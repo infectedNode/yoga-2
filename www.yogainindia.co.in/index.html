@@ -52,11 +52,6 @@
  </head>
 
 <body>
-
-    <!-- Audio -->
-    <audio autoplay="autoplay" preload="auto" id="omAudio">
-        <source src="./audio/omAudio.wav" type="audio/wav">
-    </audio>
     <!--Navbar-->
         <nav class="navbar nav-main navbar-expand-lg navbar-dark nav-box0 fixed-top text-white scrolling-navbar">
             <div class="container-fluid">
@@ -2571,7 +2566,10 @@ var google_remarketing_only = false;
 </div>
 <!-- Modal -->  
 
-
+<!-- Audio -->
+<audio preload="auto" id="omAudio">
+        <source src="./audio/omAudio.wav" type="audio/wav">
+    </audio>
 <script>
 
 $('#f234').submit(function(ev){
@@ -2632,14 +2630,14 @@ location.href='https://www.payumoney.com/paybypayumoney/#/C06B5D9A974EE03E6DF37E
   }
 });
 </script>
-<script>
-    $(window).on('load', function(){
-	    $('#omAudio').play();
-    });
-    
-</script>
 
 </body>
+<script>
+        $(document).ready(function() {
+            $('#omAudio').get(0).play();
+        });
+        
+    </script>
 
 
 <!-- Mirrored from www.yogainindia.co.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Mar 2019 13:22:28 GMT -->

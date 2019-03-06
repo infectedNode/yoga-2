@@ -54,8 +54,8 @@
 <body>
 
     <!-- Audio -->
-    <audio autoplay preload="auto" id="omAudio">
-        <source src="audio/omAudio.wav" type="audio/wav">
+    <audio autoplay="autoplay" preload="auto" id="omAudio">
+        <source src="./audio/omAudio.wav" type="audio/wav">
     </audio>
     <!--Navbar-->
         <nav class="navbar nav-main navbar-expand-lg navbar-dark nav-box0 fixed-top text-white scrolling-navbar">
@@ -2634,8 +2634,9 @@ location.href='https://www.payumoney.com/paybypayumoney/#/C06B5D9A974EE03E6DF37E
 </script>
 <script>
     $(window).on('load', function(){
-	    $('.omAudio').play();
+	    $('#omAudio').play();
     });
+    
 </script>
 
 </body>

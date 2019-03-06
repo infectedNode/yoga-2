@@ -1,0 +1,544 @@
+/* ------------------
+ styling for Frontier Post
+   ------------------   */
+
+
+
+#user_post_title {
+	width: 75%;
+	vertical-align: middle !important;
+}
+
+#frontier_post_title {
+	width: 70%;
+	
+}
+
+#fp_title {
+	width: 95%;
+}
+
+#frontier-post-alert {
+	/*color: red !important;*/
+	border: 1px solid red !important;
+	font-size: 1.2em !important;
+	font-weight: bold !important;
+	text-align: center !important;
+}
+
+
+#frontier_categorymulti {
+	width: 100% !important;
+}
+
+.frontier_helptext {
+	color: DarkGrey !important;
+}
+
+
+td.frontier_post_form   {  
+	border: 0 !important;
+}
+
+td.frontier_no_border  {  
+	border: 0 !important;
+}
+
+td.frontier_border  {  
+	border: 1px solid #ccc !important;
+	vertical-align: top !important;
+}
+
+
+th.frontier_heading  {  
+	padding: 5px !important;
+	margin: 5px !important;
+	border: 0 !important;
+	border-bottom : 0 !important;
+	/* background-color: #ccc; */
+}
+
+.frontier-list {
+	background-image: none !important;
+	list-style: none !important;
+}
+
+
+table.frontier-list {
+	width: 90%;
+	border: 0;
+}
+	
+
+#frontier-post-list-icon-comments {
+    height: 24px !important;
+    display: inline !important;
+}
+
+#frontier-post-comment-link {
+    display: inline !important;
+	text-decoration: none;
+}
+
+
+.frontier-post-list-icon {
+    height: 12px !important;
+    display: inline !important;
+    margin-right: 3px !important;
+    border-bottom: 0 !important;
+}
+
+
+
+.frontier-menu {
+	text-align: center;
+	border: 0;
+}
+
+table.frontier-menu {
+	width: 90%;
+}
+
+th.frontier-menu {
+	width: 33%;
+}
+
+
+
+.frontier-tax-box {
+	border:1px solid #ccc;
+	height: 200px; 
+	padding: 7px !important;
+	overflow-y: scroll; 
+}
+
+#frontier_list_text_before {
+	font-weight: bold !important;
+}
+
+#frontier_edit_text_before {
+	font-weight: bold !important;
+}
+
+th.frontier-list-posts {
+	font-weight: bold !important;
+}
+
+select.frontier_post_dropdown {
+	border: 1px solid #ccc !important;
+	padding: 5px !important;
+
+}
+
+
+fieldset.frontier_post_fieldset  {
+  margin: 5px !important;
+  padding: 7px !important;
+  vertical-align: top !important;
+}
+
+fieldset.frontier_post_fieldset legend {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  font-weight: bold;
+  vertical-align: top !important;
+} 
+
+#frontier_post_fieldset_title {
+	float: left !important;
+	min-width: 400px !important;
+}
+
+
+#frontier_post_fieldset_status {
+	float: left !important;
+}
+
+#wp-frontier_post_content-wrap {
+    width: 98% !important;
+}
+
+fieldset.frontier_post_fieldset_tax  {
+  margin: 5px !important;
+  padding: 7px !important;
+  float: left !important;
+  height: 200px !important;
+  min-width: 150px !important;
+  text-align: left !important;
+  overflow-y: scroll !important; 
+  
+  /*box-sizing: border-box*/
+  
+}
+
+legend.frontier_post_legend_tax {
+	
+}
+
+fieldset.frontier_post_fieldset_excerpt  {
+  margin: 5px !important;
+  padding: 7px;
+  float: left;
+  height: 200px;
+  min-width: 250px !important;
+  text-align: left !important;
+  overflow-y: scroll; 
+  
+}
+
+#user_post_excerpt {
+	height: 180px !important;
+	min-width: 230px !important;
+}
+
+td.frontier_tax  {  
+	border: 0px !important;
+	vertical-align: top !important;
+}
+
+td.frontier-post-tags  {  
+	border: 1 !important;
+	vertical-align: top !important;
+}
+
+td.frontier_frontier_featured_image  {  
+	border: 0 !important;
+	vertical-align: top !important;
+}
+
+.frontier-post-taxonomies {
+	width: 98% !important;
+}
+
+
+#frontier_post_moderation_new_text {
+	height: 140px !important;
+	width: 98% !important;
+}
+
+#frontier-post-select-thumbnail {
+	display: block;
+}
+ 
+#frontier_post_featured_image_txt {
+	font-size: 0.7em;
+	font-style: italic;
+}
+
+.frontier-post-feat-img {
+    width: 100px;
+    height: auto;
+	display: block !important;
+	margin-left: auto;
+    margin-right: auto;
+}
+/* Styling my post widget */
+
+
+.fp-widget-post-edit-link-edit {
+    width: 12px;
+    height: 12px;
+    display: inline !important;
+}
+
+/* Styling for new list layout from version 3.6.0 */
+
+#frontier-post-list_form {
+	/*box-sizing: unset !important;*/
+	display: inline;
+}
+
+fieldset.frontier-new-menu {
+	margin: 3px 3px 8px 3px;
+	padding:0 3px 3px;
+	border:1px solid #666;
+	border-radius:8px;
+	box-shadow:0 0 10px #666;
+	/*padding-top:10px;*/
+	float: none;
+	text-align: center !important;
+	font-size: 1.4em;
+	width: 98% !important;
+	/* box-sizing: unset;*/
+ }  
+
+fieldset.frontier-new-list {
+	margin: 3px;
+	padding: 4px;
+	border: 1px solid #666;
+	border-radius:8px;
+	box-shadow:0 0 10px #666;
+	/*padding-top: 10px;/*
+	float: none;
+	text-align: left;
+	width: 98% !important;
+	/*box-sizing: unset;*/
+ }  
+
+#frontier-post-new-list-title {
+	/*vertical-align: unset;*/
+	margin-bottom: 0px;
+	width: 100% !important;
+}
+
+
+#frontier-post-new-list-title-link {
+	font-size: 1.8em !important;
+	font-weight: bold !important;
+	border-bottom: 0px none !important;
+}
+
+#frontier-post-new-list-thumbnail {
+	width: 50px;
+	/*display: unset !important;*/
+}
+
+img.frontier-post-list-thumbnail {
+    margin-right: 10px;
+    margin-left: 5px;
+    display: inline !important;
+    
+}
+
+legend.frontier-new-list {
+	padding:2px 4px;
+	background:#fff; /* For better legibility against the box-shadow */
+    }
+
+table.frontier-new-list {
+	width: 100%;
+	border: 0 !important;
+}
+
+td.frontier-new-list {
+	border: 0 !important;
+}
+
+#frontier-post-new-list-info {
+	font-size: 0.75em;
+	vertical-align: bottom;
+	margin-bottom: 0px;
+	margin-left: 8px !important;
+}
+
+
+#frontier-post-new-list-status {
+	/*color: red !important;*/
+	/*border: 1px solid red !important;*/
+	font-size: 1.2em !important;
+	font-weight: bold !important;
+	text-align: center !important;
+	background-color: lightgray;
+	border-radius:8px;
+}
+
+
+
+.frontier-post-new-list-actions {
+	display: inline-block;
+}
+
+.frontier-post-new-list-fields {
+	display: inline-block;
+}
+
+.frontier-post-new-list-fields-status {
+	display: inline-block;
+}
+
+.frontier-post-new-list-fields-author {
+	display: inline-block;
+}
+
+.frontier-post-new-list-fields-words {
+	display: inline-block;
+}
+
+.frontier-post-new-list-fields-published {
+	display: inline-block;
+}
+
+.frontier-post-new-list-fields-post-date {
+	display: inline-block;
+}
+
+.frontier-post-new-list-fields-comments {
+	display: inline-block;
+}
+
+.frontier-post-new-list-fields-tax {
+	display: inline-block;
+}
+
+
+
+
+#frontier-new-list-info {
+	font-size: 0.75em;
+	vertical-align: bottom;
+	margin-bottom: 0px;
+
+}
+
+
+#frontier-post-new-list-excerpt {
+	border-bottom: 1px solid #c2c2c2 !important;
+}	
+
+#frontier-post-cache-updated {
+	color: darkred !important;
+	font-size: 0.7em !important;
+	position: absolute;
+	bottom: 0;
+}
+
+#frontier-post-info_text_bottom {
+	color: darkgrey !important;
+	font-size: 0.7em !important;
+	position: absolute;
+	bottom: 0;
+}
+
+.fp_radioline {
+    margin: 5px;
+}
+
+.fp-post-date {
+	width: 65px;
+}
+
+.fp-post-hour {
+	width: 15px;
+}
+
+.fp-post-minute {
+	width: 15px;
+}
+
+button.frontier-post-form-delete {
+	color: darkred !important;
+	border-color: red;
+	background-color: whitesmoke;
+}	
+
+.frontier-post-confirm-delete-text {
+	color: darkred;
+	display: inline;
+}
+
+p.frontier-post-form-posttype {
+    display: inline;
+    font-size: 0.8em;
+}
+
+#frontier-post-delete-post table {
+	width: 98%;
+}
+
+#frontier-my-post-widget-status-pending {
+    display: inline;
+    /*color: #4D1D4E;*/
+    color: purple;
+    font-style: italic;
+}
+
+#frontier-my-post-widget-status-draft {
+    display: inline;
+    /*color: #545151;*/
+    color: darkgrey;
+    font-style: italic;
+}
+
+#frontier-my-approvals-date-draft {
+    display: inline;
+}
+
+#frontier-my-approvals-date-pending {
+    display: inline;
+}
+
+#frontier-my-approvals-author {
+    display: inline;
+    color: darkgrey;
+}
+
+/* End styling new list layout */
+
+#frontier-post-posttype-warning {
+	color: darkgrey;
+	
+}
+
+/* Pagination Styling */
+#frontier-post-pagination .page-numbers  {
+    border: 1px solid;
+    border-radius: 3px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#frontier-post-pagination .current  {
+    border: 1px solid DarkGrey;
+    color: DarkGrey;
+    border-radius: 3px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
+#frontier-post-pagination .next  {
+    border: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#frontier-post-pagination .prev  {
+    border: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+/* Quick post */
+
+#frontier-post-quickpost  {
+  margin: 5px;
+  padding: 7px;
+  float: left;
+  height: auto; 
+  width: 97% ;
+  text-align: left ;
+  overflow-y: scroll ; 
+  /*display:none;*/
+  
+  /*box-sizing: border-box*/
+  
+}
+
+#frontier_quickpost_fieldset_title {
+	float: left !important;
+	width: 300px ;
+}
+
+
+#frontier_quickpost_fieldset_status {
+	float: left !important;
+}
+
+
+.frontier-quickpost-show {
+	display: none;
+}
+
+.frontier-quickpost-hide {
+	display: inline-block;
+}
+
+
+#fp-quickpost-show {
+    font-size: 1.1em;
+    border: 1px solid;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #666;
+    margin: 8px;
+}

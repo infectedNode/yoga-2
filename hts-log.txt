@@ -1,0 +1,86 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 06 Mar 2019 18:51:27 at https://www.yogainindia.co.in/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.yogainindia.co.in/ -O1 "C:\Users\Shivam Sharma\Desktop\heyaa\Yoga" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:52:28	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/googleeb4e81db68cfe90f.html (from https://www.yogainindia.co.in/)
+18:54:06	Warning: 	file not stored in cache due to bogus state (incomplete type with OK (200), size 16379): https://www.yogainindia.co.in/blogyoga/wp-content/uploads/2018/05/pranayam-360x240.jpg
+18:55:04	Error: 	"Forbidden" (403) at link translate.google.com/translate_a/element.js?cb=googleTranslateElementInit (from https://www.yogainindia.co.in/)
+18:55:44	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/yoga-teacher-training-for-beginners-in-indi (from https://www.yogainindia.co.in/)
+18:55:44	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/300hr-ashtanga-hatha-yoga-teacher-training-in-indi (from https://www.yogainindia.co.in/)
+18:55:44	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/500hr-ashtanga-hatha-yoga-teacher-training-in-indi (from https://www.yogainindia.co.in/)
+18:55:44	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/kundalini-yoga-teacher-training-in-indi (from https://www.yogainindia.co.in/)
+18:55:45	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/yoga-for-pregnancy-teacher-training-in-indi (from https://www.yogainindia.co.in/)
+18:55:45	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/yoga-for-oldage-and-kids-training-course-in-indi (from https://www.yogainindia.co.in/)
+18:55:49	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/page/googleeb4e81db68cfe90f.html (from https://www.yogainindia.co.in/page/yoga_student_review)
+18:55:49	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/yoga-training-course-for-beginners-indi (from https://www.yogainindia.co.in/yoga-teacher-training-for-beginners-in-india)
+18:55:49	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/200-hour-yoga-teacher-training-in-rishikesh-indi (from https://www.yogainindia.co.in/ashtanga-and-hatha-yoga-teacher-training-in-india)
+18:55:49	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/300-hour-yoga-teacher-training-in-rishikesh-indi (from https://www.yogainindia.co.in/ashtanga-and-hatha-yoga-teacher-training-in-india)
+18:55:49	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/500-hour-yoga-teacher-training-in-rishikesh-indi (from https://www.yogainindia.co.in/ashtanga-and-hatha-yoga-teacher-training-in-india)
+18:55:49	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/kundalini-yoga-training-course-in-rishikesh-indi (from https://www.yogainindia.co.in/kundalini-yoga-teacher-training-in-india)
+18:55:49	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/yoga-for-pregnancy-training-course-in-rishikesh-indi (from https://www.yogainindia.co.in/yoga-for-pregnancy-teacher-training-in-india)
+18:56:14	Error: 	"Method Not Allowed" (405) at link https://www.yogainindia.co.in/blogyoga/xmlrpc.php (from https://www.yogainindia.co.in/blogyoga/)
+18:56:14	Error: 	"Not Found" (404) at link www.yogainindia.co.in/page/class (from https://www.yogainindia.co.in/blogyoga/)
+18:56:14	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/blogyoga/search/ (from https://www.yogainindia.co.in/blogyoga/)
+18:57:09	Error: 	"Error when decompressing" (-1) at link https://www.yogainindia.co.in/blogyoga/2018/05/05/ac-का-सही-उपयोग/ (from https://www.yogainindia.co.in/blogyoga/)
+18:57:44	Error: 	"Forbidden" (403) at link translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2 (from https://www.yogainindia.co.in/blogyoga/)
+18:58:10	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/page/courses/googleeb4e81db68cfe90f.html (from https://www.yogainindia.co.in/page/courses/8-Days-Yoga-for-Beginners-Course-In-Rishikesh-Haridwar-India)
+18:58:11	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/assets/js/images/ui-icons_ffffff_256x240.png (from https://www.yogainindia.co.in/assets/js/jquery-ui.css)
+18:58:11	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/assets/js/images/ui-icons_777620_256x240.png (from https://www.yogainindia.co.in/assets/js/jquery-ui.css)
+18:58:11	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/assets/js/images/ui-icons_cc0000_256x240.png (from https://www.yogainindia.co.in/assets/js/jquery-ui.css)
+18:58:11	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/assets/js/images/ui-icons_777777_256x240.png (from https://www.yogainindia.co.in/assets/js/jquery-ui.css)
+18:58:11	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/assets/gallery/img/vimeo-play.png (from https://www.yogainindia.co.in/assets/gallery/css/gallery.css)
+18:58:11	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/assets/gallery/img/video-play.png (from https://www.yogainindia.co.in/assets/gallery/css/gallery.css)
+18:58:11	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/assets/gallery/img/youtube-play.png (from https://www.yogainindia.co.in/assets/gallery/css/gallery.css)
+18:58:11	Error: 	"Not Found" (404) at link https://www.yogainindia.co.in/assets/gallery/images/share.png (from https://www.yogainindia.co.in/assets/gallery/css/gallery.css)
+18:58:29	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=310
+18:58:29	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=310 to https://www.yogainindia.co.in/blogyoga/2019/02/24/meditation/
+18:58:29	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=307
+18:58:29	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=307 to https://www.yogainindia.co.in/blogyoga/2019/02/03/307/
+18:58:29	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=295
+18:58:29	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=295 to https://www.yogainindia.co.in/blogyoga/2019/01/30/all-power-is-within-youyou-can-do-anything-and-everything-believe-in-thatdo-not-believe-that-you-are-weak-stand-up-and-express-the-divinity-within-you/
+18:58:29	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=290
+18:58:29	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=290 to https://www.yogainindia.co.in/blogyoga/2019/01/29/kundalini-ttc/
+18:58:29	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=266
+18:58:29	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=266 to https://www.yogainindia.co.in/blogyoga/2018/05/07/sun-salutation-yoga-pose-surya-namaskar/
+18:58:33	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=257
+18:58:33	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=257 to https://www.yogainindia.co.in/blogyoga/2018/05/05/pranayama/
+18:58:33	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=255
+18:58:33	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=255 to https://www.yogainindia.co.in/blogyoga/2018/05/05/yogic-diet/
+18:58:38	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=246
+18:58:38	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=246 to https://www.yogainindia.co.in/blogyoga/2018/05/05/diet-2/
+18:58:39	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=240
+18:58:39	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=240 to https://www.yogainindia.co.in/blogyoga/2018/05/05/diet/
+18:58:43	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=54
+18:58:43	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=54 to https://www.yogainindia.co.in/blogyoga/registration/
+18:58:43	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=49
+18:58:43	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=49 to https://www.yogainindia.co.in/blogyoga/my-posts/
+18:58:47	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=119
+18:58:47	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=119 to https://www.yogainindia.co.in/blogyoga/2018/04/26/what-is-the-requirement-of-yoga/
+18:58:47	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=1
+18:58:47	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=1 to https://www.yogainindia.co.in/blogyoga/2018/04/22/hello-world/
+18:58:47	Warning: 	Retry after error 500 (Internal Server Error) at link https://www.yogainindia.co.in/page/studentList/googleeb4e81db68cfe90f.html (from https://www.yogainindia.co.in/page/studentList/2)
+18:58:58	Warning: 	Retry after error 500 (Internal Server Error) at link https://www.yogainindia.co.in/page/studentListUSA/googleeb4e81db68cfe90f.html (from https://www.yogainindia.co.in/page/studentListUSA/2)
+18:59:07	Error: 	"Bad Request" (400) at link https://www.yogainindia.co.in/admin/upload/events/<div style= (from https://www.yogainindia.co.in/page/activity/googleeb4e81db68cfe90f.html)
+18:59:07	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=225
+18:59:07	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=225 to https://www.yogainindia.co.in/blogyoga/2018/05/04/om-yoga-international-yoga-student-reviews-2/
+18:59:07	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=194
+18:59:07	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=194 to https://www.yogainindia.co.in/blogyoga/2018/05/01/what-is-stress-and-how-to-manage-stress/
+18:59:08	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=41
+18:59:08	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=41 to https://www.yogainindia.co.in/blogyoga/2018/04/24/what-is-yoga/
+18:59:08	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=192
+18:59:08	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=192 to https://www.yogainindia.co.in/blogyoga/2018/05/01/what-is-asana/
+18:59:08	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=150
+18:59:08	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=150 to https://www.yogainindia.co.in/blogyoga/2018/04/28/300hour-yoga-ttc/
+18:59:13	Warning: 	Moved Permanently for https://www.yogainindia.co.in/blogyoga/?p=188
+18:59:13	Warning: 	File has moved from https://www.yogainindia.co.in/blogyoga/?p=188 to https://www.yogainindia.co.in/blogyoga/2018/05/01/importance-of-hatha-yoga/
+18:59:16	Warning: 	Retry after error 500 (Internal Server Error) at link https://www.yogainindia.co.in/page/studentList/googleeb4e81db68cfe90f.html (from https://www.yogainindia.co.in/page/studentList/2)
+18:59:27	Warning: 	Retry after error 500 (Internal Server Error) at link https://www.yogainindia.co.in/page/studentListUSA/googleeb4e81db68cfe90f.html (from https://www.yogainindia.co.in/page/studentListUSA/2)
+18:59:27	Error: 	"Internal Server Error" (500) after 2 retries at link https://www.yogainindia.co.in/page/studentList/googleeb4e81db68cfe90f.html (from https://www.yogainindia.co.in/page/studentList/2)
+18:59:42	Error: 	"Internal Server Error" (500) after 2 retries at link https://www.yogainindia.co.in/page/studentListUSA/googleeb4e81db68cfe90f.html (from https://www.yogainindia.co.in/page/studentListUSA/2)
+
+HTTrack Website Copier/3.49-2 mirror complete in 8 minutes 20 seconds : 836 links scanned, 779 files written (73439167 bytes overall) [65275394 bytes received at 130550 bytes/sec], 10477168 bytes transferred using HTTP compression in 163 files, ratio 18%, 9.6 requests per connection
+(32 errors, 43 warnings, 0 messages)

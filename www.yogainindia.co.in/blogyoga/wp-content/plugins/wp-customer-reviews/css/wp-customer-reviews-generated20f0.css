@@ -1,0 +1,213 @@
+/*
+	WARNING: If you edit anything here, it will be overwritten with each plugin update and/or activation.
+	If you have the Pro version, you can edit this file via plugin settings without it being overwritten.
+	
+    You can also override any of these values in your theme CSS if you use !important or prepend with "body "
+    Example: body #wpcr3_respond_1 blockquote.description p { font-size:12px !important; font-weight:bold !important; }
+*/
+
+.wpcr3_in_content { margin-bottom:30px; }
+.wpcr3_in_content meta { display:none; }
+.wpcr3_power { padding-top:30px !important; padding-bottom:30px !important; font-size:11px !important; }
+.wpcr3_status_msg { color:#c00;font-weight:bold; }
+.wpcr3_status_msg div { color:#c00;font-weight:bold;padding-bottom:15px;padding-top:15px; }
+.wpcr3_caps { text-transform:capitalize; }
+
+div.wpcr3_dotline, div.wpcr3_review div.wpcr3_dotline { 
+	display:block !important; border-bottom:1px dotted #ccc !important; 
+	margin-bottom:10px !important; clear:both !important;
+}
+
+.wpcr3_leave_text { font-weight:bold; font-size:1.1rem; }
+
+div.wpcr3_aggregateRating { display:block !important; margin-bottom:30px; line-height:24px; font-size:0.8em; }
+div.wpcr3_aggregateRating div.wpcr3_aggregateRating_ratingValue { display:inline-block !important; position:relative; top:2px; }
+
+div.wpcr3_review_item div.wpcr3_item_name { font-size:0.8em; font-style:italic; }
+
+div.wpcr3_review div, div.wpcr3_review span { display:inline-block !important; line-height:24px; }
+div.wpcr3_review div.wpcr3_review_ratingValue { position:relative; top:2px; margin-right:5px; }
+div.wpcr3_review div.wpcr3_review_title { font-size:0.8em; display:block !important; }
+div.wpcr3_review blockquote.wpcr3_content { font-size:14px; font-weight:normal; display:block !important; padding-bottom:30px; }
+div.wpcr3_review blockquote.wpcr3_content p { font-size:14px; font-weight:normal; display:inline !important; }
+div.wpcr3_review blockquote.wpcr3_content.wpcr3_admin_response { margin-left:30px;color:#00c; }
+div.wpcr3_review div.wpcr3_review_datePublished { font-size:0.9em; font-style:italic; }
+div.wpcr3_review div.wpcr3_review_author { font-size:0.8em; font-style:italic; }
+div.wpcr3_review div.wpcr3_review_customs { margin-bottom:5px; }
+div.wpcr3_review div.wpcr3_review_custom { font-size:12px; float:left; margin-right:60px; }
+
+.wpcr3_respond_2 { position:relative; }
+.wpcr3_respond_2 label { display:inline-block; !important; }
+.wpcr3_respond_2 .fconfirm2 { width:auto !important; }
+
+.wpcr3_respond_2 input { }
+.wpcr3_respond_2 input[type="text"]  { min-width:200px; }
+.wpcr3_respond_2 textarea { height:100px !important; min-width:500px; }
+.wpcr3_respond_2 small { padding:0 !important; margin:0 !important; }
+.wpcr3_respond_2 table, .wpcr3_respond_2 td { border:0 !important; border-style:none !important; }
+
+.wpcr3_respond_2 .wpcr3_check_confirm label { margin:-2px 0px 0px 5px; }
+
+.wpcr3_ad { background:#ffffff; }
+.wpcr3_ad label { font-weight:bold; }
+
+.wpcr3_respond_1, .wpcr3_respond_2 { margin:0 !important; padding:0 !important; clear:both !important; }
+.wpcr3_respond_1 p, .wpcr3_respond_2 p {
+    margin:0 !important;
+    padding:0 !important;
+    line-height:120% !important;
+    margin-top:2px !important;
+    margin-bottom:2px !important;
+}	
+
+.wpcr3_respond_1 .wpcr3_rating, .wpcr3_respond_2 .wpcr3_rating {
+    border:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+    margin-left:0px !important;
+    margin-top:0px !important;
+    overflow:hidden;
+    height:16px;
+}
+
+div.wpcr3_rating_style1  { line-height:17px; display:inline-block; }
+div.wpcr3_rating_style1 div { line-height:17px; }
+div.wpcr3_rating_style1 * { border:0 none; margin:0; padding:0; line-height:17px; }
+div.wpcr3_rating_style1_base  { background:url(newstars.png) 0 0 no-repeat; width:85px; height:17px; line-height:17px; float:left; padding-right:4px; overflow:hidden; display:block; }
+div.wpcr3_rating_style1_average { background:url(newstars.png) 0 -15px no-repeat; text-indent:-9999px; height:17px; line-height:17px; }
+div.wpcr3_rating_style1_status { height:17px; line-height:17px; width:100px; overflow:hidden; position:relative; cursor:pointer; display:block; }
+div.wpcr3_rating_style1_score { background:url(newstars.png) 0 0 no-repeat; width:85px; height:17px; line-height:17px; float:left; position:relative; }
+div.wpcr3_rating_style1_score div { display:block; height:17px; float:left; text-indent:-9999px; position:absolute; overflow:hidden; line-height:17px; }
+div.wpcr3_rating_style1_score div:hover { background:url(newstars.png) bottom right no-repeat; }
+div.wpcr3_rating_style1_score div.wpcr3_rating_style1_score1 {width:20%; z-index:55;}
+div.wpcr3_rating_style1_score div.wpcr3_rating_style1_score2 {width:40%; z-index:54;}
+div.wpcr3_rating_style1_score div.wpcr3_rating_style1_score3 {width:60%; z-index:53;}
+div.wpcr3_rating_style1_score div.wpcr3_rating_style1_score4 {width:80%; z-index:52;}
+div.wpcr3_rating_style1_score div.wpcr3_rating_style1_score5 {width:100%; z-index:51;}
+
+.wpcr3_respond_2 { display:none; background-color:inherit; }
+.wpcr3_div_2 { width:600px; }
+.wpcr3_table_2 { text-align:left; width:100%; }
+.wpcr3_table_2  td { text-align:left; }
+.wpcr3_check_confirm { margin-top:10px;font-size:13px;margin-bottom:4px; }
+
+.wpcr3_button_1 {
+	border: 1px solid;
+	border-color: #e6e6e6 #cccccc #cccccc #e6e6e6;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background: #ffffff;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #c4c4c4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#c4c4c4));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#c4c4c4 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#c4c4c4 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#c4c4c4 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#c4c4c4 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c4c4c4',GradientType=0 );
+	color: #404040;
+	cursor:pointer;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: normal;
+	outline: 0;
+	padding: 5px 12px 5px;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	float:none;
+	height:auto;
+	text-indent:0;
+	margin-bottom: 15px;
+ }
+
+.wpcr3_button_1:hover {
+	background: #dedede;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #b8b8b8 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#b8b8b8));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#b8b8b8 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#b8b8b8 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#b8b8b8 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#b8b8b8 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b8b8b8',GradientType=1 );
+    border-color: #99ccff;
+    color: #333333;
+    cursor:pointer;
+    font-weight: normal;
+}
+
+.wpcr3_button_1:active, .wpcr3_button_1:focus {
+    background-position: 0 -25px;
+	background: #dedede;
+	background: -moz-linear-gradient(top,  #ffffff 0%, #dedede 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dedede));
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#dedede 100%);
+	background: -o-linear-gradient(top,  #ffffff 0%,#dedede 100%);
+	background: -ms-linear-gradient(top,  #ffffff 0%,#dedede 100%);
+	background: linear-gradient(to bottom,  #ffffff 0%,#dedede 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dedede',GradientType=1 );
+    border-color: #8fc7ff #94c9ff #94c9ff #8fc7ff;
+    color:#1a1a1a;
+}
+
+.wpcr3_button_1.wpcr3_disabled {
+	opacity: 0.5;
+}
+
+.wpcr3_button_1.wpcr3_hide {
+	display:none !important;
+}
+
+.wpcr3_pagination {
+    clear:both;
+    padding:0px 0px 0px 0px;
+    position:relative;
+    font-size:11px;
+    line-height:13px;
+}
+
+.wpcr3_pagination_page {
+    float:left;
+    display:block;
+    line-height:30px;
+    padding-right:5px;
+}
+
+.wpcr3_pagination .wpcr3_a {
+    display:block;
+    float:left;
+    margin: 0px 1px 0px 1px;
+    padding:6px 10px 6px 10px;
+	line-height: 16px;
+    text-decoration:none;
+    width:auto;
+    color:#fff;
+    background:#555;
+	cursor:pointer;
+}
+
+.wpcr3_pagination .wpcr3_a:hover {
+    color:#fff;background: #3279BB;
+}
+
+.wpcr3_pagination .wpcr3_ls {
+	margin-right:1px;
+}
+
+.wpcr3_pagination .wpcr3_rs {
+	margin-left:1px;
+}
+
+.wpcr3_pagination .wpcr3_a.wpcr3_current {
+    background: #3279BB;color:#fff;cursor:default;
+}
+
+.wpcr3_pagination .wpcr3_a.wpcr3_disabled, .wpcr3_pagination .wpcr3_a.wpcr3_disabled:hover {
+	background:#ddd;color:#fff;cursor:default;
+}
+
+.wpcr3_clear , div.wpcr3_review .wpcr3_clear  { clear:both !important; display:block !important; line-height:0px !important;; height:0px !important; }
+.wpcr3_show, div.wpcr3_review .wpcr3_show { display:inline; }
+.wpcr3_hide, div.wpcr3_review .wpcr3_hide { display:none !important; }
+.wpcr3_fakehide { position:absolute !important;top:0 !important;left:-999em !important;height:1px !important;width:1px !important; }
+.wpcr3_pb5 { padding-bottom:5px; }

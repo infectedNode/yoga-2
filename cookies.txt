@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.yogainindia.co.in	TRUE	/blogyoga/	FALSE	1999999999	wordpress_test_cookie	WP+Cookie+check
+www.yogainindia.co.in	TRUE	/	FALSE	1999999999	yosertion	a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22d12fe72975fe0bd9be3f2175a2b9c4d1%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A15%3A%22122.162.104.240%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A50%3A%22Mozilla%2F4.5+%28compatible%3B+HTTrack+3.0x%3B+Windows+98%29%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1551878860%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7De14b83d1fad54cdb98e91392df923fe5
+

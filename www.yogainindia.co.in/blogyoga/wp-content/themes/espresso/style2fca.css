@@ -1,0 +1,6872 @@
+@charset "UTF-8";
+/*
+Theme Name: ESPRESSO
+Theme URI: http://envirra.com/themes/espresso
+Author: envirra
+Author URI: http://themeforest.net/user/envirra?ref=envirra
+Description: Magazine WordPress Theme
+Version: 1.4.0
+License: GPL
+License URI: http://www.gnu.org/licenses/gpl.html‎
+Tags: black, white, one-column, two-columns, three-columns, right-sidebar, fluid-layout, custom-colors, custom-menu, featured-images, post-formats, theme-options, translation-ready, photoblogging
+Text Domain: envirra
+Domain Path: /languages/
+*/
+/*=============================================================================
+
+  -----------------
+  Table of Contents
+  -----------------
+
+  TYPOGRAPHY - Typography basics
+  INPUT - Input styles
+  WORDPRESS - Wordpress's default styles
+
+  Theme
+  -----
+  BUTTON
+  SITELAYOUT
+  SITEHEADER
+  SITEFOOTER
+  TOPBAR
+  BOTTOMBAR
+  LOGO
+  TITLES
+  HEADERADS
+  PAGE
+  POST
+  POSTLOOPS
+  NAVIGATION
+  BREADCRUMB
+  BREAKINGNEWS
+  COMMENTS
+  PAGINATION
+  SITESOCIAL
+
+  Widgets
+  -------
+  GENERALWIDGETS
+  AUTHOR
+  AUTHORLIST
+  CATEGORIES
+  FEEDBURNER
+  LOGIN
+  SEARCH
+  SOCIALCOUNTER
+  POSTTABBED
+
+  Components
+  --------
+  SHORTCODES
+  PAGECOMPOSER
+  MAGNIFICPOPUP
+  TIPSY
+  PAGE
+  REVIEW
+  STICKY
+  CUSTOMTILEDGALLERY
+  INSTANTSEARCH
+  BXSLIDER
+  QTRANSLATE
+  UTILITY
+
+==============================================================================*/
+/* -----------------------------------------------------------------------------
+ * $TYPOGRAPHY
+ * -------------------------------------------------------------------------- */
+body {
+    line-height: 1.75em;
+    margin: 0;
+}
+
+blockquote {
+    margin-bottom: 40px;
+    font-size: 21px;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 1px;
+    line-height: 1.25em;
+    text-transform: uppercase;
+}
+blockquote cite {
+    display: block;
+    margin-top: 1.5em;
+    font-size: 11px;
+}
+
+cite {
+    font-style: italic !important;
+    letter-spacing: 0;
+}
+cite:before {
+    content: '—';
+    opacity: 0.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.6em;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+em {
+    color: #AAAAAA;
+    text-transform: none;
+    font-weight: normal;
+    font-style: italic;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* -----------------------------------------------------------------------------
+ * $INPUT
+ * -------------------------------------------------------------------------- */
+textarea {
+    max-width: 100%;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+select,
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type=button],
+input[type=submit],
+button,
+.vw-button,
+.woocommerce .button {
+    /* for woocommerce */
+    padding: 5px 10px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+    border: 1px solid #BBBBBB;
+    -webkit-appearance: none;
+}
+
+/* -----------------------------------------------------------------------------
+ * $WORDPRESS
+ * -------------------------------------------------------------------------- */
+/* -------------------------------------
+ * Alignment */
+.alignnone {
+    display: block;
+    margin: 15px 15px 15px 0;
+}
+.alignnone:before,
+.alignnone:after {
+    content: " ";
+    display: table;
+}
+.alignnone:after {
+    clear: both;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 15px auto 15px auto;
+}
+
+.alignright {
+    float: right;
+    margin: 15px 0 15px 15px;
+}
+
+.alignleft {
+    float: left;
+    margin: 15px 15px 15px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 15px auto 15px auto;
+}
+
+a img.alignright {
+    float: right;
+    margin: 0px 0 15px 15px;
+}
+
+a img.alignnone {
+    margin: 15px 15px 15px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 0px 15px 15px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* -------------------------------------
+ * Image Caption */
+.wp-caption {
+    max-width: 100%;
+}
+
+.wp-caption.alignnone {
+    margin: 2em 0;
+}
+
+.wp-caption.aligncenter {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.wp-caption.aligncenter:before,
+.wp-caption.aligncenter:after {
+    content: " ";
+    display: table;
+}
+.wp-caption.aligncenter:after {
+    clear: both;
+}
+
+.wp-caption.alignleft {
+    margin: 15px 2em 10px 0;
+}
+
+.wp-caption.alignright {
+    margin: 15px 0 10px 2em;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption .wp-caption-text {
+    color: #AAAAAA;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.2em;
+    margin: 8px 0px 8px 0px;
+    padding: 5px 10px 5px 10px;
+    border-left: 3px solid;
+}
+
+.wp-post-image {
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.sticky {
+    /* empty */
+}
+
+.gallery-caption {
+    /* empty */
+}
+
+.bypostauthor {
+    background-color: transparent;
+}
+
+/* -------------------------------------
+ * $WORDPRESS TILED GALLERY DEFAULT STYLE */
+.gallery img {
+    border: 1px solid #DDDDDD !important;
+    padding: 3px;
+}
+
+.gallery .gallery-caption {
+    margin-top: 0.5em;
+    font-style: italic;
+}
+
+/* =============================================================================
+
+  $THEME
+
+============================================================================= */
+/* -----------------------------------------------------------------------------
+ * $BUTTON
+ * -------------------------------------------------------------------------- */
+input[type=button],
+input[type=submit],
+button,
+.vw-button,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit {
+    text-transform: uppercase;
+    background-color: #3E3E3E;
+    color: #FFFFFF;
+    border: 0px solid;
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 28px;
+    margin-bottom: 5px;
+    margin-right: 4px;
+    padding: 6px 18px;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+.no-touch input[type=button]:hover,
+.no-touch
+  input[type=submit]:hover,
+.no-touch
+  button:hover,
+.no-touch
+  .vw-button:hover,
+.no-touch
+  .woocommerce a.button:hover,
+.no-touch .woocommerce button.button:hover,
+.no-touch .woocommerce input.button:hover,
+.no-touch .woocommerce #respond input#submit:hover {
+    background-color: #C5AC57;
+}
+
+.vw-button {
+    display: inline-block;
+    text-decoration: none !important;
+    color: #FFFFFF !important;
+}
+.no-touch .vw-button:hover {
+    color: #FFFFFF;
+}
+.vw-button .vw-icon {
+    margin-right: 0.4em;
+    font-size: 15px;
+    vertical-align: bottom;
+}
+
+.vw-button-full-width {
+    display: block;
+    width: 100%;
+}
+
+.vw-button-black {
+    background-color: #000000;
+}
+.no-touch .vw-button-black:hover {
+    background-color: #333333;
+}
+
+.vw-button-orange {
+    background-color: #FC7844;
+}
+.no-touch .vw-button-orange:hover {
+    background-color: #FD9369;
+}
+
+.vw-button-red {
+    background-color: #E74C3C;
+}
+.no-touch .vw-button-red:hover {
+    background-color: #EC7063;
+}
+
+.vw-button-yellow {
+    background-color: #F9CB31;
+}
+.no-touch .vw-button-yellow:hover {
+    background-color: #FAD45A;
+}
+
+.vw-button-blue {
+    background-color: #3498DB;
+}
+.no-touch .vw-button-blue:hover {
+    background-color: #5DACE2;
+}
+
+.vw-button-green {
+    background-color: #1ABC84;
+}
+.no-touch .vw-button-green:hover {
+    background-color: #48C99D;
+}
+
+.vw-button-purple {
+    background-color: #B73B7A;
+}
+.no-touch .vw-button-purple:hover {
+    background-color: #C56295;
+}
+
+.vw-button-pink {
+    background-color: #ED5E80;
+}
+.no-touch .vw-button-pink:hover {
+    background-color: #F17E99;
+}
+
+/* -----------------------------------------------------------------------------
+ * $SITE LAYOUT
+ * -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+    body.vw-site-layout-boxed .vw-site-wrapper {
+        margin: 30px auto;
+    }
+    body.vw-site-layout-boxed .vw-site-wrapper,
+    body.vw-site-layout-boxed .container {
+        max-width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    body.vw-site-layout-boxed .vw-site-wrapper,
+    body.vw-site-layout-boxed .container {
+        max-width: 1000px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body.vw-site-layout-boxed .vw-site-wrapper,
+    body.vw-site-layout-boxed .container {
+        max-width: 1200px;
+    }
+}
+
+/* -----------------------------------------------------------------------------
+ * $SITE HEADER
+ * -------------------------------------------------------------------------- */
+.vw-site-header-inner {
+    padding: 45px 0;
+}
+
+.vw-site-header.vw-site-header-style-left-logo .vw-logo-wrapper,
+.vw-site-header.vw-site-header-style-left-logo .vw-header-ads-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.vw-site-header.vw-site-header-style-left-logo .vw-header-ads-wrapper {
+    width: 100%;
+    text-align: right;
+}
+
+@media (min-width: 992px) {
+    .vw-site-header.vw-site-header-style-left-logo .vw-header-ads-wrapper {
+        padding-left: 15px;
+    }
+    .vw-site-header.vw-site-header-style-left-logo .vw-header-ads-leader-board,
+    .vw-site-header.vw-site-header-style-left-logo .vw-header-ads-banner {
+        float: right;
+    }
+}
+
+@media (max-width: 991px) {
+    .vw-site-header.vw-site-header-style-left-logo .vw-header-ads-wrapper {
+        display: block;
+        text-align: center;
+    }
+    .vw-site-header.vw-site-header-style-left-logo .vw-mobile-nav-button-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+.vw-site-header.vw-site-header-style-right-menu .vw-menu-main-wrapper {
+    background: transparent !important;
+}
+
+.vw-site-header.vw-site-header-style-right-menu .vw-logo-wrapper,
+.vw-site-header.vw-site-header-style-right-menu #vw-menu-main-sticky-wrapper {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.vw-site-header.vw-site-header-style-right-menu .vw-logo-wrapper,
+.vw-site-header.vw-site-header-style-right-menu #vw-menu-main .container {
+    width: auto !important;
+}
+
+.vw-site-header.vw-site-header-style-centered-logo .vw-site-header-inner,
+.vw-site-header.vw-site-header-style-centered-logo .vw-menu-main-inner {
+    text-align: center;
+}
+
+.vw-site-header.vw-site-header-style-centered-logo .sub-menu {
+    text-align: left;
+}
+
+@media (max-width: 767px) {
+    .vw-site-header.vw-site-header-style-centered-logo .vw-site-header-inner {
+        position: relative;
+        padding: 0 40px;
+    }
+    .vw-site-header.vw-site-header-style-centered-logo .vw-mobile-nav-button-wrapper {
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        margin-top: -18px;
+    }
+}
+
+.vw-site-header.vw-site-header-style-centered-logo .vw-menu-additional-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.vw-site-header.vw-site-header-style-centered-logo .vw-header-ads-wrapper {
+    margin-top: 2em;
+}
+
+/* -----------------------------------------------------------------------------
+ * $SITE FOOTER
+ * -------------------------------------------------------------------------- */
+.vw-site-footer {
+    padding-top: 10px;
+    border-top: 6px solid #C5AC57;
+}
+
+/* -----------------------------------------------------------------------------
+ * $SITE FOOTER SIDEBARS
+ * -------------------------------------------------------------------------- */
+.vw-site-footer-sidebars {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.vw-site-footer-sidebars .vw-post-loop-text-no-thumbnail .vw-post-box + .vw-post-box,
+.vw-site-footer-sidebars .vw-post-style-small-left-thumbnail + .vw-post-style-small-left-thumbnail,
+.vw-site-footer-sidebars .widget_vw_widget_categories .vw-widget-category-list li + li {
+    border-top-color: rgba(128, 128, 128, 0.3);
+}
+.vw-site-footer-sidebars .vw-post-loop-mix-3 .vw-post-style-medium {
+    border-bottom-color: rgba(128, 128, 128, 0.3);
+}
+
+/* -----------------------------------------------------------------------------
+ * $TOP BAR
+ * -------------------------------------------------------------------------- */
+.vw-top-bar {
+    display: none;
+    padding: 0;
+    font-size: 11px;
+}
+@media (min-width: 768px) {
+    .vw-top-bar {
+        display: block;
+    }
+}
+.vw-top-bar .main-menu-link,
+.vw-top-bar .vw-site-social-profile-icon,
+.vw-top-bar .vw-instant-search-buton {
+    color: #888888;
+}
+.vw-top-bar .vw-instant-search-buton {
+    display: inline-block;
+}
+.vw-top-bar .vw-instant-search-buton,
+.vw-top-bar .vw-instant-search-buton .vw-icon {
+    display: inline-block;
+    padding: 2px 4px;
+}
+.vw-top-bar .vw-instant-search-buton .vw-icon,
+.vw-top-bar .vw-site-social-profile-icon {
+    padding: 6px 4px;
+    font-size: 12px;
+}
+.vw-top-bar .vw-instant-search-buton .vw-icon:hover,
+.vw-top-bar .vw-site-social-profile-icon:hover {
+    color: #FFFFFF !important;
+}
+
+.vw-top-bar-inner {
+    border-bottom: 3px solid #3E3E3E;
+}
+
+.vw-top-bar-left {
+    float: left;
+}
+
+.vw-top-bar-right {
+    text-align: right;
+}
+
+@media (max-width: 767px) {
+    .vw-top-bar-left,
+    .vw-top-bar-right {
+        text-align: center;
+        float: none;
+    }
+}
+
+.vw-top-bar-social-menu .vw-menu {
+    margin-bottom: -3px;
+}
+
+/* -----------------------------------------------------------------------------
+ * $BOTTOM BAR
+ * -------------------------------------------------------------------------- */
+.vw-bottom-bar {
+    padding: 20px 0;
+    font-size: 11px;
+}
+
+.vw-bottom-bar-inner {
+    /* empty */
+}
+
+.vw-bottom-bar-left {
+    float: left;
+}
+
+.vw-bottom-bar-right {
+    text-align: right;
+}
+
+@media (max-width: 767px) {
+    .vw-bottom-bar-left,
+    .vw-bottom-bar-right {
+        text-align: center;
+        float: none;
+    }
+}
+
+.vw-copyright {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.95em;
+}
+
+/* -----------------------------------------------------------------------------
+ * $LOGO
+ * -------------------------------------------------------------------------- */
+.vw-logo-wrapper {
+    width: 100%;
+}
+
+.vw-logo-link {
+    display: inline-block;
+}
+.vw-logo-link:hover {
+    text-decoration: none;
+}
+@media (max-width: 767px) {
+    .vw-logo-link {
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+    }
+}
+
+.vw-logo-2x {
+    display: none;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .vw-logo-2x {
+        display: inline;
+    }
+    .vw-logo-2x + .vw-logo {
+        display: none;
+    }
+}
+
+.vw-site-title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.vw-site-tagline {
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 0;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+@media (max-width: 991px) {
+    .vw-site-tagline {
+        display: none;
+    }
+}
+
+/* -----------------------------------------------------------------------------
+ * $TITLES
+ * -------------------------------------------------------------------------- */
+.vw-about-author-title,
+.vw-related-posts-title,
+.vw-post-comments-title,
+.widget-title,
+.vwspc-section-title,
+.vw-widget-author-title,
+.vw-infobox-title,
+.vw-pricing-title,
+.vw-title-shortcode,
+.vw-post-shortcode-title,
+.vw-page-content .vw-page-title-box {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #3E3E3E;
+    border-bottom: 3px solid #3E3E3E;
+}
+
+* + .vw-title-shortcode {
+    margin-top: 30px;
+}
+
+.vw-page-content .vw-title-shortcode {
+    border-bottom-width: 2px;
+}
+
+/* -------------------------------------
+ * $TOPIC LINE */
+.vw-topic-line {
+    /* Middle Horizontal line */
+    text-align: center;
+    white-space: normal;
+    overflow: hidden;
+}
+.vw-topic-line > span {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.vw-topic-line > span:before,
+.vw-topic-line > span:after {
+    background: rgba(128, 128, 128, 0.15);
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    width: 1000%;
+}
+.vw-topic-line > span:before {
+    right: 100%;
+}
+.vw-topic-line > span:after {
+    left: 100%;
+}
+
+.vw-right-topic-line {
+    white-space: nowrap;
+    overflow: hidden;
+}
+.vw-right-topic-line > span {
+    display: inline-block;
+    padding: 0 10px 0 0;
+    position: relative;
+}
+.vw-right-topic-line > span:after {
+    background: rgba(128, 128, 128, 0.15);
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    width: 1000%;
+    left: 100%;
+}
+
+/* -------------------------------------
+ * $PAGE TITLE */
+.vw-page-content .vw-page-title-box .vw-label {
+    margin-bottom: 10px;
+}
+
+.vw-page-content .vw-page-title-box .vw-page-title {
+    margin-bottom: 10px;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: 1em;
+}
+
+.vw-page-content .vw-page-title-box .vw-page-description {
+    font-size: 14px;
+}
+.vw-page-content .vw-page-title-box .vw-page-description p {
+    margin-bottom: 0;
+}
+
+.vw-page-title-section {
+    border-bottom: 1px solid #EEEEEE;
+}
+.vw-breaking-news-bar + .vw-page-title-section.vw-has-background {
+    margin-top: 3px;
+}
+.vw-page-title-section.vw-has-background .vw-page-title {
+    color: #FFFFFF;
+}
+.vw-page-title-section.vw-has-background .vw-page-title-divider {
+    display: none;
+}
+.vw-page-title-section.vw-has-background .vw-post-meta {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.vw-page-title-section.vw-has-background .vw-post-meta + .vw-page-title-divider {
+    margin-top: 0;
+}
+.vw-page-title-section.vw-has-background .vw-label,
+.vw-page-title-section.vw-has-background .vw-post-categories .vw-category-link,
+.vw-page-title-section.vw-has-background .vw-post-meta,
+.vw-page-title-section.vw-has-background .vw-post-meta a,
+.vw-page-title-section.vw-has-background .vw-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+}
+.vw-page-title-section.vw-has-background .vw-page-title-section-inner {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: static;
+}
+.vw-page-title-section.vw-has-background .vw-page-title-section-overlay {
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 80%, transparent 99%, rgba(0, 0, 0, 0.08) 100%);
+    background:         linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 80%, transparent 99%, rgba(0, 0, 0, 0.08) 100%);
+}
+.vw-page-title-section.vw-has-background .backstretch:after {
+    content: '';
+    display: block;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 0, transparent 10px);
+    background-image:         linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0, transparent 10px);
+    opacity: 0.25;
+    width: 100%;
+    height: 100%;
+}
+.vw-page-title-section.vw-has-background .vw-featured-image-caption {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+}
+.vw-page-title-section .vw-page-title {
+    font-size: 43px;
+    line-height: 1em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}
+.vw-page-title-section .vw-page-title-box-inner {
+    padding-right: 34%;
+}
+.vw-page-title-section .vw-featured-image-caption {
+    margin-right: 90px;
+}
+.vw-page-title-section .vw-page-title-thumbnail {
+    float: left;
+}
+.vw-page-title-section .vw-page-title-thumbnail + .vw-page-title-box-inner {
+    margin-left: 130px;
+}
+.vw-page-title-section .vw-author-avatar {
+    display: inline-block;
+}
+@media (max-width: 991px) {
+    .vw-page-title-section .vw-page-title {
+        font-size: 40px;
+    }
+    .vw-page-title-section .vw-page-title-box-inner {
+        padding-right: 10%;
+    }
+}
+@media (max-width: 767px) {
+    .vw-page-title-section .vw-page-title {
+        font-size: 24px;
+    }
+    .vw-page-title-section .vw-page-title-box-inner {
+        padding-right: 0%;
+    }
+    .vw-page-title-section .vw-post-meta .vw-post-meta-icons {
+        text-align: left;
+        padding-left: 0;
+    }
+}
+
+.vw-page-title-section-inner {
+    padding: 25px 0;
+}
+
+.vw-page-title {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-top: -5px;
+    margin-bottom: 0px;
+}
+
+.vw-page-description {
+    font-weight: 300;
+    font-style: italic;
+    color: #999999;
+    text-transform: none;
+}
+
+.vw-label {
+    text-transform: uppercase !important;
+    font-size: 12px;
+    display: block;
+}
+
+.vw-subtitle {
+    margin-top: 0.5em;
+    padding-right: 5em;
+    font-size: 15px;
+    line-height: 1.3em;
+    color: #9C9C9C;
+}
+.vw-subtitle > * {
+    margin: 0;
+}
+@media (min-width: 992px) {
+    .vw-page-title-section .vw-subtitle {
+        padding-right: 25%;
+    }
+}
+@media (min-width: 1200px) {
+    .vw-page-title-section .vw-subtitle {
+        padding-right: 40%;
+    }
+}
+.page-template-page_big_featured_image-php .vw-subtitle {
+    color: #FFFFFF;
+}
+@media (max-width: 767px) {
+    .vw-subtitle {
+        padding-right: 0;
+    }
+}
+
+/* -------------------------------------
+ * SUPER TITLE */
+.vw-super-title {
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1em;
+    color: #9F9F9F;
+}
+.widget-title .vw-super-title {
+    top: -9px;
+    font-size: 10px;
+}
+
+/* -------------------------------------
+ * $GALLERY DIRECTION NAV */
+.vw-gallery-direction-nav {
+    direction: ltr;
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    z-index: 1000000;
+}
+
+.vw-gallery-direction-button {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    border-radius: 2px;
+    padding: 4px 6px;
+    -webkit-transition: background-color 0.2s ease-out;
+       -moz-transition: background-color 0.2s ease-out;
+            transition: background-color 0.2s ease-out;
+}
+.vw-gallery-direction-button i {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+/* -----------------------------------------------------------------------------
+ * $HEADER ADS
+ * -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+    .vw-header-ads-wrapper {
+        margin-top: 1em;
+    }
+}
+
+.vw-header-ads-leader-board,
+.vw-header-ads-banner {
+    max-width: 100%;
+    margin: auto;
+}
+
+.vw-header-ads-leader-board {
+    width: 728px;
+    height: 90px;
+}
+
+.vw-header-ads-banner {
+    width: 468px;
+    height: 60px;
+}
+
+.vw-single-header-ads {
+    display: inline-block !important;
+    width: 728px;
+    height: 90px;
+}
+@media (max-width: 991px) {
+    .vw-single-header-ads {
+        width: 468px;
+        height: 60px;
+    }
+}
+@media (max-width: 479px) {
+    .vw-single-header-ads {
+        width: 234px;
+        height: 60px;
+    }
+}
+
+/* -----------------------------------------------------------------------------
+ * $PAGE
+ * -------------------------------------------------------------------------- */
+.vw-page-wrapper {
+    padding: 60px 0;
+}
+.vw-page-title-section.vw-has-background + .vw-page-wrapper {
+    padding-top: 20px;
+}
+.vw-breaking-news-bar + .vw-page-wrapper {
+    padding-top: 20px;
+}
+.vw-breaking-news-bar + .vw-page-wrapper .vw-page-title:first-child {
+    margin-top: 20px;
+}
+@media (max-width: 767px) {
+    .vw-page-wrapper {
+        border-top: 1px solid #EEEEEE;
+        padding-top: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .vw-page-content {
+        margin-bottom: 30px;
+    }
+}
+
+.vw-page-content > article:first-child {
+    margin-top: 15px;
+}
+
+/* -------------------------------------
+ * $SIDEBAR POSITION */
+.vw-sidebar-position-right .vw-page-content,
+.vw-sidebar-position-left .vw-page-content {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 768px) {
+    .vw-sidebar-position-right .vw-page-content,
+    .vw-sidebar-position-left .vw-page-content {
+        float: left;
+        width: 66.6666666667%;
+    }
+}
+
+.vw-sidebar-position-right .vw-page-sidebar,
+.vw-sidebar-position-left .vw-page-sidebar {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 768px) {
+    .vw-sidebar-position-right .vw-page-sidebar,
+    .vw-sidebar-position-left .vw-page-sidebar {
+        float: left;
+        width: 33.3333333333%;
+    }
+}
+
+@media (min-width: 768px) {
+    .vw-sidebar-position-left .vw-page-content {
+        left: 33.3333333333%;
+    }
+}
+
+@media (min-width: 768px) {
+    .vw-sidebar-position-left .vw-page-sidebar-left {
+        right: 66.6666666667%;
+    }
+}
+
+.vw-sidebar-position-mini-content-right .vw-page-sidebar-right {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 768px) {
+    .vw-sidebar-position-mini-content-right .vw-page-sidebar-right {
+        float: left;
+        width: 33.3333333333%;
+    }
+}
+
+.vw-sidebar-position-mini-content-right .vw-page-content {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 768px) {
+    .vw-sidebar-position-mini-content-right .vw-page-content {
+        float: left;
+        width: 66.6666666667%;
+    }
+}
+
+.vw-sidebar-position-mini-content-right .vw-page-sidebar-left {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .vw-sidebar-position-mini-content-right .vw-page-content {
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (min-width: 1200px) and (min-width: 768px) {
+    .vw-sidebar-position-mini-content-right .vw-page-content {
+        float: left;
+        width: 50%;
+    }
+}
+@media (min-width: 1200px) and (min-width: 768px) {
+    .vw-sidebar-position-mini-content-right .vw-page-content {
+        left: 16.6666666667%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .vw-sidebar-position-mini-content-right .vw-page-sidebar-left {
+        display: block;
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (min-width: 1200px) and (min-width: 768px) {
+    .vw-sidebar-position-mini-content-right .vw-page-sidebar-left {
+        float: left;
+        width: 16.6666666667%;
+    }
+}
+@media (min-width: 1200px) and (min-width: 768px) {
+    .vw-sidebar-position-mini-content-right .vw-page-sidebar-left {
+        right: 50%;
+    }
+}
+
+.vw-sidebar-position-left-content-mini .vw-page-sidebar-left {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 768px) {
+    .vw-sidebar-position-left-content-mini .vw-page-sidebar-left {
+        float: left;
+        width: 33.3333333333%;
+    }
+}
+@media (min-width: 768px) {
+    .vw-sidebar-position-left-content-mini .vw-page-sidebar-left {
+        right: 66.6666666667%;
+    }
+}
+
+.vw-sidebar-position-left-content-mini .vw-page-content {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 768px) {
+    .vw-sidebar-position-left-content-mini .vw-page-content {
+        float: left;
+        width: 66.6666666667%;
+    }
+}
+@media (min-width: 768px) {
+    .vw-sidebar-position-left-content-mini .vw-page-content {
+        left: 33.3333333333%;
+    }
+}
+
+.vw-sidebar-position-left-content-mini .vw-page-sidebar-right {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .vw-sidebar-position-left-content-mini .vw-page-content {
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (min-width: 1200px) and (min-width: 768px) {
+    .vw-sidebar-position-left-content-mini .vw-page-content {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) and (min-width: 768px) {
+    .vw-sidebar-position-left-content-mini .vw-page-sidebar-left {
+        right: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .vw-sidebar-position-left-content-mini .vw-page-sidebar-right {
+        display: block;
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (min-width: 1200px) and (min-width: 768px) {
+    .vw-sidebar-position-left-content-mini .vw-page-sidebar-right {
+        float: left;
+        width: 16.6666666667%;
+    }
+}
+
+.vw-sidebar-position-content-mini-right .vw-page-content {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 768px) {
+    .vw-sidebar-position-content-mini-right .vw-page-content {
+        float: left;
+        width: 66.6666666667%;
+    }
+}
+
+.vw-sidebar-position-content-mini-right .vw-page-sidebar-left {
+    display: none;
+}
+
+.vw-sidebar-position-content-mini-right .vw-page-sidebar-right {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 768px) {
+    .vw-sidebar-position-content-mini-right .vw-page-sidebar-right {
+        float: left;
+        width: 33.3333333333%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .vw-sidebar-position-content-mini-right .vw-page-content {
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (min-width: 1200px) and (min-width: 768px) {
+    .vw-sidebar-position-content-mini-right .vw-page-content {
+        float: left;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .vw-sidebar-position-content-mini-right .vw-page-sidebar-left {
+        display: block;
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (min-width: 1200px) and (min-width: 768px) {
+    .vw-sidebar-position-content-mini-right .vw-page-sidebar-left {
+        float: left;
+        width: 16.6666666667%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .vw-sidebar-position-content-mini-right .vw-page-sidebar-right {
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (min-width: 1200px) and (min-width: 768px) {
+    .vw-sidebar-position-content-mini-right .vw-page-sidebar-right {
+        float: left;
+        width: 33.3333333333%;
+    }
+}
+
+.vw-sidebar-position-none .vw-page-content {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+@media (min-width: 768px) {
+    .vw-sidebar-position-none .vw-page-content {
+        float: left;
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    body.page .vw-sidebar-position-none .vw-page-content,
+    body.post .vw-sidebar-position-none .vw-page-content {
+        position: relative;
+        min-height: 1px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (min-width: 992px) and (min-width: 768px) {
+    body.page .vw-sidebar-position-none .vw-page-content,
+    body.post .vw-sidebar-position-none .vw-page-content {
+        float: left;
+        width: 100%;
+    }
+}
+
+.vw-sticky-sidebar-wrapper {
+    position: relative;
+}
+
+/* -----------------------------------------------------------------------------
+ * $POST
+ * -------------------------------------------------------------------------- */
+.vw-main-post .entry-title {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.1em;
+    word-wrap: break-word;
+}
+@media (max-width: 767px) {
+    .vw-main-post .entry-title {
+        font-size: 22px;
+    }
+}
+
+.vw-main-post .vw-subtitle {
+    margin-top: 0.75em;
+}
+
+.vw-post-content {
+    word-wrap: break-word;
+}
+.vw-post-content > :first-child {
+    margin-top: 0;
+}
+
+.vw-before-post-content,
+.vw-after-post-content {
+    margin-bottom: 25px;
+}
+
+/* -------------------------------------
+ * $POST LAYOUT */
+.vw-post-layout-full-width .vw-site-header {
+    border-bottom: none;
+}
+
+/* -------------------------------------
+ * $POST CATEGORIES */
+.vw-post-categories {
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: 1em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.vw-post-categories > div {
+    display: inline-block;
+    padding: 0 2px;
+}
+.vw-post-categories .vw-sticky-link,
+.vw-post-categories .vw-category-separator,
+.vw-post-categories .vw-category-link {
+    font-weight: 300;
+}
+.vw-post-categories .vw-category-separator {
+    display: inline-block;
+    margin: 0 3px;
+    color: #FFFFFF;
+}
+.vw-post-categories .vw-sticky-link,
+.vw-post-categories .vw-category-link {
+    display: inline;
+    padding: 0px 4px;
+    margin-bottom: 4px;
+    line-height: 1.9em;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+/* -------------------------------------
+ * $POST META */
+.vw-post-meta {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.vw-post-meta .vw-post-meta-icons {
+    text-align: right;
+}
+.vw-post-meta .avatar {
+    margin-right: 5px;
+}
+.vw-post-meta .vw-author-avatar {
+    display: inline-block;
+}
+
+.vw-post-meta-separator {
+    margin-left: 3px;
+    margin-right: 5px;
+}
+
+.vw-post-meta-large {
+    display: table;
+    width: 100%;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #3E3E3E;
+    font-size: 12px;
+}
+.vw-post-meta-large .vw-post-meta-icons {
+    display: table-cell;
+    padding-right: 15px;
+}
+@media (max-width: 767px) {
+    .vw-post-meta-large .vw-post-meta-icons {
+        display: block;
+    }
+}
+.vw-post-meta-large a {
+    color: inherit;
+}
+@media (max-width: 479px) {
+    .vw-post-meta-large .vw-post-date + .vw-post-meta-separator {
+        display: block;
+        height: 1px;
+        opacity: 0;
+    }
+}
+
+/* -------------------------------------
+ * $POST MEDIA */
+.vw-featured-image img {
+    margin: 0;
+}
+
+.vw-featured-image-caption-wrapper {
+    font-size: 12px;
+    line-height: 1.4em;
+    position: absolute;
+    top: 30px;
+    left: 15px;
+}
+.vw-featured-image-caption-wrapper .vw-featured-image-caption {
+    color: white;
+    padding: 4px 6px;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.vw-embeded-media,
+.vw-embeded-media.vw-embeded-gallery,
+.vw-featured-image {
+    margin-bottom: 20px;
+}
+
+.vw-embeded-media {
+    position: relative;
+}
+.vw-embeded-media iframe {
+    max-width: 100%;
+}
+
+.vw-embeded-image-caption {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: 2px 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* -------------------------------------
+ * $TAG/PAGE LINKS */
+.vw-tag-links,
+.vw-page-links {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.vw-tag-links-title,
+.vw-page-links-title {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.vw-tag-links a,
+.vw-page-links a,
+.vw-page-links > .vw-page-link {
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: rgba(128, 128, 128, 0.15);
+    margin-left: 0.5em;
+    margin-bottom: 4px;
+    font-size: 11px;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+.vw-tag-links a:hover,
+.vw-page-links a:hover,
+.vw-page-links > .vw-page-link:hover {
+    background-color: #3E3E3E;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.vw-tag-links a {
+    color: #FFFFFF;
+}
+
+.vw-page-links a {
+    color: inherit;
+}
+
+.vw-page-links > .vw-page-link {
+    background-color: #3E3E3E;
+    color: #FFFFFF;
+}
+
+/* -------------------------------------
+ * $POST NAVIGATION */
+.vw-post-navigation {
+    border-top: 3px solid rgba(128, 128, 128, 0.15);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 20px 0;
+}
+
+.vw-post-navigation-label {
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    opacity: 0.5;
+}
+
+.vw-post-navigation-title {
+    font-size: 1em;
+    margin-top: 0;
+    padding: 0 10%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.vw-post-navigation-title-no-link {
+    font-style: italic;
+    font-weight: 300;
+}
+
+.vw-post-navigation-next,
+.vw-post-navigation-previous {
+    width: 49%;
+    float: left;
+    padding-top: 10px;
+    color: inherit;
+    word-wrap: break-word;
+}
+.vw-post-navigation-next:hover,
+.vw-post-navigation-previous:hover {
+    text-decoration: none;
+    background-color: #3E3E3E;
+}
+.vw-post-navigation-next:hover *,
+.vw-post-navigation-previous:hover * {
+    color: #FFFFFF;
+}
+
+.vw-post-navigation-next {
+    border-left: 1px solid #EEEEEE;
+}
+
+.vw-post-navigation-label,
+.vw-post-navigation-title,
+.vw-post-navigation-next,
+.vw-post-navigation-previous {
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+
+/* -------------------------------------
+ * $NEXT/PREVIOUS LINK PAGES */
+.vw-next-link-pages {
+    margin-bottom: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+}
+.vw-next-link-pages:before,
+.vw-next-link-pages:after {
+    content: " ";
+    display: table;
+}
+.vw-next-link-pages:after {
+    clear: both;
+}
+.vw-next-link-pages a {
+    display: inline-block;
+    padding: 0px 10px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #3E3E3E;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+.vw-next-link-pages a,
+.vw-next-link-pages a:hover {
+    color: #FFFFFF;
+}
+.vw-next-link-pages a * {
+    vertical-align: middle;
+    line-height: 30px;
+}
+.vw-next-link-pages a .vw-icon:before {
+    position: relative;
+    top: -1px;
+}
+.vw-next-link-pages .vw-next-link-page {
+    float: right;
+}
+
+/* -------------------------------------
+ * $RELATED POSTS */
+.vw-related-posts {
+    margin: 20px 0;
+}
+
+/* -------------------------------------
+ * $ABOUT AUTHOR */
+.vw-about-author {
+    position: relative;
+    margin: 20px 0;
+    padding: 10px 25px;
+    background-color: #222222;
+}
+.vw-about-author,
+.vw-about-author .vw-about-author-title,
+.vw-about-author .vw-author-name,
+.vw-about-author .vw-author-bio {
+    color: #FFFFFF;
+}
+.vw-about-author .vw-author-avatar {
+    float: left;
+    margin-right: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.vw-about-author .vw-about-author-info {
+    padding-bottom: 30px;
+    padding-left: 150px;
+}
+.vw-about-author .vw-about-author-info:last-child {
+    padding-bottom: 15px;
+}
+.vw-about-author .vw-about-author-info + .vw-about-author-info {
+    border-top: 1px solid #EEEEEE;
+    padding-top: 30px;
+}
+.vw-about-author .vw-author-name {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.vw-about-author .vw-author-bio {
+    padding-right: 25px;
+    margin-bottom: 20px;
+    color: #999999;
+    font-size: 0.95em;
+    font-style: italic;
+    line-height: 1.6em;
+}
+@media (max-width: 479px) {
+    .vw-about-author .vw-author-avatar {
+        float: none;
+        margin: auto;
+        display: block;
+        text-align: center;
+    }
+    .vw-about-author .vw-about-author-info {
+        padding-left: 0;
+        text-align: center;
+    }
+    .vw-about-author .vw-author-bio {
+        padding: 0;
+    }
+}
+
+.vw-author-archive-info {
+    margin-bottom: 30px;
+    padding: 0px 20px 20px 20px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.vw-author-archive-info .vw-author-avatar {
+    display: inline-block;
+    float: left;
+}
+.vw-author-archive-info .vw-author-avatar ~ .vw-author-bio,
+.vw-author-archive-info .vw-author-avatar ~ .vw-author-socials {
+    margin-left: 140px;
+}
+
+.vw-author-socials {
+    margin-bottom: -7px;
+}
+.vw-author-socials i {
+    display: inline-block;
+    width: 30px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+.vw-author-socials .vw-icon-social {
+    background-color: #444444;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+.vw-author-socials .vw-icon-social:hover {
+    background-color: #666666;
+}
+.vw-author-socials .vw-icon-social-twitter {
+    background-color: #00ACED;
+}
+.vw-author-socials .vw-icon-social-facebook {
+    background-color: #3B5998;
+}
+.vw-author-socials .vw-icon-social-gplus {
+    background-color: #DD4B39;
+}
+.vw-author-socials .vw-icon-social-pinterest {
+    background-color: #CB2027;
+}
+.vw-author-socials .vw-icon-social-tumblr {
+    background-color: #32506D;
+}
+.vw-author-socials .vw-icon-social-instagram {
+    background-color: #517FA4;
+}
+.vw-author-socials .vw-icon-social-fivehundredpx {
+    background-color: #1B1B1B;
+}
+.vw-author-socials .vw-icon-social-dribbble {
+    background-color: #EA4C89;
+}
+.vw-author-socials .vw-icon-social-flickr {
+    background-color: #FF0084;
+}
+.vw-author-socials .vw-icon-social-linkedin {
+    background-color: #007BB6;
+}
+.vw-author-socials .vw-icon-social-skype {
+    background-color: #12A5F4;
+}
+.vw-author-socials .vw-icon-social-soundcloud {
+    background-color: #FF3A00;
+}
+.vw-author-socials .vw-icon-social-youtube {
+    background-color: #BB0000;
+}
+.vw-author-socials .vw-icon-social-vimeo {
+    background-color: #AAD450;
+}
+
+/* -----------------------------------------------------------------------------
+ * $POST LOOP
+ * -------------------------------------------------------------------------- */
+.vw-post-box {
+    position: relative;
+}
+.no-touch .vw-post-box:hover .vw-post-box-thumbnail .wp-post-image {
+    -webkit-transform: scale(1.05) translate3d(0, 0, 0);
+       -moz-transform: scale(1.05) translate3d(0, 0, 0);
+        -ms-transform: scale(1.05) translate3d(0, 0, 0);
+         -o-transform: scale(1.05) translate3d(0, 0, 0);
+            transform: scale(1.05) translate3d(0, 0, 0);
+}
+.vw-post-box .vw-post-box-thumbnail {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.vw-post-box .wp-post-image {
+    margin: 0;
+    width: 100%;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+.vw-post-box .vw-post-box-title {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.2em;
+    word-break: break-word;
+    margin-bottom: 15px;
+}
+.vw-post-box .vw-post-box-title a {
+    -webkit-transition: color 0.2s ease-out;
+       -moz-transition: color 0.2s ease-out;
+            transition: color 0.2s ease-out;
+}
+.vw-post-box .vw-post-box-footer {
+    padding: 0px 0px 10px 0px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+.vw-post-box .vw-icon {
+    font-size: 16px;
+}
+.vw-post-box .vw-post-format-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+}
+.vw-post-box .vw-post-box-excerpt {
+    word-break: break-word;
+}
+.vw-post-box .avatar {
+    margin-right: 0.5em;
+}
+.vw-post-box .vw-post-meta,
+.vw-post-box .vw-post-meta .vw-icon {
+    font-size: 11px;
+}
+.vw-post-box .vw-post-meta,
+.vw-post-box .vw-post-meta a {
+    color: #999999;
+}
+.vw-post-box .vw-post-box-meta-right {
+    margin-top: 10px;
+    display: block;
+}
+@media (min-width: 768px) {
+    .vw-post-box .vw-post-box-meta-right {
+        float: right;
+        margin-top: 0;
+        display: inline-block;
+        display: -webkit-inline-box;
+        /* Prevent positioning bug in chrome */
+    }
+}
+.vw-post-box .vw-post-box-read-more {
+    color: #3E3E3E;
+    text-decoration: none;
+}
+.vw-post-box .vw-post-box-read-more * {
+    vertical-align: middle;
+}
+.vw-post-box .vw-post-box-read-more .vw-icon {
+    font-size: 9px;
+}
+.vw-post-box .vw-post-box-read-more:hover span {
+    text-decoration: underline;
+}
+
+.vw-block-grid-item {
+    position: relative;
+}
+
+/* -------------------------------------
+ * POST STYLE : TEXT NO THUMBNAIL */
+.vw-post-loop-text-no-thumbnail {
+    counter-reset: loop-text-no-thumbnail-counter;
+}
+.vw-post-loop-text-no-thumbnail .vw-post-box-title {
+    position: relative;
+    padding-left: 50px;
+}
+.vw-post-loop-text-no-thumbnail .vw-post-box-title:before {
+    content: counter(loop-text-no-thumbnail-counter);
+    counter-increment: loop-text-no-thumbnail-counter;
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    font-family: 'Times New Roman', serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    opacity: 0.6;
+}
+.vw-post-loop-text-no-thumbnail .vw-post-box + .vw-post-box {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #EFEFEF;
+}
+
+.vw-post-style-text-no-thumbnail .vw-post-box-title {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-height: 2.4em;
+}
+
+.vw-post-style-text-no-thumbnail.vw-has-review {
+    padding-bottom: 30px;
+}
+
+/* -------------------------------------
+ * POST STYLE : SMALL LEFT THUMBNAIL */
+.vw-post-style-small-left-thumbnail + .vw-post-style-small-left-thumbnail {
+    margin-top: 13px;
+    padding-top: 13px;
+    border-top: 1px solid #EEEEEE;
+}
+
+.vw-post-style-small-left-thumbnail.vw-post-box {
+    background-color: transparent;
+}
+
+.vw-post-style-small-left-thumbnail .vw-post-box-thumbnail {
+    display: inline-block;
+    float: left;
+}
+.vw-post-style-small-left-thumbnail .vw-post-box-thumbnail + .vw-post-box-inner {
+    margin-left: 100px;
+}
+
+.vw-post-style-small-left-thumbnail .vw-post-box-title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.vw-post-style-small-left-thumbnail .vw-post-meta {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 10px;
+}
+
+.vw-post-style-small-left-thumbnail .vw-post-meta-icon {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: 0;
+}
+
+.vw-post-style-small-left-thumbnail .vw-icon {
+    font-size: 12px;
+}
+
+.vw-post-style-small-left-thumbnail .vw-post-comment-count {
+    margin-left: 5px;
+}
+
+.vw-post-style-small-left-thumbnail .vw-post-author {
+    display: none;
+}
+
+/* -------------------------------------
+ * POST STYLE : SMALL TOP THUMBNAIL */
+.vw-post-style-small-top-thumbnail .vw-post-box-title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.vw-post-style-small-top-thumbnail .vw-post-author {
+    display: none;
+}
+
+/* -------------------------------------
+ * POST STYLE : SMALL COMMENT */
+.vw-post-style-small-comment .vw-post-box-title {
+    font-size: 12px;
+    font-style: italic;
+    word-break: break-word;
+    text-transform: none;
+    margin-left: 0;
+    margin-top: 0;
+    opacity: 0.7;
+}
+
+.vw-post-style-small-comment .vw-comment-author-avatar,
+.vw-post-style-small-comment .vw-comment-author {
+    display: inline-block;
+}
+
+.vw-post-style-small-comment .vw-comment-author {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.vw-post-style-small-comment .vw-comment-author-avatar {
+    float: left;
+    margin-left: 15px;
+}
+
+.vw-post-style-small-comment .vw-comment-meta {
+    margin-left: 60px;
+    padding-left: 10px;
+}
+
+.vw-post-style-small-comment .vw-post-box-comment {
+    position: relative;
+    margin: 0 0 15px 0;
+    padding: 15px 15px;
+    font-style: italic;
+    line-height: 1.4em;
+    word-break: break-word;
+    background-color: rgba(128, 128, 128, 0.15);
+}
+.vw-post-style-small-comment .vw-post-box-comment:after {
+    position: absolute;
+    bottom: -10px;
+    left: 25px;
+    display: inline-block;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(128, 128, 128, 0.15);
+}
+
+.vw-post-style-small-comment + .vw-post-style-small-comment {
+    margin-top: 20px;
+}
+
+/* -------------------------------------
+ * POST STYLE : MEDIUM */
+.vw-post-style-medium .vw-post-box-title {
+    margin-top: 0px;
+}
+
+.vw-post-style-medium .vw-post-box-thumbnail {
+    margin-bottom: 15px;
+}
+.no-touch .vw-post-style-medium .vw-post-box-thumbnail:hover .wp-post-image {
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+}
+
+.vw-post-style-medium .vw-post-box-excerpt {
+    margin-top: 15px;
+}
+.vw-post-style-medium .vw-post-box-excerpt :first-child {
+    margin-top: 0;
+}
+
+.vw-post-style-medium .vw-post-box-excerpt :last-child {
+    margin-bottom: 0;
+}
+
+.vw-post-style-medium .vw-post-share-icons {
+    float: right;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .vw-post-style-medium .vw-post-box-title {
+        font-size: 18px;
+    }
+}
+
+.vw-post-style-medium.vw-post-format-quote .vw-post-box-excerpt {
+    opacity: 1;
+}
+
+.vw-post-style-medium.vw-post-format-quote blockquote {
+    margin-left: 0;
+    margin-right: 0;
+}
+.vw-post-style-medium.vw-post-format-quote blockquote > p > cite {
+    display: block;
+    margin-top: -20px;
+}
+
+.vw-post-style-medium.vw-post-format-link .vw-post-box-excerpt {
+    opacity: 1;
+}
+
+.vw-post-style-medium.vw-post-format-link .vw-post-box-excerpt a {
+    font-size: 31px;
+    text-decoration: none;
+}
+
+.vw-post-style-medium-1 .vw-post-box-thumbnail + .vw-post-categories,
+.vw-post-style-medium-4 .vw-post-box-thumbnail + .vw-post-categories {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.vw-post-style-medium-1 .vw-post-box-title,
+.vw-post-style-medium-4 .vw-post-box-title {
+    margin-bottom: 5px;
+}
+
+.vw-post-style-medium-3 {
+    text-align: center;
+}
+.vw-post-style-medium-3 .vw-post-box-title,
+.vw-post-style-medium-3 .vw-post-categories {
+    text-align: center;
+}
+.vw-post-style-medium-3 .vw-post-author {
+    display: none;
+}
+
+.vw-post-style-medium-5.vw-has-review .vw-post-box-title {
+    padding-bottom: 25px;
+}
+
+.vw-post-style-medium-5 .vw-post-box-thumbnail {
+    margin: 0;
+}
+
+.vw-post-style-medium-5 .vw-post-box-title,
+.vw-post-style-medium-5 .vw-post-categories {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+}
+
+.vw-post-style-medium-5 .vw-post-categories {
+    top: 0;
+    padding-bottom: 30px;
+}
+
+.vw-post-style-medium-5 .vw-post-box-title {
+    bottom: 0px;
+    padding-top: 30px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+    background:         linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 100%);
+}
+
+.vw-post-style-medium-6 {
+    display: table;
+    width: 100%;
+}
+.vw-post-style-medium-6 .vw-post-box-thumbnail-wrapper,
+.vw-post-style-medium-6 .vw-post-box-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+.vw-post-style-medium-6 .vw-post-box-thumbnail-wrapper {
+    width: 360px;
+}
+.vw-post-style-medium-6 .vw-post-box-thumbnail-wrapper + .vw-post-box-inner {
+    padding-left: 20px;
+}
+.vw-post-style-medium-6 + .vw-post-style-medium-6 {
+    margin-top: 25px;
+    padding-top: 30px;
+    border-top: 1px solid #EEEEEE;
+}
+@media (max-width: 767px) {
+    .vw-post-style-medium-6,
+    .vw-post-style-medium-6 .vw-post-box-thumbnail-wrapper,
+    .vw-post-style-medium-6 .vw-post-box-inner {
+        display: block;
+        width: auto;
+    }
+    .vw-post-style-medium-6 .vw-post-box-thumbnail-wrapper + .vw-post-box-inner {
+        padding-left: 0;
+    }
+}
+
+.vw-post-loop-medium-1-col-2 .vw-block-grid-item:nth-child(n+3):after,
+.vw-post-loop-medium-1-col-3 .vw-block-grid-item:nth-child(n+4):after,
+.vw-post-loop-medium-2-col-2 .vw-block-grid-item:nth-child(n+3):after,
+.vw-post-loop-medium-2-col-3 .vw-block-grid-item:nth-child(n+4):after,
+.vw-post-loop-medium-3-col-2 .vw-block-grid-item:nth-child(n+3):after,
+.vw-post-loop-medium-3-col-3 .vw-block-grid-item:nth-child(n+4):after,
+.vw-post-loop-medium-4-col-2 .vw-block-grid-item:nth-child(n+3):after,
+.vw-post-loop-medium-4-col-3 .vw-block-grid-item:nth-child(n+4):after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    border-top: 1px solid #EEEEEE;
+    height: 1px;
+}
+
+.vw-post-loop-medium-4 .vw-post-meta {
+    margin-bottom: 0;
+}
+
+/* -------------------------------------
+ * POST STYLE : MIX */
+.vw-post-loop-mix-2-col-3 .vw-block-grid-item,
+.vw-post-loop-mix-3-col-2 .vw-block-grid-item {
+    position: relative;
+}
+.vw-post-loop-mix-2-col-3 .vw-block-grid-item:after,
+.vw-post-loop-mix-3-col-2 .vw-block-grid-item:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    border-top: 1px solid #EEEEEE;
+    height: 1px;
+}
+
+@media (max-width: 991px) {
+    .vw-post-loop-mix-1 .vw-post-style-medium,
+    .vw-post-loop-mix-2-col-3 .vw-post-style-medium {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #EEEEEE;
+    }
+}
+
+@media (min-width: 992px) {
+    .vw-post-loop-mix-1 .vw-block-grid-item:nth-child(-n+2):after,
+    .vw-post-loop-mix-2-col-3 .vw-block-grid-item:nth-child(-n+2):after {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .vw-post-loop-mix-2-col-2 .vw-block-grid-item:first-child:after {
+        display: none;
+    }
+}
+
+.vw-post-loop-mix-3 .vw-post-style-medium {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.vw-post-loop-mix-3 .vw-post-style-medium .vw-post-meta {
+    margin-bottom: 0;
+}
+
+/* -------------------------------------
+ * POST STYLE : LARGE */
+.vw-post-style-large .vw-post-box-title {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.vw-post-style-large .vw-post-box-meta {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 1em;
+    margin-bottom: 1.5em;
+    border-bottom: 3px solid rgba(128, 128, 128, 0.15);
+}
+
+.vw-post-style-large .vw-post-box-thumbnail {
+    margin-bottom: 15px;
+}
+
+.vw-post-style-large .vw-post-box-footer {
+    padding: 0;
+}
+
+.vw-post-style-large .vw-post-box-read-more {
+    color: #3E3E3E;
+    font-weight: bold;
+    line-height: 1em;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+
+.vw-post-style-large .vw-post-share-icons {
+    float: right;
+}
+
+.vw-post-style-large .author + .vw-post-date:before {
+    display: inline-block;
+    content: "·";
+    margin: 0 5px;
+}
+
+.vw-post-style-large + .vw-post-style-large {
+    margin-top: 25px;
+    padding-top: 30px;
+    border-top: 1px solid #EEEEEE;
+}
+
+.vw-post-style-large .vw-post-box-excerpt {
+    margin-bottom: 15px;
+}
+
+/* -------------------------------------
+ * POST BOX ELEMENTS */
+.vw-post-comment-count,
+.vw-post-view-count,
+.vw-post-likes-count,
+.vw-post-share-count {
+    margin-right: 0.5em;
+    color: inherit;
+}
+.vw-post-comment-count:last-child,
+.vw-post-view-count:last-child,
+.vw-post-likes-count:last-child,
+.vw-post-share-count:last-child {
+    margin-right: 0 !important;
+}
+
+.vw-box-link {
+    text-indent: -99999px;
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+.vw-post-loop.vw-preloader-bg {
+    background-position: center 80px;
+}
+
+.vw-review-summary-bar {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: table;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    font-weight: bold;
+    background-color: rgba(128, 128, 128, 0.15);
+    z-index: 1;
+}
+.vw-review-summary-bar .vw-review-score-bar {
+    line-height: 20px;
+    display: table-cell;
+    background-color: #C5AC57;
+    text-align: right;
+}
+.vw-review-summary-bar .vw-review-score {
+    padding: 0 5px;
+    color: #FFFFFF;
+}
+.vw-review-summary-bar .vw-review-score span {
+    font-size: 11px;
+    margin-left: 2px;
+}
+
+/* -------------------------------------
+ * POST STYLE : SLIDER SMALL */
+.vw-post-loop-slider {
+    /* empty */
+}
+
+.vw-post-loop-slide-list .vw-post-box + .vw-post-box {
+    margin-top: 20px;
+}
+
+.vw-post-loop-slider-large .vw-post-style-slide {
+    height: 500px;
+}
+@media (max-width: 991px) {
+    .vw-post-loop-slider-large .vw-post-style-slide {
+        height: 350px;
+    }
+    .vw-post-loop-slider-large .vw-post-style-slide .wp-post-image {
+        height: 400px;
+    }
+}
+
+.vw-post-loop-slider-large-carousel .swiper-slide {
+    display: inline-block;
+    width: auto;
+}
+
+.vw-post-loop-slider-large-carousel .vw-post-meta a {
+    color: #B0B0B0;
+}
+
+.vw-post-style-slide {
+    position: relative;
+}
+.vw-post-style-slide .vw-post-box-thumbnail {
+    display: block;
+}
+.vw-post-style-slide .vw-post-box-thumbnail + .vw-post-box-inner {
+    position: absolute;
+}
+.vw-post-style-slide .wp-post-image {
+    margin: 0;
+}
+.vw-post-style-slide .vw-post-box-inner {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 10px;
+}
+.vw-post-style-slide .vw-post-categories {
+    display: inline-block;
+}
+.vw-post-style-slide .vw-post-box-title {
+    margin: -5px 0 0 0;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.vw-post-style-slide .vw-post-box-title a:hover {
+    color: inherit;
+}
+.vw-post-style-slide .vw-post-meta {
+    margin-bottom: 0;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.vw-post-style-slide-small .vw-post-box-inner,
+.vw-post-style-slide-medium .vw-post-box-inner {
+    padding: 25px 10px 15px 10px;
+    background: rgba(0, 0, 0, 0.5);
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+    background:         linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+}
+
+.vw-post-style-slide-small .vw-post-box-title,
+.vw-post-style-slide-medium .vw-post-box-title {
+    text-align: center;
+}
+
+.vw-post-style-slide-small .vw-post-box-title {
+    font-size: 14px;
+}
+
+.vw-post-style-slide-small .vw-post-author {
+    display: none;
+}
+
+.vw-post-style-slide-medium .vw-post-box-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.vw-post-style-slide-medium .vw-post-meta a {
+    color: #B0B0B0;
+}
+
+.vw-post-style-slide-medium .vw-post-meta,
+.vw-post-style-slide-medium .vw-post-categories {
+    display: block;
+    text-align: center;
+}
+
+.vw-post-style-slide-large {
+    overflow: hidden;
+}
+.vw-post-style-slide-large .vw-post-categories {
+    display: block;
+}
+.vw-post-style-slide-large .vw-post-categories > div {
+    position: relative;
+    top: -1em;
+}
+.vw-post-style-slide-large .vw-post-box-title {
+    font-size: 21px;
+    line-height: 1.1em;
+    padding-right: 0;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+    .vw-post-style-slide-large .vw-post-box-title {
+        font-size: 26px;
+    }
+}
+@media (min-width: 992px) {
+    .vw-post-style-slide-large .vw-post-box-title {
+        font-size: 31px;
+    }
+}
+@media (min-width: 1200px) {
+    .vw-post-style-slide-large .vw-post-box-title {
+        font-size: 43px;
+    }
+}
+.vw-post-style-slide-large .vw-post-box-title a {
+    text-decoration: none;
+}
+.vw-post-style-slide-large .vw-post-box-inner {
+    padding: 25px 15px;
+}
+.vw-post-style-slide-large .vw-post-box-inner-2 {
+    position: relative;
+    background: rgba(0, 0, 0, 0.65);
+    padding-right: 10px;
+}
+.vw-post-style-slide-large .vw-post-box-inner-2:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1000px;
+    width: 1000px;
+    background: rgba(0, 0, 0, 0.65);
+}
+.vw-post-style-slide-large .wp-post-image {
+    width: auto;
+    max-width: none;
+    min-width: 100%;
+    min-height: 100%;
+}
+@media (max-width: 767px) {
+    .vw-post-style-slide-large .wp-post-image {
+        margin-left: -300px;
+    }
+}
+.vw-post-style-slide-large .vw-post-box-thumbnail {
+    min-height: 100%;
+    position: relative;
+}
+.vw-post-style-slide-large .vw-post-box-thumbnail:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.08) 0%, transparent 1%, transparent 99%, rgba(0, 0, 0, 0.08) 100%);
+    background:         linear-gradient(to top, rgba(0, 0, 0, 0.08) 0%, transparent 1%, transparent 99%, rgba(0, 0, 0, 0.08) 100%);
+}
+.vw-post-style-slide-large .vw-post-meta {
+    padding-bottom: 10px;
+    font-size: 13px;
+}
+.vw-post-style-slide-large .vw-post-meta a {
+    color: #B0B0B0;
+}
+
+.vw-enable-kenburns .vw-post-loop-slider-large .vw-post-box-inner {
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+    z-index: 10;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.vw-enable-kenburns .vw-post-loop-slider-large .wp-post-image {
+    -webkit-backface-visibility: visible;
+            backface-visibility: visible;
+    -webkit-animation-fill-mode: both;
+       -moz-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-duration: 20s;
+       -moz-animation-duration: 20s;
+            animation-duration: 20s;
+    -webkit-animation-timing-function: ease-out;
+       -moz-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform-origin: bottom right;
+       -moz-transform-origin: bottom right;
+        -ms-transform-origin: bottom right;
+         -o-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-animation-iteration-count: 1;
+       -moz-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: both;
+       -moz-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-name: kenburnsreverse;
+       -moz-animation-name: kenburnsreverse;
+            animation-name: kenburnsreverse;
+    -webkit-animation-play-state: paused;
+       -moz-animation-play-state: paused;
+            animation-play-state: paused;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+         -o-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+       -moz-transition: none !important;
+         -o-transition: none !important;
+    -webkit-transition: none !important;
+            transition: none !important;
+}
+
+.vw-enable-kenburns .vw-post-loop-slider-large .swiper-slide.resetanim .wp-post-image {
+    -webkit-animation-name: none;
+       -moz-animation-name: none;
+            animation-name: none;
+}
+
+.vw-enable-kenburns .vw-post-loop-slider-large .vw-kenburn-active .wp-post-image {
+    -webkit-animation-name: kenburnsreverse;
+       -moz-animation-name: kenburnsreverse;
+            animation-name: kenburnsreverse;
+    -webkit-animation-play-state: running;
+       -moz-animation-play-state: running;
+            animation-play-state: running;
+}
+
+.vw-enable-kenburns .vw-post-loop-slider-large .vw-kenburn-active .vw-post-box-inner {
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.vw-enable-kenburns .vw-post-loop-slider-large .swiper-slide .wp-post-image,
+.vw-enable-kenburns .vw-post-loop-slider-large .swiper-slide.vw-kenburn-origin-1 .wp-post-image {
+    -webkit-transform-origin: top left;
+       -moz-transform-origin: top left;
+        -ms-transform-origin: top left;
+         -o-transform-origin: top left;
+            transform-origin: top left;
+}
+
+.vw-enable-kenburns .vw-post-loop-slider-large .swiper-slide.vw-kenburn-origin-2 .wp-post-image {
+    -webkit-transform-origin: top right;
+       -moz-transform-origin: top right;
+        -ms-transform-origin: top right;
+         -o-transform-origin: top right;
+            transform-origin: top right;
+}
+
+.vw-enable-kenburns .vw-post-loop-slider-large .swiper-slide.vw-kenburn-origin-3 .wp-post-image {
+    -webkit-transform-origin: bottom left;
+       -moz-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+         -o-transform-origin: bottom left;
+            transform-origin: bottom left;
+}
+
+@-webkit-keyframes kenburns {
+    0% {
+        -webkit-transform: scale(1.2) translate3d(0, 0, 0);
+           -moz-transform: scale(1.2) translate3d(0, 0, 0);
+            -ms-transform: scale(1.2) translate3d(0, 0, 0);
+             -o-transform: scale(1.2) translate3d(0, 0, 0);
+                transform: scale(1.2) translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: scale(1) translate3d(0, 0, 0);
+           -moz-transform: scale(1) translate3d(0, 0, 0);
+            -ms-transform: scale(1) translate3d(0, 0, 0);
+             -o-transform: scale(1) translate3d(0, 0, 0);
+                transform: scale(1) translate3d(0, 0, 0);
+    }
+}
+
+@-moz-keyframes kenburns {
+    0% {
+        -webkit-transform: scale(1.2) translate3d(0, 0, 0);
+           -moz-transform: scale(1.2) translate3d(0, 0, 0);
+            -ms-transform: scale(1.2) translate3d(0, 0, 0);
+             -o-transform: scale(1.2) translate3d(0, 0, 0);
+                transform: scale(1.2) translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: scale(1) translate3d(0, 0, 0);
+           -moz-transform: scale(1) translate3d(0, 0, 0);
+            -ms-transform: scale(1) translate3d(0, 0, 0);
+             -o-transform: scale(1) translate3d(0, 0, 0);
+                transform: scale(1) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes kenburns {
+    0% {
+        -webkit-transform: scale(1.2) translate3d(0, 0, 0);
+           -moz-transform: scale(1.2) translate3d(0, 0, 0);
+            -ms-transform: scale(1.2) translate3d(0, 0, 0);
+             -o-transform: scale(1.2) translate3d(0, 0, 0);
+                transform: scale(1.2) translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: scale(1) translate3d(0, 0, 0);
+           -moz-transform: scale(1) translate3d(0, 0, 0);
+            -ms-transform: scale(1) translate3d(0, 0, 0);
+             -o-transform: scale(1) translate3d(0, 0, 0);
+                transform: scale(1) translate3d(0, 0, 0);
+    }
+}
+
+@-webkit-keyframes kenburnsreverse {
+    0% {
+        -webkit-transform: scale(1) translate3d(0, 0, 0);
+           -moz-transform: scale(1) translate3d(0, 0, 0);
+            -ms-transform: scale(1) translate3d(0, 0, 0);
+             -o-transform: scale(1) translate3d(0, 0, 0);
+                transform: scale(1) translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: scale(1.2) translate3d(0, 0, 0);
+           -moz-transform: scale(1.2) translate3d(0, 0, 0);
+            -ms-transform: scale(1.2) translate3d(0, 0, 0);
+             -o-transform: scale(1.2) translate3d(0, 0, 0);
+                transform: scale(1.2) translate3d(0, 0, 0);
+    }
+}
+
+@-moz-keyframes kenburnsreverse {
+    0% {
+        -webkit-transform: scale(1) translate3d(0, 0, 0);
+           -moz-transform: scale(1) translate3d(0, 0, 0);
+            -ms-transform: scale(1) translate3d(0, 0, 0);
+             -o-transform: scale(1) translate3d(0, 0, 0);
+                transform: scale(1) translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: scale(1.2) translate3d(0, 0, 0);
+           -moz-transform: scale(1.2) translate3d(0, 0, 0);
+            -ms-transform: scale(1.2) translate3d(0, 0, 0);
+             -o-transform: scale(1.2) translate3d(0, 0, 0);
+                transform: scale(1.2) translate3d(0, 0, 0);
+    }
+}
+
+@keyframes kenburnsreverse {
+    0% {
+        -webkit-transform: scale(1) translate3d(0, 0, 0);
+           -moz-transform: scale(1) translate3d(0, 0, 0);
+            -ms-transform: scale(1) translate3d(0, 0, 0);
+             -o-transform: scale(1) translate3d(0, 0, 0);
+                transform: scale(1) translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: scale(1.2) translate3d(0, 0, 0);
+           -moz-transform: scale(1.2) translate3d(0, 0, 0);
+            -ms-transform: scale(1.2) translate3d(0, 0, 0);
+             -o-transform: scale(1.2) translate3d(0, 0, 0);
+                transform: scale(1.2) translate3d(0, 0, 0);
+    }
+}
+
+.vw-post-style-slide-large-carousel .vw-post-box-inner {
+    text-align: center;
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+    background:         linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+}
+
+.vw-post-style-slide-large-carousel .vw-post-box-title {
+    margin-top: 5px;
+}
+
+.vw-post-style-slide-large-carousel .vw-post-meta {
+    padding-bottom: 0;
+}
+
+.vw-post-style-slide-large-carousel .vw-post-author {
+    display: none;
+}
+
+.vw-post-style-slide-carousel .vw-post-categories {
+    display: block;
+}
+.vw-post-style-slide-carousel .vw-post-categories > div {
+    position: relative;
+    top: -1em;
+}
+
+.vw-post-style-slide-carousel .vw-post-box-title {
+    font-size: 32px;
+}
+
+.vw-post-style-slide-carousel .vw-post-box-inner {
+    padding: 0;
+}
+
+.vw-post-style-slide-carousel .vw-post-box-inner-2 {
+    position: relative;
+    background: rgba(0, 0, 0, 0.65);
+    padding-left: 45px;
+    padding-right: 1em;
+    margin-right: 25px;
+    margin-bottom: 15px;
+}
+
+/* -------------------------------------
+ * POST SHARE ICONS */
+.vw-post-share-icons .vw-post-shares-social {
+    color: #888888;
+    display: inline-block;
+    padding: 0px 6px;
+    margin-right: 3px;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+
+.vw-post-share-icons .vw-icon {
+    font-size: 10px;
+    color: inherit;
+}
+
+.vw-post-share-icons .vw-post-shares-social-facebook:hover {
+    background-color: #3B5998;
+    color: #FFFFFF;
+}
+
+.vw-post-share-icons .vw-post-shares-social-twitter:hover {
+    background-color: #00ACED;
+    color: #FFFFFF;
+}
+
+.vw-post-share-icons .vw-post-shares-social-gplus:hover {
+    background-color: #DD4B39;
+    color: #FFFFFF;
+}
+
+.vw-post-share-icons .vw-post-shares-social-pinterest:hover {
+    background-color: #CB2027;
+    color: #FFFFFF;
+}
+
+/* -----------------------------------------------------------------------------
+ * $POSTSHARES
+ * -------------------------------------------------------------------------- */
+.vw-post-share-box {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #EFEFEF;
+}
+.vw-post-share-box .vw-post-share-box-button {
+    display: inline-block;
+    padding: 4px 10px 4px 4px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+@media (max-width: 767px) {
+    .vw-post-share-box .vw-post-share-box-button {
+        padding: 4px 8px;
+    }
+}
+.vw-post-share-box .vw-post-share-box-button .vw-button-label {
+    font-size: 11px;
+    margin-left: 5px;
+    padding-left: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
+}
+@media (max-width: 767px) {
+    .vw-post-share-box .vw-post-share-box-button .vw-button-label {
+        display: none;
+    }
+}
+.vw-post-share-box .vw-post-share-box-button:hover {
+    background-color: #3E3E3E;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+.vw-post-share-box .vw-post-shares-social-pinterest {
+    background-color: #CB2027;
+}
+.vw-post-share-box .vw-post-shares-social-twitter {
+    background-color: #39A9E0;
+}
+.vw-post-share-box .vw-post-shares-social-facebook {
+    background-color: #3B5998;
+}
+.vw-post-share-box .vw-post-shares-social-gplus {
+    background-color: #D14836;
+}
+
+.vw-post-share-big-number {
+    display: inline-block;
+    margin-right: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1em;
+    vertical-align: text-top;
+}
+.vw-post-share-big-number .vw-number {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 4px;
+}
+.vw-post-share-big-number .vw-unit {
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: 0.5;
+}
+
+/* -------------------------------------
+ * $DIALOG WINDOW */
+#vw-post-shares-dialog {
+    background: white;
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 600px;
+    margin: 40px auto;
+    position: relative;
+}
+#vw-post-shares-dialog .vw-post-shares-title {
+    color: #111111;
+    text-transform: uppercase;
+}
+#vw-post-shares-dialog .vw-post-shares-subtitle {
+    font-size: 11px;
+    font-weight: bold;
+    color: #BBBBBB;
+    letter-spacing: 2px;
+}
+#vw-post-shares-dialog .vw-post-shares-socials {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#vw-post-shares-dialog .vw-post-shares-social {
+    font-size: 24px;
+    color: #FFFFFF;
+    background-color: #EFEFEF;
+    padding: 10px 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+/* -----------------------------------------------------------------------------
+ * $NAVIGATION
+ * -------------------------------------------------------------------------- */
+/* -------------------------------------
+ * GENERIC STYLE */
+.vw-menu,
+.vw-menu ul,
+.vw-menu ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.vw-menu .menu-link {
+    display: block;
+    padding: 4px 6px;
+    text-decoration: none;
+    text-align: left;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+
+.vw-menu .main-menu-item,
+.vw-menu .main-menu-link {
+    display: inline-block;
+}
+
+.vw-menu .sub-menu {
+    min-width: 15em;
+}
+
+.vw-menu .menu-item > .sub-menu,
+.vw-menu .menu-item > .sub-menu-wrapper {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    -webkit-backface-visibility: hidden;
+}
+
+.vw-menu .menu-item-depth-1 > .sub-menu,
+.vw-menu .menu-item-depth-1 > .sub-menu-wrapper {
+    right: -100%;
+    top: 0;
+}
+
+.vw-menu .sub-menu-item {
+    position: relative;
+}
+.vw-menu .sub-menu-item.menu-item-has-children > .sub-menu-link:after {
+    content: '';
+    display: inline-block;
+    content: "";
+    font-family: "entypo";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -7px;
+}
+
+.vw-menu .sub-menu-item + .sub-menu-item {
+    border-top: 1px solid #EEEEEE;
+}
+
+.vw-menu .sub-menu-link {
+    padding: 8px 15px;
+}
+
+.vw-no-main-menu-warning {
+    font-size: 12px;
+    font-style: italic;
+    padding: 0.5em;
+    color: #AAAAAA;
+}
+.vw-no-main-menu-warning a {
+    text-decoration: underline;
+}
+
+/* -------------------------------------
+ * $MEGA MENU */
+.vw-menu-type-mega-post {
+    display: table;
+    margin: 0 auto;
+}
+
+.vw-mega-menu-type-category.menu-item-depth-0 > .sub-menu-wrapper,
+.vw-mega-menu-type-links-4-cols.menu-item-depth-0 > .sub-menu-wrapper {
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.vw-mega-menu-type-category .sub-menu-wrapper > .sub-menu {
+    padding-bottom: 500px;
+    margin-bottom: -500px;
+    width: 25%;
+    float: left;
+}
+.vw-mega-menu-type-category .sub-menu-wrapper > .sub-menu + .sub-posts {
+    width: 75%;
+    float: left;
+}
+
+.vw-mega-menu-type-category .sub-menu.menu-depth-1 .sub-menu-wrapper {
+    width: 100%;
+}
+
+.vw-mega-menu-type-category .sub-menu.menu-depth-2 {
+    float: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.vw-mega-menu-type-links-4-cols {
+    position: static;
+}
+.vw-mega-menu-type-links-4-cols > .sub-menu-wrapper {
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+.vw-mega-menu-type-links-4-cols .sub-menu.menu-depth-1 {
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+}
+.vw-mega-menu-type-links-4-cols .sub-menu.menu-depth-1:before,
+.vw-mega-menu-type-links-4-cols .sub-menu.menu-depth-1:after {
+    content: " ";
+    display: table;
+}
+.vw-mega-menu-type-links-4-cols .sub-menu.menu-depth-1:after {
+    clear: both;
+}
+.vw-mega-menu-type-links-4-cols .sub-menu.menu-depth-1 > li {
+    width: 25%;
+    padding: 10px;
+    display: block;
+    float: left;
+    vertical-align: top;
+}
+.vw-mega-menu-type-links-4-cols .sub-menu.menu-depth-1 .sub-menu-wrapper {
+    box-shadow: none;
+    display: block !important;
+    position: static;
+    opacity: 1 !important;
+}
+.vw-mega-menu-type-links-4-cols .sub-menu.menu-depth-2 {
+    display: block;
+    width: auto;
+}
+.vw-mega-menu-type-links-4-cols .menu-item-depth-1:hover {
+    background: transparent;
+}
+.vw-mega-menu-type-links-4-cols .menu-item-depth-1 > .menu-link {
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 3px solid #3E3E3E;
+    margin-bottom: 5px;
+    padding: 10px 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.vw-mega-menu-type-links-4-cols .menu-item-depth-1 > .menu-link:after {
+    display: none;
+}
+.vw-mega-menu-type-links-4-cols .sub-menu-item.menu-item-has-children > .sub-menu-link:after {
+    display: none;
+}
+
+/* -------------------------------------
+ * $TOP/BOTTOM MENU */
+.vw-menu-location-top,
+.vw-menu-location-bottom {
+    font-size: 11px;
+}
+.vw-menu-location-top .main-menu-link,
+.vw-menu-location-bottom .main-menu-link {
+    text-transform: uppercase;
+}
+
+.vw-menu-location-top .menu-item-depth-0:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    opacity: 0;
+    background-color: #C5AC57;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+
+.vw-menu-location-top .menu-item-depth-0:hover:after,
+.vw-menu-location-top .menu-item-depth-0.current-post-ancestor:after,
+.vw-menu-location-top .menu-item-depth-0.current-menu-parent:after,
+.vw-menu-location-top .menu-item-depth-0.current-post-parent:after,
+.vw-menu-location-top .menu-item-depth-0.current-menu-item:after {
+    opacity: 1;
+}
+
+.vw-menu-location-top .menu-item-depth-0 > .sub-menu {
+    margin-top: 3px;
+}
+
+.vw-menu-location-top .main-menu-link {
+    padding: 8px 6px;
+}
+
+.vw-menu-location-top .sub-menu-item.menu-item-has-children > .sub-menu-link:after {
+    margin-top: -5px;
+}
+
+/* -------------------------------------
+ * $MAIN MENU */
+.vw-menu-main-wrapper {
+    z-index: 1000;
+}
+
+.vw-menu-main-inner {
+    margin-bottom: -20px;
+}
+
+.vw-menu-location-main .main-menu-link {
+    padding: 10px 12px;
+    position: relative;
+}
+
+.vw-menu-location-main .main-menu-item + .main-menu-item {
+    margin-left: 4px;
+}
+.vw-menu-location-main .main-menu-item + .main-menu-item .main-menu-link:before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    margin-left: -15px;
+    background-color: #FFFFFF;
+    opacity: 0.5;
+}
+
+@media (max-width: 767px) {
+    .vw-menu-location-main {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .vw-menu-location-main .sub-menu {
+        min-width: 10em;
+    }
+}
+
+.vw-mobile-nav-button-wrapper {
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .vw-mobile-nav-button-wrapper {
+        display: none;
+    }
+}
+
+.vw-menu-mobile-wrapper {
+    display: none;
+}
+
+/* -----------------------------------------------------------------------------
+ * $BREADCRUMB
+ * -------------------------------------------------------------------------- */
+.vw-breadcrumb {
+    margin-bottom: 10px;
+    font-size: 11px;
+    color: #AAAAAA;
+}
+.vw-breadcrumb a,
+.vw-breadcrumb span {
+    word-wrap: break-word;
+}
+.vw-breadcrumb a {
+    color: inherit;
+}
+.vw-breadcrumb > span > * {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.vw-breadcrumb > span > *:first-child {
+    margin-left: 0;
+}
+.vw-breadcrumb > span > *:last-child {
+    margin-right: 0;
+}
+
+/* Yoast Breadcrumb */
+.vw-breadcrumb-yoast {
+    /* empty */
+}
+
+/* -----------------------------------------------------------------------------
+ * $BREAKING NEWS
+ * -------------------------------------------------------------------------- */
+.vw-breaking-news-bar {
+    position: relative;
+}
+.vw-breaking-news-bar:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 20px;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.02) 50%, transparent 80%);
+    background:         linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.02) 50%, transparent 80%);
+}
+
+.vw-breaking-news {
+    /* empty */
+}
+
+/* -----------------------------------------------------------------------------
+ * Comments
+ * -------------------------------------------------------------------------- */
+#comments .comment-reply-title {
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+#comments .comment-reply-title small {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.commentlist,
+.commentlist .children {
+    list-style: none;
+}
+
+.commentlist {
+    padding-left: 0;
+}
+
+.comment .avatar {
+    width: 50px;
+    height: auto;
+    float: left;
+    margin-right: 15px;
+}
+
+.comment .author,
+.comment .text {
+    margin-left: 70px;
+}
+
+.comment .date,
+.pingback .date {
+    font-size: 11px;
+    color: #AAAAAA;
+    text-transform: uppercase;
+}
+
+.comment .author-name,
+.pingback .author-name {
+    margin-top: 0.2em;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.comment .author-name a,
+.pingback .author-name a {
+    color: inherit;
+}
+
+.comment .text,
+.pingback .text {
+    margin-top: 20px;
+    word-wrap: break-word;
+}
+
+* + .comment,
+* + .pingback,
+.commentlist .children {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px dashed #AAAAAA;
+}
+
+.commentlist .children {
+    margin-left: 60px;
+    padding-left: 0;
+}
+@media (max-width: 991px) {
+    .commentlist .children {
+        margin-left: 40px;
+    }
+}
+@media (max-width: 479px) {
+    .commentlist .children {
+        margin-left: 20px;
+    }
+}
+.commentlist .children .comment .avatar {
+    width: 32px;
+}
+.commentlist .children .comment .author,
+.commentlist .children .comment .text {
+    margin-left: 50px;
+}
+.commentlist .children .comment .author-name {
+    margin-top: 0;
+}
+
+.comment-body img {
+    max-width: 100%;
+}
+
+.form-allowed-tags {
+    font-size: 11px;
+    color: #AAAAAA;
+}
+
+/* -----------------------------------------------------------------------------
+ * $PAGINATION
+ * -------------------------------------------------------------------------- */
+.vw-page-navigation {
+    margin-top: 45px;
+    text-align: center;
+    position: relative;
+}
+
+.vw-page-navigation-title {
+    margin-right: 0.5em;
+    display: none;
+}
+
+.vw-page-navigation-divider {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.15);
+}
+
+.vw-page-navigation-pagination {
+    display: inline-block;
+    padding: 4px 8px;
+    position: relative;
+    z-index: 100;
+}
+.vw-page-navigation-pagination .page-numbers {
+    display: inline-block;
+    padding: 6px 8px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold !important;
+    color: #FFFFFF !important;
+    background-color: #3E3E3E;
+    min-width: 2.5em;
+    text-align: center;
+    -webkit-transition: all 0.25s ease-out;
+       -moz-transition: all 0.25s ease-out;
+            transition: all 0.25s ease-out;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+.vw-page-navigation-pagination .page-numbers.current,
+.vw-page-navigation-pagination .page-numbers:hover {
+    color: white;
+}
+.vw-page-navigation-pagination .page-numbers:last-child {
+    margin-right: 0;
+}
+
+/* -----------------------------------------------------------------------------
+ * $SITE SOCIAL
+ * -------------------------------------------------------------------------- */
+.vw-site-social-profile-icon {
+    display: inline-block;
+    color: inherit;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-twitter {
+    color: #00ACED;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-facebook {
+    color: #3B5998;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-gplus {
+    color: #DD4B39;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-pinterest {
+    color: #CB2027;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-tumblr {
+    color: #32506D;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-instagram {
+    color: #517FA4;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-fivehundredpx {
+    color: #1B1B1B;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-dribbble {
+    color: #EA4C89;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-flickr {
+    color: #FF0084;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-linkedin {
+    color: #007BB6;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-skype {
+    color: #12A5F4;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-soundcloud {
+    color: #FF3A00;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-youtube {
+    color: #BB0000;
+}
+.vw-site-social-profile-icon:hover.vw-site-social-vimeo {
+    color: #AAD450;
+}
+.vw-site-social-profile-icon + .vw-site-social-profile-icon {
+    margin-left: 0.5em;
+}
+.vw-site-social-profile-icon .vw-icon {
+    display: inline-block;
+    padding: 2px 6px;
+}
+
+.vw-top-bar .vw-site-social-profile-icon + .vw-site-social-profile-icon,
+.vw-bottom-bar .vw-site-social-profile-icon + .vw-site-social-profile-icon,
+.vw-short-code-site-social-icons .vw-site-social-profile-icon + .vw-site-social-profile-icon {
+    margin-left: 0;
+}
+
+.vw-top-bar .vw-site-social-profile-icon:hover,
+.vw-bottom-bar .vw-site-social-profile-icon:hover,
+.vw-short-code-site-social-icons .vw-site-social-profile-icon:hover {
+    color: #FFFFFF;
+}
+
+/* =============================================================================
+
+	$WIDGETS
+
+============================================================================= */
+/* -----------------------------------------------------------------------------
+ * $GENERAL WIDGET
+ * -------------------------------------------------------------------------- */
+.widget + .widget {
+    margin-top: 30px;
+}
+
+.widget select {
+    max-width: 100%;
+}
+
+.vw-no-widget-warning {
+    font-size: 12px;
+    font-style: italic;
+    border: 1px dashed rgba(127, 127, 127, 0.7);
+    padding: 0.5em;
+}
+.vw-no-widget-warning a {
+    text-decoration: underline;
+}
+
+.widget_recent_comments li,
+.widget_recent_entries li {
+    margin-bottom: 1em;
+}
+
+.widget_categories #cat,
+.widget_archive select {
+    width: 100%;
+}
+
+.vw-page-sidebar .widget:first-child .widget-title {
+    margin-top: 15px;
+}
+
+.widget_recent_comments a,
+.widget_recent_entries a {
+    word-wrap: break-word;
+}
+
+/* -----------------------------------------------------------------------------
+ * $WIDGET: RECENT COMMENTS
+ * -------------------------------------------------------------------------- */
+.widget_recent_comments .recentcomments > a {
+    color: inherit;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+/* -----------------------------------------------------------------------------
+ * $WIDGET: CALENDAR
+ * -------------------------------------------------------------------------- */
+#calendar_wrap {
+    background-color: rgba(128, 128, 128, 0.05);
+    padding: 5px 10px;
+}
+
+#wp-calendar {
+    width: 100%;
+}
+
+#wp-calendar caption {
+    padding-left: 10px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#wp-calendar thead {
+    font-size: 11px;
+    color: #BBBBBB;
+    font-weight: bold;
+}
+
+#wp-calendar thead th {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#wp-calendar tbody {
+    font-size: 11px;
+}
+
+#wp-calendar tbody td {
+    background: #F3F3F3;
+    border: 0px solid #818181;
+    text-align: center;
+    padding: 8px;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #wp-calendar tbody td {
+        padding: 0;
+    }
+}
+
+#wp-calendar tbody td.pad:hover {
+    background: transparent !important;
+}
+
+#wp-calendar tbody td:hover {
+    color: #FFFFFF;
+}
+
+#wp-calendar tbody td:hover a {
+    color: #FFFFFF;
+}
+
+#wp-calendar tbody a {
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+}
+
+#wp-calendar tbody .pad {
+    background: none;
+}
+
+#wp-calendar tfoot td {
+    padding-top: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#wp-calendar tfoot #next {
+    text-align: right;
+}
+
+#wp-calendar tfoot #prev {
+    /* empty */
+}
+
+/* -----------------------------------------------------------------------------
+ * $WIDGET: TAG CLOUD
+ * -------------------------------------------------------------------------- */
+.widget_product_tag_cloud .tagcloud a,
+.widget_tag_cloud .tagcloud a {
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-right: 4px;
+    padding: 2px 8px;
+    font-size: 12px !important;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #3E3E3E;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+
+/* -----------------------------------------------------------------------------
+ * $WIDGET: AUTHOR
+ * -------------------------------------------------------------------------- */
+.vw-widget-author-info {
+    padding: 15px 25px 25px 25px;
+    text-align: center;
+    border: 3px solid #3E3E3E;
+}
+.vw-widget-author-info .vw-author-avatar {
+    display: block;
+    padding: 0 10% 30px 10%;
+}
+
+.vw-widget-author-title {
+    text-transform: uppercase;
+}
+
+.vw-widget-author-name {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.vw-widget-author-bio {
+    font-style: italic;
+    font-size: 0.85em;
+    line-height: 1.6em;
+}
+
+.vw-author-socials {
+    margin-top: 20px;
+}
+.vw-author-socials .vw-icon-social:hover {
+    background-color: #3E3E3E;
+}
+.vw-author-socials .vw-icon-social i {
+    width: 35px;
+    line-height: 35px;
+    color: #FFFFFF;
+}
+
+.vw-sidebar-position-content-mini-right .vw-page-sidebar-left .widget_vw_widget_author .vw-widget-author-avatar,
+.vw-sidebar-position-mini-content-right .vw-page-sidebar-left .widget_vw_widget_author .vw-widget-author-avatar,
+.vw-sidebar-position-left-content-mini .vw-page-sidebar-right .widget_vw_widget_author .vw-widget-author-avatar {
+    padding-bottom: 15px;
+}
+
+.vw-sidebar-position-content-mini-right .vw-page-sidebar-left .widget_vw_widget_author .vw-widget-author-name,
+.vw-sidebar-position-mini-content-right .vw-page-sidebar-left .widget_vw_widget_author .vw-widget-author-name,
+.vw-sidebar-position-left-content-mini .vw-page-sidebar-right .widget_vw_widget_author .vw-widget-author-name {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+/* -----------------------------------------------------------------------------
+ * $WIDGET: AUTHOR
+ * -------------------------------------------------------------------------- */
+.widget_vw_widget_author_list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget_vw_widget_author_list li {
+    display: inline-block;
+    float: left;
+    margin-right: 9px;
+    margin-bottom: 10px;
+}
+
+.widget_vw_widget_author_list a {
+    display: inline-block;
+}
+
+.widget_vw_widget_author_list .avatar {
+    max-width: 80px;
+}
+
+/* -----------------------------------------------------------------------------
+ * $WIDGET: CATEGORIES
+ * -------------------------------------------------------------------------- */
+.widget_vw_widget_categories .vw-widget-category-list {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 20px;
+    margin: 0;
+}
+.widget_vw_widget_categories .vw-widget-category-list li {
+    position: relative;
+}
+.widget_vw_widget_categories .vw-widget-category-list li + li {
+    margin-top: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #F3F3F3;
+}
+
+.widget_vw_widget_categories .vw-widget-category-title {
+    position: relative;
+    display: block;
+    padding-right: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    word-break: break-word;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+.widget_vw_widget_categories .vw-widget-category-title:hover .vw-widget-category-post-count {
+    color: #FFFFFF;
+}
+
+.widget_vw_widget_categories .vw-widget-category-post-count {
+    display: inline-block;
+    padding: 0 4px;
+    margin-top: 10px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 20px;
+    color: #FFFFFF;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+
+.widget_vw_widget_categories .vw-widget-category-description {
+    font-size: 12px;
+    font-style: italic;
+    opacity: 0.7;
+    line-height: 1.2em;
+    margin-top: 8px;
+    padding-right: 15%;
+}
+
+.vw-sidebar-position-content-mini-right .vw-page-sidebar-left .widget_vw_widget_categories .vw-widget-category-title,
+.vw-sidebar-position-mini-content-right .vw-page-sidebar-left .widget_vw_widget_categories .vw-widget-category-title,
+.vw-sidebar-position-left-content-mini .vw-page-sidebar-right .widget_vw_widget_categories .vw-widget-category-title {
+    font-size: 18px;
+}
+
+.vw-sidebar-position-content-mini-right .vw-page-sidebar-left .vw-widget-category-post-count,
+.vw-sidebar-position-mini-content-right .vw-page-sidebar-left .vw-widget-category-post-count,
+.vw-sidebar-position-left-content-mini .vw-page-sidebar-right .vw-widget-category-post-count {
+    margin-top: 0px;
+}
+
+/* -----------------------------------------------------------------------------
+ * $WIDGET: CUSTOM BANNER
+ * -------------------------------------------------------------------------- */
+.vw-custom-banner {
+    background-size: cover;
+    background-position: right center;
+}
+.vw-custom-banner .vw-icon {
+    margin-left: 5px;
+}
+
+.vw-custom-banner-inner {
+    padding: 20px 20% 20px 15px;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
+    background-image:         linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+}
+.vw-custom-banner-inner:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.vw-custom-banner-title {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.2em;
+    color: #FFFFFF;
+}
+
+.vw-custom-banner-subtitle {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.4em;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+.vw-custom-banner-button {
+    margin-top: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* -----------------------------------------------------------------------------
+ * $WIDGET: FEEDBURNER
+ * -------------------------------------------------------------------------- */
+.vw-widget-feedburner-container {
+    padding: 25px;
+    border: 3px solid #3E3E3E;
+}
+
+.vw-widget-feedburner-text {
+    margin-top: 0;
+    margin-bottom: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.vw-widget-feedburner-email {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+/* -----------------------------------------------------------------------------
+ * $WIDGET: LOGIN
+ * -------------------------------------------------------------------------- */
+.widget_vw_widget_login {
+    padding: 25px;
+    border: 3px solid #3E3E3E;
+}
+
+.vw-login-title {
+    margin-top: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.vw-login-form-username > input,
+.vw-login-form-pass > input {
+    width: 100%;
+    display: block;
+}
+
+.vw-login-form-lost-password {
+    float: right;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+    .vw-login-form-lost-password {
+        float: none;
+        display: block;
+    }
+}
+
+.vw-loggedin-form .avatar {
+    float: left;
+    margin-right: 1.5em;
+    width: 100px;
+}
+
+.vw-loggedin-form .vw-loggedin-form-links {
+    padding-left: 20px;
+    font-size: 0.9em;
+}
+
+.vw-loggedin-user-info {
+    float: left;
+}
+
+.vw-loggedin-form-links {
+    font-size: 12px;
+    list-style: square;
+}
+
+/* -----------------------------------------------------------------------------
+ * $WIDGET: SEARCH
+ * -------------------------------------------------------------------------- */
+.widget_product_search #searchform,
+.widget_product_search .woocommerce-product-search,
+.widget_product_search .search-form,
+.widget_search #searchform,
+.widget_search .woocommerce-product-search,
+.widget_search .search-form {
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    background-color: rgba(128, 128, 128, 0.05);
+}
+
+.widget_product_search .screen-reader-text,
+.widget_search .screen-reader-text {
+    display: none;
+}
+
+.widget_product_search label,
+.widget_search label {
+    display: block;
+}
+
+.widget_product_search #searchsubmit,
+.widget_product_search input[type=submit],
+.widget_product_search .search-submit,
+.widget_search #searchsubmit,
+.widget_search input[type=submit],
+.widget_search .search-submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 0;
+}
+
+.widget_product_search #s,
+.widget_product_search .search-field,
+.widget_search #s,
+.widget_search .search-field {
+    width: 100%;
+    padding-right: 65px;
+}
+
+body.search .vw-page-content > .widget_search {
+    margin-bottom: 30px;
+}
+
+/* -----------------------------------------------------------------------------
+ * $WIDGET: SOCIAL COUNTER
+ * -------------------------------------------------------------------------- */
+.widget_vw_widget_social_counter {
+    margin-bottom: -15px;
+}
+.widget_vw_widget_social_counter .vw-social-counter-count {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.2em;
+    color: #333333;
+    margin-top: 5px;
+}
+
+.vw-social-counter {
+    width: 47%;
+    margin-right: 3%;
+    min-width: 135px;
+    display: inline-block;
+    float: left;
+    margin-bottom: 15px;
+}
+
+.vw-social-counter-icon {
+    float: left;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #EEEEEE;
+    color: #333333;
+    text-align: center;
+    margin-right: 18px;
+}
+.vw-social-counter-icon i {
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.vw-social-counter-count,
+.vw-social-counter-count,
+.vw-social-counter-icon {
+    -webkit-transition: all 0.25s;
+       -moz-transition: all 0.25s;
+            transition: all 0.25s;
+}
+
+.vw-social-counter-twitter .vw-social-counter-icon {
+    background-color: #55ACEE;
+    color: #FFFFFF;
+}
+
+.vw-social-counter-twitter:hover .vw-social-counter-icon {
+    background-color: #88C5F3;
+}
+
+.vw-social-counter-twitter:hover .vw-social-counter-count {
+    color: #55ACEE;
+}
+
+.vw-social-counter-facebook .vw-social-counter-icon {
+    background-color: #3D62B3;
+    color: #FFFFFF;
+}
+
+.vw-social-counter-facebook:hover .vw-social-counter-icon {
+    background-color: #7791CA;
+}
+
+.vw-social-counter-facebook:hover .vw-social-counter-count {
+    color: #3D62B3;
+}
+
+.vw-social-counter-instagram .vw-social-counter-icon {
+    background-color: #2D6B94;
+    color: #FFFFFF;
+}
+
+.vw-social-counter-instagram:hover .vw-social-counter-icon {
+    background-color: #6C97B4;
+}
+
+.vw-social-counter-instagram:hover .vw-social-counter-count {
+    color: #2D6B94;
+}
+
+.vw-social-counter-youtube .vw-social-counter-icon {
+    background-color: #CC181E;
+    color: #FFFFFF;
+}
+
+.vw-social-counter-youtube:hover .vw-social-counter-icon {
+    background-color: #DB5D62;
+}
+
+.vw-social-counter-youtube:hover .vw-social-counter-count {
+    color: #CC181E;
+}
+
+.vw-social-counter-googleplus .vw-social-counter-icon {
+    background-color: #D34836;
+    color: #FFFFFF;
+}
+
+.vw-social-counter-googleplus:hover .vw-social-counter-icon {
+    background-color: #E07F72;
+}
+
+.vw-social-counter-googleplus:hover .vw-social-counter-count {
+    color: #D34836;
+}
+
+.vw-social-counter-vimeo .vw-social-counter-icon {
+    background-color: #1BB6EC;
+    color: #FFFFFF;
+}
+
+.vw-social-counter-vimeo:hover .vw-social-counter-icon {
+    background-color: #5FCCF2;
+}
+
+.vw-social-counter-vimeo:hover .vw-social-counter-count {
+    color: #1BB6EC;
+}
+
+.vw-social-counter-soundcloud .vw-social-counter-icon {
+    background-color: #FE4600;
+    color: #FFFFFF;
+}
+
+.vw-social-counter-soundcloud:hover .vw-social-counter-icon {
+    background-color: #FE7E4D;
+}
+
+.vw-social-counter-soundcloud:hover .vw-social-counter-count {
+    color: #FE4600;
+}
+
+.vw-social-counter-pinterest .vw-social-counter-icon {
+    background-color: #CB2028;
+    color: #FFFFFF;
+}
+
+.vw-social-counter-pinterest:hover .vw-social-counter-icon {
+    background-color: #DB6369;
+}
+
+.vw-social-counter-pinterest:hover .vw-social-counter-count {
+    color: #CB2028;
+}
+
+.vw-social-counter-vk .vw-social-counter-icon {
+    background-color: #44678D;
+    color: #FFFFFF;
+}
+
+.vw-social-counter-vk:hover .vw-social-counter-icon {
+    background-color: #7C95AF;
+}
+
+.vw-social-counter-vk:hover .vw-social-counter-count {
+    color: #44678D;
+}
+
+.vw-social-counter-dribbble .vw-social-counter-icon {
+    background-color: #E14D86;
+    color: #FFFFFF;
+}
+
+.vw-social-counter-dribbble:hover .vw-social-counter-icon {
+    background-color: #EA82AA;
+}
+
+.vw-social-counter-dribbble:hover .vw-social-counter-count {
+    color: #E14D86;
+}
+
+.vw-social-counter-counter {
+    float: left;
+    display: inline-block;
+}
+
+.vw-social-counter-unit {
+    margin-top: 2px;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1em;
+    color: #999999;
+}
+
+/* -----------------------------------------------------------------------------
+ * $WIDGET: POST TABBED & POPULAR POSTS
+ * -------------------------------------------------------------------------- */
+.vw-fixed-tab > ul {
+    display: table;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+.vw-fixed-tab > ul li {
+    display: table-cell;
+    text-align: center;
+}
+
+.vw-fixed-tab.vw-fixed-tab-3-cols > ul li {
+    width: 33.333333%;
+}
+
+.vw-fixed-tab .vw-fixed-tab-title {
+    display: block;
+    padding: 5px 0;
+    border-bottom: 3px solid #3E3E3E;
+    text-decoration: none;
+    color: inherit;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+
+.vw-fixed-tab .vw-fixed-tab-content {
+    display: none;
+}
+.vw-fixed-tab .vw-fixed-tab-content.is-active {
+    display: block;
+}
+
+.widget_vw_widget_popular_post .vw-fixed-tab-title {
+    font-size: 0.95em;
+}
+
+/* =============================================================================
+
+	$COMPONENTS
+
+============================================================================= */
+/* -----------------------------------------------------------------------------
+ * $SHORTCODES
+ * -------------------------------------------------------------------------- */
+/* -------------------------------------
+ * ACCORDION */
+.vw-accordions {
+    margin-bottom: 30px;
+}
+
+.vw-accordion {
+    margin-top: 30px;
+}
+.vw-accordion .ui-icon:before {
+    content: "";
+    font-family: "entypo";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.vw-accordion .ui-state-hover span {
+    color: #FFCC00;
+}
+.vw-accordion .ui-accordion-header-active {
+    border-top: 2px solid #777777;
+}
+.vw-accordion .ui-accordion-header-active .ui-icon:before {
+    content: '\e873';
+}
+.vw-accordion + .vw-accordion {
+    margin-top: 15px;
+}
+.vw-accordion + * {
+    margin-top: 30px;
+}
+
+.vw-accordion-header {
+    outline: none;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    padding-top: 15px;
+    border-top: 1px solid rgba(128, 128, 128, 0.15);
+    -webkit-transition: all 0.25s ease-out;
+       -moz-transition: all 0.25s ease-out;
+            transition: all 0.25s ease-out;
+}
+.vw-accordion-header span {
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+
+.vw-accordion-header-text {
+    margin-left: 1em;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.vw-accordion-content {
+    display: none;
+    padding: 15px 0 15px 50px;
+}
+
+/* -------------------------------------
+ * COLUMN */
+.vw-row-shortcode {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 1.3em;
+}
+.vw-row-shortcode:before,
+.vw-row-shortcode:after {
+    content: " ";
+    display: table;
+}
+.vw-row-shortcode:after {
+    clear: both;
+}
+
+.vw-column-shortcode {
+    position: relative;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 100%;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .vw-row-shortcode > .vw-column-shortcode {
+        margin-bottom: 30px;
+    }
+    .vw-row-shortcode > .vw-column-shortcode:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .vw-one-half {
+        width: 50%;
+    }
+    .vw-one-third {
+        width: 33.333333333%;
+    }
+    .vw-two-third {
+        width: 66.666666666%;
+    }
+    .vw-one-fourth {
+        width: 25%;
+    }
+    .vw-three-fourth {
+        width: 75%;
+    }
+    .vw-one-fifth {
+        width: 20%;
+    }
+    .vw-two-fifth {
+        width: 40%;
+    }
+    .vw-three-fifth {
+        width: 60%;
+    }
+}
+
+/* -------------------------------------
+ * DROPCAP */
+.vw-dropcap {
+    font-size: 2.85em;
+    font-weight: bold;
+    line-height: 1em;
+    float: left;
+    margin-right: 0.35em;
+    margin-top: 4px;
+}
+
+.vw-dropcap-standard {
+    margin-top: 2px;
+}
+
+.vw-dropcap-circle,
+.vw-dropcap-box {
+    font-size: 1.75em;
+    color: #FFFFFF;
+    background-color: #3E3E3E;
+    padding: 8px 11px;
+    text-align: center;
+}
+
+.vw-dropcap-circle {
+    border-radius: 50%;
+}
+
+/* -------------------------------------
+ * GAP */
+.vw-gap {
+    display: block;
+}
+
+/* -------------------------------------
+ * HEADLINE */
+.vw-headline {
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+}
+
+/* -------------------------------------
+ * INFOBOX */
+.vw-infobox {
+    margin: 1.414em 0;
+    padding: 10px;
+    background-color: #F9F9F9;
+    border: 1px solid #EEEEEE;
+    text-align: center;
+}
+
+.vw-infobox-inner {
+    padding: 0 0 15px 0;
+}
+
+.vw-infobox-title {
+    padding-top: 10px;
+    margin: 0;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #3E3E3E;
+    border: 0;
+}
+.vw-infobox-title + .vw-infobox-content {
+    margin-top: 25px;
+}
+
+.vw-infobox-content {
+    font-size: 1.1em;
+    opacity: 0.6;
+    padding: 0 0.8em;
+}
+
+/* -------------------------------------
+ * LIST */
+.vw-list-shortcode {
+    list-style: none;
+    padding-left: 1em;
+    padding-right: 1.5em;
+}
+
+/* -------------------------------------
+ * MARK */
+mark.vw-mark-style-yellow {
+    background-color: #FFCC00;
+}
+
+mark.vw-mark-style-grey {
+    background-color: #CCCCCC;
+}
+
+mark.vw-mark-style-dark {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* -------------------------------------
+ * QUOTE */
+.vw-quote {
+    margin: 15px 30px 10px 0;
+    padding-left: 15px;
+    position: relative;
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.25em;
+    text-transform: uppercase;
+}
+
+.vw-quote-icon {
+    position: absolute;
+    left: 2px;
+    top: 4px;
+    font-size: 24px;
+    color: #3E3E3E;
+}
+
+@media (min-width: 768px) {
+    .vw-quote {
+        margin-top: 0.5em;
+        max-width: 40%;
+        float: left;
+    }
+    .vw-quote-align-right {
+        float: right;
+        margin-left: 30px;
+        margin-right: 0;
+    }
+}
+
+.vw-quote-align-none {
+    float: none;
+    max-width: none;
+}
+
+.vw-quote-cite {
+    margin-top: 0.9em;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: normal;
+    opacity: 0.75;
+    display: block;
+}
+
+/* -------------------------------------
+ * TABS */
+.vw-tabs {
+    margin: 30px 0;
+}
+.vw-tabs .vw-tab-title {
+    cursor: pointer;
+    color: #FFFFFF;
+    margin: 0;
+    text-decoration: none;
+    font-size: 12px;
+    background-color: #3E3E3E;
+}
+.vw-tabs .vw-tab-title i {
+    float: left;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+.vw-tabs .vw-tab-title i:before {
+    text-align: left;
+    display: inline;
+}
+.vw-tabs .vw-full-tab {
+    margin-top: -1px;
+    font-weight: bold;
+    border-top: 3px solid #818181;
+    padding: 10px 15px;
+}
+.vw-tabs .vw-full-tab.active {
+    background-color: #464646;
+    border-color: #464646;
+}
+.vw-tabs .vw-full-tab.active:hover {
+    color: #FFFFFF;
+}
+.vw-tabs .vw-tab-content {
+    display: none;
+    padding: 15px 25px 15px 25px;
+    background-color: #EEEEEE;
+}
+
+.vw-tabs.vw-style-top-tab .vw-tab-titles {
+    border-bottom: 3px solid #464646;
+}
+
+.vw-tabs.vw-style-top-tab .vw-tab-title {
+    border: 1px solid transparent;
+    padding: 10px 15px;
+    float: left;
+    display: inline-block;
+    text-align: center;
+    margin: 0 -1px 0 0;
+}
+.vw-tabs.vw-style-top-tab .vw-tab-title.active {
+    box-shadow: none;
+    border-color: #C5AC57;
+    background-color: #C5AC57;
+    color: #FFFFFF;
+}
+
+@media (max-width: 991px) {
+    .vw-tabs.vw-style-top-tab .vw-tab-title {
+        float: none;
+        border-top: 3px solid rgba(128, 128, 128, 0.15);
+        border-bottom: none !important;
+    }
+}
+
+/* -------------------------------------
+ * LOGO */
+.vw-logo-shortcode {
+    margin-bottom: 30px;
+}
+
+/* -------------------------------------
+ * PRICING TABLE */
+.vw-pricing-table {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.vw-pricing-item {
+    border: 3px solid #3E3E3E;
+}
+
+.vw-pricing-header {
+    padding-bottom: 20px;
+}
+
+.vw-pricing-featured .vw-pricing-title {
+    background-color: #C5AC57;
+}
+
+.vw-pricing-title {
+    margin: 6px 6px 20px 6px;
+    padding: 5px 0;
+    font-size: 13px;
+    color: #FFFFFF;
+    background-color: #3E3E3E;
+    border-bottom: none;
+}
+.vw-pricing-title span:before,
+.vw-pricing-title span:after {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.vw-pricing-info {
+    text-align: center;
+    position: relative;
+}
+
+.vw-pricing-price {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1em;
+    color: #3E3E3E;
+}
+
+.vw-pricing-currency {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1em;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    margin-top: 5px;
+    margin-left: -1em;
+}
+
+.vw-pricing-per {
+    font-size: 12px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.vw-pricing-content {
+    background-color: #F9F9F9;
+}
+.vw-pricing-content ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+.vw-pricing-content li {
+    padding: 10px 15px;
+}
+.vw-pricing-content li + li {
+    border-top: 1px solid rgba(128, 128, 128, 0.15);
+}
+.vw-pricing-content p:first-child:empty,
+.vw-pricing-content p:last-child:empty {
+    display: none;
+}
+
+.vw-pricing-footer {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* -------------------------------------
+ * 404 */
+.vw-404-text {
+    font-size: 90px;
+    line-height: 1em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* -----------------------------------------------------------------------------
+ * $PAGE COMPOSER
+ * -------------------------------------------------------------------------- */
+.page-template-page_simple_composer-php .vw-page-wrapper {
+    padding-top: 0;
+}
+
+.vwspc-section {
+    margin-top: 45px;
+}
+
+.vwspc-section-title {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-bottom: 10px;
+    font-size: 32px;
+    line-height: 1.25em;
+}
+
+@media (max-width: 991px) {
+    .vwspc-sidebar-column {
+        margin-top: 45px;
+    }
+}
+
+.vwspc-section-post-slider-section:first-child {
+    margin-top: -1px;
+}
+
+.vwspc-section-post-slider-section + .vwspc-section-post-slider-section {
+    margin-top: 1%;
+}
+
+@media (min-width: 992px) {
+    .vwspc-section-post-slider-section:nth-of-type(even) .vw-post-slider-mini-box-left {
+        float: right;
+        margin-right: 0;
+        margin-left: 1%;
+    }
+    .vwspc-section-post-slider-section:nth-of-type(even) .vw-post-slider-mini-box-right-top,
+    .vwspc-section-post-slider-section:nth-of-type(even) .vw-post-slider-mini-box-right-bottom {
+        float: left;
+    }
+}
+
+@media (max-width: 991px) {
+    .vwspc-section-sidebar {
+        margin-top: 30px;
+    }
+}
+
+/* -------------------------------------
+ * PAGE SECTION: POST SLIDER */
+.vw-menu-main-wrapper {
+    position: relative;
+}
+
+/* -------------------------------------
+ * PAGE SECTION: FULL PAGE LINK */
+.vwspc-section-full-page-link {
+    text-align: center;
+    background-color: #000000;
+    padding: 80px 0;
+    cursor: pointer;
+}
+.vwspc-section-full-page-link .vw-full-page-link-header {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    padding: 30px 60px;
+}
+.vwspc-section-full-page-link .vw-full-page-link-title a,
+.vwspc-section-full-page-link .vw-full-page-link-subtitle a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.vwspc-section-full-page-link .vw-full-page-link-title {
+    font-size: 46px;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+}
+.vwspc-section-full-page-link .vw-full-page-link-subtitle {
+    font-size: 16px;
+    font-style: italic;
+    color: #CCCCCC;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+.vwspc-section-full-page-link .vw-button {
+    background-color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+}
+.vwspc-section-full-page-link .vw-button:hover {
+    color: #FFFFFF;
+}
+.vwspc-section-full-page-link:last-child {
+    margin-bottom: -40px;
+}
+@media (max-width: 767px) {
+    .vwspc-section-full-page-link {
+        padding: 40px 0;
+    }
+    .vwspc-section-full-page-link .vw-full-page-link-header {
+        padding: 15px 30px;
+    }
+    .vwspc-section-full-page-link .vw-full-page-link-title {
+        font-size: 30px;
+    }
+}
+
+/* -----------------------------------------------------------------------------
+ * $MAGNIFIC POPUP
+ * -------------------------------------------------------------------------- */
+/* Magnific Popup CSS */
+.mfp-bg {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1042;
+    overflow: hidden;
+    position: fixed;
+    background: #0B0B0B;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.mfp-wrap {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1043;
+    position: fixed;
+    outline: none !important;
+    -webkit-backface-visibility: hidden;
+}
+
+.mfp-container {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 8px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.mfp-container:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.mfp-align-top .mfp-container:before {
+    display: none;
+}
+
+.mfp-content {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    text-align: left;
+    z-index: 1045;
+}
+
+.mfp-inline-holder .mfp-content,
+.mfp-ajax-holder .mfp-content {
+    width: 100%;
+    cursor: auto;
+}
+
+.mfp-ajax-cur {
+    cursor: progress;
+}
+
+.mfp-zoom-out-cur,
+.mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+    cursor:    -moz-zoom-out;
+    cursor: -webkit-zoom-out;
+    cursor:         zoom-out;
+}
+
+.mfp-zoom {
+    cursor: pointer;
+    cursor: -webkit-zoom-in;
+    cursor:    -moz-zoom-in;
+    cursor:         zoom-in;
+}
+
+.mfp-auto-cursor .mfp-content {
+    cursor: auto;
+}
+
+.mfp-close,
+.mfp-arrow,
+.mfp-preloader,
+.mfp-counter {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+}
+
+.mfp-loading.mfp-figure {
+    display: none;
+}
+
+.mfp-hide {
+    display: none !important;
+}
+
+.mfp-preloader {
+    color: #CCCCCC;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    text-align: center;
+    margin-top: -0.8em;
+    left: 8px;
+    right: 8px;
+    z-index: 1044;
+}
+.mfp-preloader a {
+    color: #CCCCCC;
+}
+.mfp-preloader a:hover {
+    color: #FFFFFF;
+}
+
+.mfp-s-ready .mfp-preloader {
+    display: none;
+}
+
+.mfp-s-error .mfp-content {
+    display: none;
+}
+
+button.mfp-close,
+button.mfp-arrow {
+    overflow: visible;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    display: block;
+    outline: none;
+    padding: 0;
+    z-index: 1046;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+.mfp-close {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-decoration: none;
+    text-align: center;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    padding: 0 0 18px 10px;
+    color: #FFFFFF;
+    font-style: normal;
+    font-size: 28px;
+    font-family: Arial, Baskerville, monospace;
+}
+.mfp-close:hover,
+.mfp-close:focus {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.mfp-close:active {
+    top: 1px;
+}
+
+.mfp-close-btn-in .mfp-close {
+    color: #333333;
+}
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+    color: #FFFFFF;
+    right: -6px;
+    text-align: right;
+    padding-right: 6px;
+    width: 100%;
+}
+
+.mfp-counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #CCCCCC;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.mfp-arrow {
+    position: absolute;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    margin: 0;
+    top: 50%;
+    margin-top: -55px;
+    padding: 0;
+    width: 90px;
+    height: 110px;
+    -webkit-tap-highlight-color: transparent;
+}
+.mfp-arrow:active {
+    margin-top: -54px;
+}
+.mfp-arrow:hover,
+.mfp-arrow:focus {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.mfp-arrow:before,
+.mfp-arrow:after,
+.mfp-arrow .mfp-b,
+.mfp-arrow .mfp-a {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 35px;
+    margin-left: 35px;
+    border: medium inset transparent;
+}
+.mfp-arrow:after,
+.mfp-arrow .mfp-a {
+    border-top-width: 13px;
+    border-bottom-width: 13px;
+    top: 8px;
+}
+.mfp-arrow:before,
+.mfp-arrow .mfp-b {
+    border-top-width: 21px;
+    border-bottom-width: 21px;
+    opacity: 0.7;
+}
+
+.mfp-arrow-left {
+    left: 0;
+}
+.mfp-arrow-left:after,
+.mfp-arrow-left .mfp-a {
+    border-right: 17px solid #FFFFFF;
+    margin-left: 31px;
+}
+.mfp-arrow-left:before,
+.mfp-arrow-left .mfp-b {
+    margin-left: 25px;
+    border-right: 27px solid #3F3F3F;
+}
+
+.mfp-arrow-right {
+    right: 0;
+}
+.mfp-arrow-right:after,
+.mfp-arrow-right .mfp-a {
+    border-left: 17px solid #FFFFFF;
+    margin-left: 39px;
+}
+.mfp-arrow-right:before,
+.mfp-arrow-right .mfp-b {
+    border-left: 27px solid #3F3F3F;
+}
+
+.mfp-iframe-holder {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.mfp-iframe-holder .mfp-content {
+    line-height: 0;
+    width: 100%;
+    max-width: 900px;
+}
+.mfp-iframe-holder .mfp-close {
+    top: -40px;
+}
+
+.mfp-iframe-scaler {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+.mfp-iframe-scaler iframe {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background: #000000;
+}
+
+/* Main image in popup */
+img.mfp-img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    line-height: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 40px 0 40px;
+    margin: 0 auto;
+}
+
+/* The shadow behind the image */
+.mfp-figure {
+    line-height: 0;
+}
+.mfp-figure:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40px;
+    bottom: 40px;
+    display: block;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    background: #444444;
+}
+.mfp-figure small {
+    color: #BDBDBD;
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+}
+.mfp-figure figure {
+    margin: 0;
+}
+
+.mfp-bottom-bar {
+    margin-top: -36px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    cursor: auto;
+}
+
+.mfp-title {
+    text-align: left;
+    line-height: 18px;
+    color: #F3F3F3;
+    word-wrap: break-word;
+    padding-right: 36px;
+}
+
+.mfp-image-holder .mfp-content {
+    max-width: 100%;
+}
+
+.mfp-gallery .mfp-image-holder .mfp-figure {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px) {
+    /**
+       * Remove all paddings around the image on small screen
+       */
+    .mfp-img-mobile .mfp-image-holder {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .mfp-img-mobile img.mfp-img {
+        padding: 0;
+    }
+    .mfp-img-mobile .mfp-figure:after {
+        top: 0;
+        bottom: 0;
+    }
+    .mfp-img-mobile .mfp-figure small {
+        display: inline;
+        margin-left: 5px;
+    }
+    .mfp-img-mobile .mfp-bottom-bar {
+        background: rgba(0, 0, 0, 0.6);
+        bottom: 0;
+        margin: 0;
+        top: auto;
+        padding: 3px 5px;
+        position: fixed;
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+    .mfp-img-mobile .mfp-bottom-bar:empty {
+        padding: 0;
+    }
+    .mfp-img-mobile .mfp-counter {
+        right: 5px;
+        top: 3px;
+    }
+    .mfp-img-mobile .mfp-close {
+        top: 0;
+        right: 0;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        background: rgba(0, 0, 0, 0.6);
+        position: fixed;
+        text-align: center;
+        padding: 0;
+    }
+}
+
+@media all and (max-width: 900px) {
+    .mfp-arrow {
+        -webkit-transform: scale(0.75);
+                transform: scale(0.75);
+    }
+    .mfp-arrow-left {
+        -webkit-transform-origin: 0;
+                transform-origin: 0;
+    }
+    .mfp-arrow-right {
+        -webkit-transform-origin: 100%;
+                transform-origin: 100%;
+    }
+    .mfp-container {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+}
+
+.mfp-ie7 .mfp-img {
+    padding: 0;
+}
+
+.mfp-ie7 .mfp-bottom-bar {
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+
+.mfp-ie7 .mfp-container {
+    padding: 0;
+}
+
+.mfp-ie7 .mfp-content {
+    padding-top: 44px;
+}
+
+.mfp-ie7 .mfp-close {
+    top: 0;
+    right: 0;
+    padding-top: 0;
+}
+
+/* -------------------------------------
+ * $DIALOG WINDOW */
+#vw-post-shares-dialog {
+    background: white;
+    padding: 20px 30px;
+    text-align: left;
+    max-width: 600px;
+    margin: 40px auto;
+    position: relative;
+}
+#vw-post-shares-dialog .vw-post-shares-title {
+    color: #111111;
+    text-transform: uppercase;
+}
+#vw-post-shares-dialog .vw-post-shares-subtitle {
+    font-size: 11px;
+    font-weight: bold;
+    color: #BBBBBB;
+    letter-spacing: 2px;
+}
+#vw-post-shares-dialog .vw-post-shares-socials {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#vw-post-shares-dialog .vw-post-shares-social {
+    font-size: 24px;
+    color: #FFFFFF;
+    background-color: #EFEFEF;
+    padding: 10px 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+#vw-post-shares-dialog .vw-post-shares-social-pinterest {
+    background-color: #CB2027;
+}
+#vw-post-shares-dialog .vw-post-shares-social-twitter {
+    background-color: #39A9E0;
+}
+#vw-post-shares-dialog .vw-post-shares-social-facebook {
+    background-color: #3B5998;
+}
+#vw-post-shares-dialog .vw-post-shares-social-gplus {
+    background-color: #D14836;
+}
+
+/* -------------------------------------
+ * $LIGHTBOX NAVIGATION */
+.mfp-arrow:hover,
+.no-touch .mfp-arrow:hover,
+.mfp-close:hover,
+.no-touch .mfp-close:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.mfp-image-holder .mfp-close {
+    margin-right: 0;
+    right: 0;
+}
+
+/* -------------------------------------
+ * $FADE-ZOOM ANIMATION */
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+       -moz-transition: all 0.2s ease-in-out;
+         -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+    -webkit-transform: scale(0.8);
+       -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+         -o-transform: scale(0.8);
+            transform: scale(0.8);
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+    opacity: 1;
+    -webkit-transform: scale(1);
+       -moz-transform: scale(1);
+        -ms-transform: scale(1);
+         -o-transform: scale(1);
+            transform: scale(1);
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+    -webkit-transform: scale(0.8);
+       -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+         -o-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 0;
+}
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg {
+    opacity: 0.001;
+    /* Chrome opacity transition bug */
+    -webkit-transition: opacity 0.3s ease-out;
+       -moz-transition: opacity 0.3s ease-out;
+         -o-transition: opacity 0.3s ease-out;
+            transition: opacity 0.3s ease-out;
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+/* -------------------------------------
+ * $FADE-MOVE ANIMATION */
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+         -o-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+    -webkit-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+       -moz-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+        -ms-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+         -o-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+            transform: translateY(-20px) perspective(600px) rotateX(10deg);
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+    opacity: 1;
+    -webkit-transform: translateY(0) perspective(600px) rotateX(0);
+       -moz-transform: translateY(0) perspective(600px) rotateX(0);
+        -ms-transform: translateY(0) perspective(600px) rotateX(0);
+         -o-transform: translateY(0) perspective(600px) rotateX(0);
+            transform: translateY(0) perspective(600px) rotateX(0);
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+    opacity: 0;
+    -webkit-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+       -moz-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+        -ms-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+         -o-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+            transform: translateY(-10px) perspective(600px) rotateX(10deg);
+}
+
+/* Dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg {
+    opacity: 0.01;
+    -webkit-transition: opacity 0.3s ease-out;
+       -moz-transition: opacity 0.3s ease-out;
+         -o-transition: opacity 0.3s ease-out;
+            transition: opacity 0.3s ease-out;
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+/* -----------------------------------------------------------------------------
+ * $TIPSY
+ * -------------------------------------------------------------------------- */
+.tipsy {
+    font-size: 10px;
+    position: absolute;
+    padding: 5px;
+    z-index: 100000;
+}
+
+.tipsy-inner {
+    background-color: #000000;
+    color: #FFFFFF;
+    max-width: 200px;
+    padding: 5px 8px 4px 8px;
+    text-align: center;
+}
+
+/* Rounded corners */
+.tipsy-inner {
+            border-radius: 3px;
+       -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+/* Uncomment for shadow */
+/*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+.tipsy-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    border: 5px dashed #000000;
+}
+
+/* Rules to colour arrows */
+.tipsy-arrow-n {
+    border-bottom-color: #000000;
+}
+
+.tipsy-arrow-s {
+    border-top-color: #000000;
+}
+
+.tipsy-arrow-e {
+    border-left-color: #000000;
+}
+
+.tipsy-arrow-w {
+    border-right-color: #000000;
+}
+
+.tipsy-n .tipsy-arrow {
+    top: 0px;
+    left: 50%;
+    margin-left: -5px;
+    border-bottom-style: solid;
+    border-top: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.tipsy-nw .tipsy-arrow {
+    top: 0;
+    left: 10px;
+    border-bottom-style: solid;
+    border-top: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.tipsy-ne .tipsy-arrow {
+    top: 0;
+    right: 10px;
+    border-bottom-style: solid;
+    border-top: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.tipsy-s .tipsy-arrow {
+    bottom: 0;
+    left: 50%;
+    margin-left: -5px;
+    border-top-style: solid;
+    border-bottom: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.tipsy-sw .tipsy-arrow {
+    bottom: 0;
+    left: 10px;
+    border-top-style: solid;
+    border-bottom: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.tipsy-se .tipsy-arrow {
+    bottom: 0;
+    right: 10px;
+    border-top-style: solid;
+    border-bottom: none;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.tipsy-e .tipsy-arrow {
+    right: 0;
+    top: 50%;
+    margin-top: -5px;
+    border-left-style: solid;
+    border-right: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.tipsy-w .tipsy-arrow {
+    left: 0;
+    top: 50%;
+    margin-top: -5px;
+    border-right-style: solid;
+    border-left: none;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+}
+
+/* -------------------------------------
+ * OVERRIDE */
+.tipsy-inner {
+    padding: 5px 8px;
+    line-height: 1.5em;
+}
+
+/* -----------------------------------------------------------------------------
+ * $PACE
+ * -------------------------------------------------------------------------- */
+/* This is a compiled file, you should be editing the file in the templates directory */
+.pace {
+    -webkit-pointer-events: none;
+            pointer-events: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    -webkit-transform: translate3d(0, -50px, 0);
+        -ms-transform: translate3d(0, -50px, 0);
+            transform: translate3d(0, -50px, 0);
+    -webkit-transition: -webkit-transform .5s ease-out;
+        -ms-transition: -webkit-transform .5s ease-out;
+            transition:         transform .5s ease-out;
+}
+
+.pace.pace-active {
+    -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.pace .pace-progress {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 3px;
+    background: #2299DD;
+    pointer-events: none;
+}
+
+/* -----------------------------------------------------------------------------
+ * $REVIEW
+ * -------------------------------------------------------------------------- */
+.vw-review-box {
+    margin-bottom: 25px;
+    padding: 10px 15px;
+    border: 3px solid #3E3E3E;
+}
+.vw-review-box > :last-child {
+    border-top: 3px solid #3E3E3E;
+}
+
+@media (min-width: 992px) {
+    .vw-review-position-top-floating {
+        float: left;
+        width: 40%;
+        margin-right: 1.3em;
+    }
+}
+
+.vw-review-box-title {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.vw-review-user-votes,
+.vw-review-pros-cons,
+.vw-review-items {
+    border-top: 1px solid #EFEFEF;
+}
+
+.vw-review-items {
+    padding: 10px 0;
+}
+
+.vw-review-item {
+    position: relative;
+    margin-top: 5px;
+}
+
+.vw-review-item-title {
+    float: left;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+}
+
+.vw-review-item-title-score {
+    font-weight: bold;
+}
+
+.vw-review-item-score {
+    text-align: center;
+    float: right;
+}
+
+.vw-review-box-summary {
+    display: table;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+    min-height: 85px;
+}
+
+.vw-review-summary,
+.vw-review-total-score {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.vw-review-box-summary .vw-review-summary {
+    padding: 10px 10px 10px 20px;
+    font-style: italic;
+}
+
+.vw-review-user-rating,
+.vw-review-total-score,
+.vw-review-score-star .vw-review-item-score {
+    width: 115px;
+    text-align: center;
+}
+
+.vw-review-total-score {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.vw-review-item-title,
+.vw-review-summary {
+    margin: 6px 0 20px 0;
+    padding-right: 5px;
+}
+
+.vw-review-score-percentage .vw-review-item,
+.vw-review-score-points .vw-review-item {
+    color: #FFFFFF;
+}
+
+.vw-review-score-percentage .vw-review-item-score,
+.vw-review-score-points .vw-review-item-score {
+    position: absolute;
+    bottom: 5px;
+    height: 10px;
+    background-image: url("images/stripe-white.png");
+    background-repeat: repeat;
+}
+
+.vw-review-score-percentage .vw-review-total-score,
+.vw-review-score-points .vw-review-total-score {
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.vw-review-score-star .vw-review-score-number {
+    line-height: 2em;
+    width: auto !important;
+}
+.vw-review-score-star .vw-review-score-number img {
+    max-width: 16px;
+    vertical-align: middle;
+}
+.vw-review-score-star .vw-review-score-number img + img {
+    margin-left: 3px;
+}
+
+.vw-review-score-star .vw-review-item-score .vw-review-score-number {
+    margin-top: 3px;
+}
+
+.vw-review-score-percentage .vw-review-total-score:after {
+    content: '%';
+    font-size: 0.5em;
+    font-weight: normal;
+}
+
+/**
+ * User Rating
+ */
+.vw-review-user-votes {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+.vw-review-user-rating {
+    float: left;
+    display: inline-block;
+}
+.vw-review-user-rating img {
+    width: 16px;
+    height: auto;
+    margin-right: 2px;
+}
+
+.vw-review-user-rating-title {
+    display: inline-block;
+    padding-left: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/**
+ * Review Pros/Cons
+ */
+.vw-review-pros-cons {
+    display: table;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.vw-review-pros,
+.vw-review-cons {
+    display: table-cell;
+    width: 50%;
+}
+
+.vw-review-pros {
+    padding-right: 2%;
+}
+
+.vw-review-cons {
+    padding-left: 2%;
+}
+
+.vw-review-pros-title,
+.vw-review-cons-title {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.vw-review-pros-summary,
+.vw-review-cons-summary {
+    font-size: 12px;
+}
+
+.vw-review-position-top-floating .vw-review-box-summary,
+.vw-review-position-top-floating .vw-review-summary,
+.vw-review-position-top-floating .vw-review-total-score {
+    display: block;
+    width: auto;
+}
+
+.vw-review-position-top-floating .vw-review-total-score {
+    line-height: normal;
+}
+
+.vw-review-position-top-floating .vw-review-pros-cons,
+.vw-review-position-top-floating .vw-review-pros,
+.vw-review-position-top-floating .vw-review-cons {
+    display: block;
+    width: auto;
+}
+
+.vw-review-position-top-floating .vw-review-pros,
+.vw-review-position-top-floating .vw-review-cons {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (max-width: 991px) {
+    .vw-review-box-summary,
+    .vw-review-summary,
+    .vw-review-total-score {
+        display: block;
+        width: auto;
+    }
+    .vw-review-total-score {
+        line-height: normal;
+    }
+    .vw-review-pros-cons,
+    .vw-review-pros,
+    .vw-review-cons {
+        display: block;
+        width: auto;
+    }
+    .vw-review-pros,
+    .vw-review-cons {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* -------------------------------------
+ * $REVIEW COLOR */
+.vw-review-box-summary .vw-review-total-score {
+    color: #FFFFFF;
+}
+
+/* -------------------------------------
+ * $REVIEW EDITOR */
+#vw_review_editor .field-review-summary,
+#vw_review_editor .field-review-score {
+    display: none;
+}
+
+#vw_review_editor .review-scores {
+    margin: 15px 0;
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 2px;
+    border: 1px solid #DDDDDD;
+}
+#vw_review_editor .review-scores .review-score-row {
+    border: 1px solid #DDDDDD;
+    background-color: #F1F1F1;
+    background: -webkit-linear-gradient(bottom, #ECECEC, #F9F9F9);
+    background:         linear-gradient(to top, #ECECEC, #F9F9F9);
+    border-radius: 2px;
+    padding: 5px 10px 5px 5px;
+    position: relative;
+}
+#vw_review_editor .review-scores .review-score-row i {
+    color: #CCCCCC;
+}
+#vw_review_editor .review-scores .review-score-row i:hover {
+    color: #3FACD6;
+}
+#vw_review_editor .review-scores .review-score-row .move-icon {
+    font-size: 24px;
+    line-height: 1em;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: move;
+}
+#vw_review_editor .review-scores .review-score-row .delete-icon {
+    font-size: 16px;
+    line-height: 1em;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    cursor: pointer;
+    margin-top: -0.5em;
+}
+#vw_review_editor .review-scores .review-score-row .review-score-label {
+    font-size: 11px;
+    color: #666666;
+    font-weight: bold;
+    margin-right: 5px;
+}
+#vw_review_editor .review-scores .review-score-row .rwmb-text {
+    width: 40%;
+    margin-right: 10px;
+}
+#vw_review_editor .review-scores .review-score-row + .review-score-row {
+    margin-top: 5px;
+}
+
+/* -----------------------------------------------------------------------------
+ * $STICKY
+ * -------------------------------------------------------------------------- */
+.vw-sticky {
+    z-index: 1000;
+    -webkit-transition: right 0.4s ease;
+       -moz-transition: right 0.4s ease;
+            transition: right 0.4s ease;
+}
+
+@media (max-width: 767px) {
+    .vw-sticky-wrapper {
+        display: none !important;
+    }
+}
+
+.vw-sticky-wrapper.is-sticky .vw-sticky {
+    right: 0;
+    left: 0;
+    -webkit-animation-name: fadeInDown;
+            animation-name: fadeInDown;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+html.mm-right.mm-opening .vw-sticky-wrapper.is-sticky .vw-sticky {
+    right: 440px;
+}
+
+/* -----------------------------------------------------------------------------
+ * $CUSTOM TILED GALLERY
+ * -------------------------------------------------------------------------- */
+.vw-custom-tiled-gallery {
+    margin: 30px 0;
+}
+.vw-custom-tiled-gallery .gallery-item {
+    display: inline-block;
+    float: left;
+    width: 32.33%;
+    margin: 0.5%;
+    position: relative;
+}
+.vw-custom-tiled-gallery .gallery-caption {
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    padding: 10px 15px;
+    color: white;
+    font-size: 0.85em;
+    font-style: italic;
+    line-height: 1.2em;
+}
+.vw-custom-tiled-gallery br + br {
+    display: none;
+}
+.vw-custom-tiled-gallery a {
+    display: inline-block;
+    max-width: 100%;
+}
+.vw-custom-tiled-gallery a:hover img {
+    opacity: 0.75;
+}
+.vw-custom-tiled-gallery img {
+    max-width: 100%;
+    -webkit-transition: all 0.25s ease-out;
+       -moz-transition: all 0.25s ease-out;
+            transition: all 0.25s ease-out;
+}
+
+/* -----------------------------------------------------------------------------
+ * $INSTANT SEARCH
+ * -------------------------------------------------------------------------- */
+.vw-instant-search-buton {
+    cursor: pointer;
+}
+.vw-instant-search-buton i:before {
+    font-size: 16px;
+}
+
+.vw-instant-search-panel {
+    margin: 0;
+    z-index: 1000000;
+    padding: 15px;
+    position: absolute;
+    width: 25em;
+    right: 15px;
+    top: 100%;
+    font-size: 12px;
+    background-color: #F9F9F9;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+.vw-top-bar-left .vw-instant-search-panel {
+    right: auto;
+    left: 15px;
+}
+.vw-instant-search-panel #s {
+    width: 100%;
+    color: #000000;
+}
+.vw-instant-search-panel .vw-loading-icon.vw-preloader-bg {
+    height: 60px;
+    background-position: center 20px !important;
+    display: none;
+}
+
+.vw-instant-search-result-panel {
+    list-style: none;
+    padding: 0 15px;
+    margin: 0;
+}
+.vw-instant-search-result-panel > li {
+    padding: 15px 0;
+    text-align: left;
+}
+.vw-instant-search-result-panel > li:first-child {
+    margin-top: 15px;
+}
+.vw-instant-search-result-panel > li + li {
+    border-top: 1px dashed rgba(128, 128, 128, 0.15);
+}
+
+.vw-instant-search-result-item {
+    line-height: 1.4em;
+}
+
+.vw-instant-search-result-thumbnail {
+    float: left;
+    width: 60px;
+}
+.vw-instant-search-result-thumbnail img {
+    margin: 0;
+}
+
+.vw-instant-search-result-content {
+    margin-left: 80px;
+}
+
+.vw-instant-search-result-title {
+    color: #3E3E3E;
+    font-weight: bold;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.vw-instant-search-result-date {
+    color: #AAAAAA;
+    font-size: 10px;
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.vw-instant-search-all-result {
+    padding-bottom: 0px !important;
+    border-top: 3px solid rgba(128, 128, 128, 0.15) !important;
+}
+
+/* -----------------------------------------------------------------------------
+ * $SCROLL TO TOP
+ * -------------------------------------------------------------------------- */
+.vw-scroll-to-top {
+    position: fixed;
+    bottom: 5px;
+    right: -50px;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+.vw-scroll-to-top.vw-scroll-to-top-visible {
+    right: 5px;
+    opacity: 1;
+}
+.vw-scroll-to-top .vw-icon {
+    display: block;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* -----------------------------------------------------------------------------
+ * $MORE ARTICLES
+ * -------------------------------------------------------------------------- */
+.vw-more-articles {
+    position: fixed;
+    bottom: 50px;
+    right: -360px;
+    z-index: 1;
+    display: inline-block;
+    width: 360px;
+    max-width: 100%;
+    padding: 15px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+    border: 1px solid #EEEEEE;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+    -webkit-transition-duration: 0.5s;
+       -moz-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+}
+.mm-opened .vw-more-articles {
+    display: none;
+}
+.vw-more-articles.vw-more-articles-visible {
+    right: 0px;
+    opacity: 1;
+}
+.vw-more-articles .vw-close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.vw-more-articles .vw-close-button .vw-icon {
+    font-size: 22px;
+}
+
+.vw-more-articles-title {
+    position: relative;
+    margin-top: 0;
+    padding-bottom: 10px;
+    font-weight: bold;
+    border-bottom: 3px solid #3E3E3E;
+}
+
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    /* Fix of Webkit flickering */
+    z-index: 1;
+}
+
+.swiper-container-vertical > .swiper-wrapper {
+    -webkit-box-orient: vertical;
+       -moz-box-orient: vertical;
+        -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display:    -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display:         flex;
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transition-property: -webkit-transform;
+       -moz-transition-property:    -moz-transform;
+         -o-transition-property:      -o-transform;
+        -ms-transition-property:     -ms-transform;
+            transition-property:         transform;
+    -webkit-transform: translate3d(0px, 0, 0);
+       -moz-transform: translate3d(0px, 0, 0);
+         -o-transform: translate(0px, 0px);
+        -ms-transform: translate3d(0px, 0, 0);
+            transform: translate3d(0px, 0, 0);
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+}
+
+.swiper-container-multirow > .swiper-wrapper {
+    -webkit-box-lines: multiple;
+       -moz-box-lines: multiple;
+    -ms-fles-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+}
+
+.swiper-container-free-mode > .swiper-wrapper {
+    -webkit-transition-timing-function: ease-out;
+       -moz-transition-timing-function: ease-out;
+        -ms-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-flex-shrink: 0;
+    -ms-flex: 0 0 auto;
+            flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+}
+
+.swiper-wp8-vertical {
+    -ms-touch-action: pan-x;
+        touch-action: pan-x;
+}
+
+/* Arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+       -moz-background-size: 27px 44px;
+    -webkit-background-size: 27px 44px;
+            background-size: 27px 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: auto;
+}
+
+/*.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    @url: `encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='#007aff'/></svg>")`;
+    background-image: url("data:image/svg+xml;charset=utf-8,@{url}");
+    left: 10px;
+    right: auto;
+    &.swiper-button-black {
+        @url: `encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='#000000'/></svg>")`;
+        background-image: url("data:image/svg+xml;charset=utf-8,@{url}");
+    }
+    &.swiper-button-white {
+        @url: `encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='#ffffff'/></svg>")`;
+        background-image: url("data:image/svg+xml;charset=utf-8,@{url}");
+    }
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    @url: `encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='#007aff'/></svg>")`;
+    background-image: url("data:image/svg+xml;charset=utf-8,@{url}");
+    right: 10px;
+    left: auto;
+    &.swiper-button-black {
+        @url: `encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='#000000'/></svg>")`;
+        background-image: url("data:image/svg+xml;charset=utf-8,@{url}");
+    }
+    &.swiper-button-white {
+        @url: `encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'><path d='M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='#ffffff'/></svg>")`;
+        background-image: url("data:image/svg+xml;charset=utf-8,@{url}");
+    }
+}*/
+/* Pagination Styles */
+.swiper-pagination {
+    position: absolute;
+    text-align: center;
+    -webkit-transition: 300ms;
+       -moz-transition: 300ms;
+         -o-transition: 300ms;
+            transition: 300ms;
+    -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    z-index: 10;
+}
+.swiper-pagination.swiper-pagination-hidden {
+    opacity: 0;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #000000;
+    opacity: 0.2;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    cursor: pointer;
+}
+.swiper-pagination-white .swiper-pagination-bullet {
+    background: #FFFFFF;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #007AFF;
+}
+.swiper-pagination-white .swiper-pagination-bullet-active {
+    background: #FFFFFF;
+}
+.swiper-pagination-black .swiper-pagination-bullet-active {
+    background: #000000;
+}
+
+.swiper-container-vertical > .swiper-pagination {
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translate3d(0px, -50%, 0);
+       -moz-transform: translate3d(0px, -50%, 0);
+         -o-transform: translate(0px, -50%);
+        -ms-transform: translate3d(0px, -50%, 0);
+            transform: translate3d(0px, -50%, 0);
+}
+.swiper-container-vertical > .swiper-pagination .swiper-pagination-bullet {
+    margin: 5px 0;
+    display: block;
+}
+
+.swiper-container-horizontal > .swiper-pagination {
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet {
+    margin: 0 5px;
+}
+
+/* 3D Container */
+.swiper-container-3d {
+    -webkit-perspective: 1200px;
+       -moz-perspective: 1200px;
+         -o-perspective: 1200px;
+            perspective: 1200px;
+}
+.swiper-container-3d .swiper-wrapper,
+.swiper-container-3d .swiper-slide,
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right,
+.swiper-container-3d .swiper-slide-shadow-top,
+.swiper-container-3d .swiper-slide-shadow-bottom,
+.swiper-container-3d .swiper-cube-shadow {
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+.swiper-container-3d .swiper-slide-shadow-left,
+.swiper-container-3d .swiper-slide-shadow-right,
+.swiper-container-3d .swiper-slide-shadow-top,
+.swiper-container-3d .swiper-slide-shadow-bottom {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+.swiper-container-3d .swiper-slide-shadow-left {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(transparent));
+    /* Safari 4+, Chrome */
+    background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
+    /* Chrome 10+, Safari 5.1+, iOS 5+ */
+    background-image:    -moz-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
+    /* Firefox 3.6-15 */
+    background-image:      -o-linear-gradient(right, rgba(0, 0, 0, 0.5), transparent);
+    /* Opera 11.10-12.00 */
+    background-image: linear, to left, rgba(0, 0, 0, 0.5), transparent;
+    /* Firefox 16+, IE10, Opera 12.50+ */
+}
+.swiper-container-3d .swiper-slide-shadow-right {
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
+    /* Safari 4+, Chrome */
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
+    /* Chrome 10+, Safari 5.1+, iOS 5+ */
+    background-image:    -moz-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
+    /* Firefox 3.6-15 */
+    background-image:      -o-linear-gradient(left, rgba(0, 0, 0, 0.5), transparent);
+    /* Opera 11.10-12.00 */
+    background-image: linear, to right, rgba(0, 0, 0, 0.5), transparent;
+    /* Firefox 16+, IE10, Opera 12.50+ */
+}
+.swiper-container-3d .swiper-slide-shadow-top {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
+    /* Safari 4+, Chrome */
+    background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
+    /* Chrome 10+, Safari 5.1+, iOS 5+ */
+    background-image:    -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
+    /* Firefox 3.6-15 */
+    background-image:      -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), transparent);
+    /* Opera 11.10-12.00 */
+    background-image: linear, to top, rgba(0, 0, 0, 0.5), transparent;
+    /* Firefox 16+, IE10, Opera 12.50+ */
+}
+.swiper-container-3d .swiper-slide-shadow-bottom {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
+    /* Safari 4+, Chrome */
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
+    /* Chrome 10+, Safari 5.1+, iOS 5+ */
+    background-image:    -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
+    /* Firefox 3.6-15 */
+    background-image:      -o-linear-gradient(top, rgba(0, 0, 0, 0.5), transparent);
+    /* Opera 11.10-12.00 */
+    background-image: linear, to bottom, rgba(0, 0, 0, 0.5), transparent;
+    /* Firefox 16+, IE10, Opera 12.50+ */
+}
+
+/* Coverflow */
+.swiper-container-coverflow .swiper-wrapper {
+    /* Windows 8 IE 10 fix */
+    -ms-perspective: 1200px;
+}
+
+/* Fade */
+.swiper-container-fade.swiper-container-free-mode .swiper-slide {
+    -webkit-transition-timing-function: ease-out;
+       -moz-transition-timing-function: ease-out;
+        -ms-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+}
+
+.swiper-container-fade .swiper-slide {
+    pointer-events: none;
+}
+
+.swiper-container-fade .swiper-slide-active {
+    pointer-events: auto;
+}
+
+/* Cube */
+.swiper-container-cube {
+    overflow: visible;
+}
+.swiper-container-cube .swiper-slide {
+    pointer-events: none;
+    visibility: hidden;
+    -webkit-transform-origin: 0 0;
+       -moz-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+.swiper-container-cube.swiper-container-rtl .swiper-slide {
+    -webkit-transform-origin: 100% 0;
+       -moz-transform-origin: 100% 0;
+        -ms-transform-origin: 100% 0;
+            transform-origin: 100% 0;
+}
+.swiper-container-cube .swiper-slide-active,
+.swiper-container-cube .swiper-slide-next,
+.swiper-container-cube .swiper-slide-prev,
+.swiper-container-cube .swiper-slide-next + .swiper-slide {
+    pointer-events: auto;
+    visibility: visible;
+}
+.swiper-container-cube .swiper-cube-shadow {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.6;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+}
+.swiper-container-cube.swiper-container-vertical .swiper-cube-shadow {
+    z-index: 0;
+}
+
+/* Scrollbar */
+.swiper-scrollbar {
+    border-radius: 10px;
+    position: relative;
+    -ms-touch-action: none;
+    background: rgba(0, 0, 0, 0.1);
+}
+.swiper-container-horizontal > .swiper-scrollbar {
+    position: absolute;
+    left: 1%;
+    bottom: 3px;
+    z-index: 50;
+    height: 5px;
+    width: 98%;
+}
+.swiper-container-vertical > .swiper-scrollbar {
+    position: absolute;
+    right: 3px;
+    top: 1%;
+    z-index: 50;
+    width: 5px;
+    height: 98%;
+}
+
+.swiper-scrollbar-drag {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+}
+
+.swiper-scrollbar-cursor-drag {
+    cursor: move;
+}
+
+/* -----------------------------------------------------------------------------
+ * Custom Swiper
+ * -------------------------------------------------------------------------- */
+.vw-swiper-arrow-nav {
+    z-index: 1;
+}
+.vw-swiper-large-nav .vw-swiper-arrow-nav {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    text-align: right;
+}
+.vw-swiper-large-nav .vw-swiper-arrow-nav .vw-swiper-arrow-left,
+.vw-swiper-large-nav .vw-swiper-arrow-nav .vw-swiper-arrow-right {
+    position: static;
+    margin-top: 0;
+    width: 70px;
+}
+.vw-swiper-large-nav .vw-swiper-arrow-nav .vw-swiper-arrow-right {
+    margin-left: 5px;
+}
+@media (max-width: 767px) {
+    .vw-swiper-large-nav .vw-swiper-arrow-nav {
+        display: none;
+    }
+}
+.vw-swiper-small-nav .vw-swiper-arrow-nav .vw-swiper-arrow-left,
+.vw-swiper-small-nav .vw-swiper-arrow-nav .vw-swiper-arrow-right {
+    width: 30px;
+}
+
+.vw-swiper-arrow-left,
+.vw-swiper-arrow-right {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 50px;
+    height: 70px;
+    margin-top: -35px;
+    display: inline-block;
+    width: 35px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-position: center center;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+@media (max-width: 991px) {
+    .vw-swiper-arrow-left,
+    .vw-swiper-arrow-right {
+        background-color: transparent;
+    }
+}
+
+.vw-swiper-arrow-left {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAgVBMVEVMaXH///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+q+H6aAAAAKnRSTlMADBfZBf4SAQj79h3x4WTLO4OdLcNZUDOQipZ8sKW2uyPS7HWrbklD5ii40kXNAAABe0lEQVR4Xu2ZYbZCUBhF9aokJAghiQpn/gN8rTuJvd5b357A3n9w7+H9OwzDMAzDMAzD8A+wv+lYfy3lpD+VUg+klW4+6J+kmvS/pYb0n6UM9t9J/3Wv1w70l4F62P84gv5PoIL0zycVG9B/OSlB/ZGeB9Bfff0/oD8ftSX966g4BP3Dongg/bEW0h/GGlfQ/7PVmLP+qAL9h6eiC+lPdCL9m69/Jv2Fgg/oPz4UlKS/1/4K+ncd7H9JZ9Dv36U36c+kifQ3UgsPECnpv8EDQApfwFsp8/kHkH4FsQWdK6A/Q2zBwxXAR5GSLUjcYQg+js5swdMdiNkrCV8QVWhBGNMFQ6wxZwsWLStasI5unGDnqZgtqCLFIVzgJjp0pKUL5pObadmhPmELykDJhi4o2ILr3v2uATmLL1DPFrylbocWTNKLLWjdj1uS1N2c4e2iYQtqqWYLMumGF6SeB08oLT5gTGxBL+XwgFH4HlsweH8LwzAMwzAMwzAM4xc3sySaf5sEegAAAABJRU5ErkJggg==");
+}
+
+.vw-swiper-arrow-right {
+    right: 0;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAgVBMVEVMaXH///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+q+H6aAAAAKnRSTlMADBfZBf4SAQj79h3x4WTLO4OdLcNZUDOQfIqWsKW2uyPS7HWrbklD5ijrbdJGAAABbklEQVR4Xu2aWZKCQBQE2WQTRAQVEFlVoe5/wDlGxhgvL1D5A3RV4/wrDMMwDMMwDMMII1igf7AGldSwBqVUogZRJ7UOSdRIK2vwkN6swUU6sQZP2iB46XBlDQYlN9QgHnGDWskHNXBrpV/WoFB6Rg3CWRlr4M3K7qyBr6VCDY65lh01mHJtE2uwKWcN9kX5ETWoFvkeanDPaINzpjlkDVIVrME3VeGiBp9ENWtwSzTGqMH1oAE36APU4CS9WIO39GSr8ypdWINWeuDzQYPPB11El/cSL+8t/zDSryM2vw/oTxKbP5L5N/hY8klUuPDBMGSPxjOc73toPaLz2YpaLWxJ3zd2ppg2dqiZcnaqOubsWOf5dD472IYzO1mHBTvauwV7beHWbH486nBl83Ui8wc2P+ilN3t1qRW+vG3hBlzCG0AXsb8wNGR+B29hJZzfwgPICg8QlTSQ+U5Uj7GDMsXO72EYhmEYhmEYhmH8AamNJJqtbZHzAAAAAElFTkSuQmCC");
+}
+
+/* -----------------------------------------------------------------------------
+ * $QTRANSLATE
+ * -------------------------------------------------------------------------- */
+/* Add flags to header, see also accompanying php */
+ul.qtrans_language_chooser {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+}
+ul.qtrans_language_chooser li {
+    display: inline-block;
+    float: left;
+}
+ul.qtrans_language_chooser a {
+    margin: 0 4px;
+    padding: 0 2px 4px 2px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+ul.qtrans_language_chooser > .active > a {
+    border-bottom: 3px solid #5A5A5A;
+}
+ul.qtrans_language_chooser .qtrans_flag_and_text {
+    padding-left: 22px;
+}
+
+.widget_qtranslate select {
+    width: 100%;
+}
+
+.qtrans_widget_end:before,
+.qtrans_widget_end:after {
+    content: " ";
+    display: table;
+}
+
+.qtrans_widget_end:after {
+    clear: both;
+}
+
+/* -----------------------------------------------------------------------------
+ * $CONTACT FORM 7
+ * -------------------------------------------------------------------------- */
+.wpcf7-text {
+    font-size: 12px;
+    line-height: 21px;
+    color: #444444;
+    border: 1px solid #E6E6E6;
+    height: 34px;
+    padding: 3px 9px 3px 9px;
+}
+
+.wpcf7-text:active,
+.wpcf7-text:focus {
+    border-color: #999999;
+}
+
+.wpcf7-text,
+.wpcf7-select,
+.wpcf7-textarea {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.wpcf7 {
+    padding: 20px 19px 20px 20px !important;
+    /* responsive portrait phone */
+}
+
+@media (max-width: 767px) {
+    .wpcf7 {
+        padding: 20px 10px 20px 10px !important;
+    }
+}
+
+/* -----------------------------------------------------------------------------
+ * $UTILITY
+ * -------------------------------------------------------------------------- */
+/* -------------------------------------
+ * $HAMBURGER ICON */
+.vw-hamburger-icon {
+    display: block;
+    width: 40px;
+    height: 36px;
+    position: relative;
+    z-index: 2;
+    -webkit-transition: all 0.2s ease-out;
+       -moz-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+}
+
+.vw-hamburger-icon:before,
+.vw-hamburger-icon:after,
+.vw-hamburger-icon span {
+    background: #3E3E3E;
+    content: '';
+    display: block;
+    width: 22px;
+    height: 3px;
+    position: absolute;
+    left: 9px;
+}
+
+.vw-hamburger-icon:hover:before,
+.vw-hamburger-icon:hover:after,
+.vw-hamburger-icon:hover span {
+    background-color: #FFFFFF;
+}
+
+.vw-hamburger-icon:before {
+    top: 9px;
+}
+
+.vw-hamburger-icon:after {
+    bottom: 10px;
+}
+
+.vw-hamburger-icon span {
+    top: 50%;
+    margin-top: -2px;
+}
+
+/* -------------------------------------
+ * $LOADING ICON */
+.vw-loading-icon {
+    height: 35px;
+    width: 100%;
+}
+
+.vw-preloader-bg,
+.vw-audio-icon-bg {
+    background-repeat: no-repeat;
+    background-position: center 0;
+}
+
+.vw-preloader-bg {
+    /* preloader */
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSJyZ2IoMTI4LDEyOCwxMjgpIj4KICA8cGF0aCBvcGFjaXR5PSIuMjUiIGQ9Ik0xNiAwIEExNiAxNiAwIDAgMCAxNiAzMiBBMTYgMTYgMCAwIDAgMTYgMCBNMTYgNCBBMTIgMTIgMCAwIDEgMTYgMjggQTEyIDEyIDAgMCAxIDE2IDQiLz4KICA8cGF0aCBkPSJNMTYgMCBBMTYgMTYgMCAwIDEgMzIgMTYgTDI4IDE2IEExMiAxMiAwIDAgMCAxNiA0eiI+CiAgICA8YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InJvdGF0ZSIgZnJvbT0iMCAxNiAxNiIgdG89IjM2MCAxNiAxNiIgZHVyPSIwLjhzIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgLz4KICA8L3BhdGg+Cjwvc3ZnPgo=") !important;
+    background-size: 35px 35px;
+}
+.no-svg .vw-preloader-bg {
+    background-image: url("data:image/gif;base64,R0lGODlhRwBHAPZOAICAgIGBgYKCgoODg4WFhYaGhomJiYuLi42NjY6Ojo+Pj5CQkJKSkpSUlJWVlZiYmJmZmZubm56enp+fn6GhoaOjo6Wlpaampqqqqqurq6ysrK6urq+vr7CwsLS0tLW1tbm5ubq6ury8vL6+vsLCwsbGxsnJyc7OztPT09bW1tjY2NnZ2dvb297e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAABHAEcAAAf+gE6Cg4SFhodDQjo0NC8vIQUHCQ4XISc7h5mam5yGQzsvLqKiji4fAKipqAkbKEmdsLGFSaCkoaOjp6q7AAcdNLLBmkmNpbjHprzKAA8rws9OSTq3yNW6y7wVOtCxO9XfudjYG0PcwzTg6dfivAkv5oZC1OnW7OIi8IO19N+PBfbj8oGal+6FDiGvCg1xYWJDAoCpLiR8poMfKUyydohgAFHCRFkV+en4KOxFBYAShHkr+KJcPicrHrLDIGsIQWQYXw4KYY9ELEc3SbnUSWjFAXbvOKHrR4MkUUFCOGJL4JSQkH4ugD3NNOSBuA/DgrpwVHWroCQOxCU1FLLai7L+ZqHKVPYAEbi3cZX+W+asUFuceTuJwFaXUJK7gWFJVebCar+hiTW5wEZzkFitkTmdVFYg4eFvkDNneoHthKCVyNaK3uRV2QVBS5EJWd3JxLID0cDBpS1oCDYaNt3y7tSaVwl5qXMOz8RT2Ya/o17MXq4pxTIJsY/tXr5jmbtv1DktKyA2/Ka5u4zhUm2+EHpV6qO3Z74BQ/0N94HOYz8fttv4pPRnSFAAjiJgIQUa9M12wx12k4LVhDbfQtXogNoxyvV3VTU7UIgMZgJmh8tsYjFIW4lOiDjKdBr+d9pYHx7YSIW9JSjhcp9VwyKBIIYHnXz6iHUjbUkU6MI2gxTE+U2Pw6ETVGg/rhjehjTOcteQiQUH2iEqAslbl6IwaRk4YgYG5lhwXRijaGe6kKEhZzqSWZv8GaLklXkRQw+Wjt3lpllU9vOmJlGu15ROQ7QpCpIgsZQVn5wMMY1YozAajKKkACeMIqTQcyg0hX5j4ZBJ0BJqNWVmZFFqjLRqJD2WmuPhqrTSw+JLRb5aq0WfbrXPrrW+sIOJ0BBDKbDH9JqYNKEcW6uyoknqbHRiddieIg8es99BBw7yyaT7GbQDQk8FAgA7") !important;
+}
+
+.vw-audio-icon-bg {
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDNweCIgaGVpZ2h0PSI0M3B4IiB2aWV3Qm94PSIwIDAgNDMgNDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQzIDQzIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsLW9wYWNpdHk9IjAuNjY2NyIgZD0iTTM1LjU1MSwzNS42QzMxLjY4NCwzOS41MzMsMjcsNDEuNSwyMS41LDQxLjUNCgkJYy01LjUzMywwLTEwLjI4My0xLjk2Ny0xNC4yNS01LjlDMy40MTcsMzEuNzMzLDEuNSwyNy4wMzMsMS41LDIxLjVjMC01LjUsMS45MTctMTAuMjMzLDUuNzUtMTQuMmMzLjk2Ny0zLjg2Niw4LjcxNy01LjgsMTQuMjUtNS44DQoJCWM1LjUsMCwxMC4xODQsMS45MzQsMTQuMDUxLDUuOEMzOS41MTcsMTEuMjY3LDQxLjUsMTYsNDEuNSwyMS41QzQxLjUsMjcuMDMzLDM5LjUxNywzMS43MzMsMzUuNTUxLDM1LjZ6IE0yMi41LDIzLjM5OQ0KCQljLTAuMzk5LDAuODY3LTAuMzk5LDEuODE3LDAsMi44NTFjMC4zNjcsMC45MzQsMS4wMzQsMS41NSwyLDEuODVjMC45LDAuMzY3LDEuODAxLDAuMjgzLDIuNy0wLjI1YzAuOTY3LTAuNSwxLjUxNy0xLjIzMywxLjY1LTIuMg0KCQljMC4xLTAuMzMzLDAuMTQ5LTAuNzY3LDAuMTQ5LTEuM2MwLTAuNzY3LDAtMS4xODQsMC0xLjI1VjExLjc1TDE3LjIsMTUuMnY5Ljc1Yy0wLjgtMC41LTEuNzE3LTAuNjE3LTIuNzUtMC4zNTENCgkJYy0xLDAuMjY3LTEuNjg0LDAuODUxLTIuMDUsMS43NWMtMC40MzQsMC44NjctMC40NjcsMS43NjctMC4xLDIuN2MwLjMzMywwLjk2NywwLjk4MywxLjYzNCwxLjk0OSwyDQoJCWMwLjg2NywwLjM2NiwxLjc2NywwLjI2NywyLjctMC4zYzAuODY3LTAuNDY3LDEuNDE3LTEuMTY3LDEuNjUtMi4xMDFjMC4xMzMtMC40MzMsMC4yLTAuOTgzLDAuMi0xLjY0OWMwLTAuNzMzLDAtMS4yODMsMC0xLjY1DQoJCVYxOC43bDguNjQ5LTIuNTUxdjUuODAxYy0wLjg5OS0wLjQ2Ny0xLjgxNi0wLjU2Ny0yLjc1LTAuMzAxQzIzLjYwMSwyMS45NSwyMi44NjcsMjIuNTMzLDIyLjUsMjMuMzk5eiIvPg0KCTxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBkPSJNMjIuNSwyMy4zOTljMC4zNjctMC44NjYsMS4xMDEtMS40NDksMi4yLTEuNzUNCgkJYzAuOTM0LTAuMjY3LDEuODUxLTAuMTY2LDIuNzUsMC4zMDF2LTUuODAxTDE4LjgwMSwxOC43djYuNjQ5YzAsMC4zNjcsMCwwLjkxNywwLDEuNjVjMCwwLjY2Ni0wLjA2NywxLjIxNy0wLjIsMS42NDkNCgkJYy0wLjIzMywwLjkzNC0wLjc4MywxLjYzNC0xLjY1LDIuMTAxYy0wLjkzNCwwLjU2Ni0xLjgzMywwLjY2Ni0yLjcsMC4zYy0wLjk2Ni0wLjM2Ni0xLjYxNi0xLjAzMy0xLjk0OS0yDQoJCWMtMC4zNjctMC45MzQtMC4zMzQtMS44MzMsMC4xLTIuN2MwLjM2Ni0wLjg5OSwxLjA1LTEuNDgzLDIuMDUtMS43NWMxLjAzMy0wLjI2NywxLjk1LTAuMTQ5LDIuNzUsMC4zNTFWMTUuMkwyOSwxMS43NVYyMy4xDQoJCWMwLDAuMDY2LDAsMC40ODMsMCwxLjI1YzAsMC41MzMtMC4wNSwwLjk2Ny0wLjE0OSwxLjNjLTAuMTM0LDAuOTY3LTAuNjg0LDEuNy0xLjY1LDIuMmMtMC44OTksMC41MzMtMS44LDAuNjE3LTIuNywwLjI1DQoJCWMtMC45NjYtMC4zLTEuNjMzLTAuOTE2LTItMS44NUMyMi4xMDEsMjUuMjE3LDIyLjEwMSwyNC4yNjcsMjIuNSwyMy4zOTl6Ii8+DQoJDQoJCTxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMyIgZD0iDQoJCU0zNS41NTEsMzUuNkMzMS42ODQsMzkuNTMzLDI3LDQxLjUsMjEuNSw0MS41Yy01LjUzMywwLTEwLjI4My0xLjk2Ny0xNC4yNS01LjlDMy40MTcsMzEuNzMzLDEuNSwyNy4wMzMsMS41LDIxLjUNCgkJYzAtNS41LDEuOTE3LTEwLjIzMyw1Ljc1LTE0LjJjMy45NjctMy44NjYsOC43MTctNS44LDE0LjI1LTUuOGM1LjUsMCwxMC4xODQsMS45MzQsMTQuMDUxLDUuOEMzOS41MTcsMTEuMjY3LDQxLjUsMTYsNDEuNSwyMS41DQoJCUM0MS41LDI3LjAzMywzOS41MTcsMzEuNzMzLDM1LjU1MSwzNS42eiIvPg0KPC9nPg0KPC9zdmc+DQo=");
+    background-size: 40px 40px;
+}
+
+.vw-video-icon-bg {
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDNweCIgaGVpZ2h0PSI0M3B4IiB2aWV3Qm94PSIwIDAgNDMgNDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQzIDQzIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsLW9wYWNpdHk9IjAuNjY2NyIgZD0iTTQxLjUsMjEuNWMwLDUuNTMzLTEuOTgzLDEwLjIzMy01Ljk0OSwxNC4xDQoJCUMzMS42ODQsMzkuNTMzLDI3LDQxLjUsMjEuNSw0MS41Yy01LjUzMywwLTEwLjI4My0xLjk2Ny0xNC4yNS01LjlDMy40MTcsMzEuNzMzLDEuNSwyNy4wMzMsMS41LDIxLjVjMC01LjUsMS45MTctMTAuMjMzLDUuNzUtMTQuMg0KCQljMy45NjctMy44NjYsOC43MTctNS44LDE0LjI1LTUuOGM1LjUsMCwxMC4xODQsMS45MzQsMTQuMDUxLDUuOEMzOS41MTcsMTEuMjY3LDQxLjUsMTYsNDEuNSwyMS41eiIvPg0KCQ0KCQk8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjMiIGQ9Ig0KCQlNNDEuNSwyMS41YzAsNS41MzMtMS45ODMsMTAuMjMzLTUuOTQ5LDE0LjFDMzEuNjg0LDM5LjUzMywyNyw0MS41LDIxLjUsNDEuNWMtNS41MzMsMC0xMC4yODMtMS45NjctMTQuMjUtNS45DQoJCUMzLjQxNywzMS43MzMsMS41LDI3LjAzMywxLjUsMjEuNWMwLTUuNSwxLjkxNy0xMC4yMzMsNS43NS0xNC4yYzMuOTY3LTMuODY2LDguNzE3LTUuOCwxNC4yNS01LjhjNS41LDAsMTAuMTg0LDEuOTM0LDE0LjA1MSw1LjgNCgkJQzM5LjUxNywxMS4yNjcsNDEuNSwxNiw0MS41LDIxLjV6Ii8+DQo8L2c+DQo8cG9seWdvbiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSIzMSwyMS4yNSAxNiwzMCAxNiwxMyAiLz4NCjwvc3ZnPg0K");
+    background-size: 40px 40px;
+}
+
+.vw-gallery-icon-bg {
+    background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDNweCIgaGVpZ2h0PSI0M3B4IiB2aWV3Qm94PSIwIDAgNDMgNDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQzIDQzIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsLW9wYWNpdHk9IjAuNjY2NyIgZD0iTTMwLjU1MSwxNi41YzAtMC4zMzQtMC4wODQtMC42MDEtMC4yNS0wLjgNCgkJYy0wLjItMC4yLTAuNS0wLjMwMS0wLjktMC4zMDFoLTIuOGwtMC41NS0xLjQ0OUMyNS43NSwxMy4zODMsMjUuMzg0LDEzLjEsMjQuOTUsMTMuMWgtNi44Yy0wLjUsMC0wLjg2NiwwLjI4My0xLjEsMC44NTENCgkJbC0wLjY1LDEuNDQ5aC0yLjg1Yy0wLjIzMywwLTAuNDY3LDAuMTAxLTAuNywwLjMwMWMtMC4yMzMsMC4xOTktMC4zNTEsMC40NjYtMC4zNTEsMC44djExLjJjMCwwLjM2NiwwLjExNywwLjY2NiwwLjM1MSwwLjg5OQ0KCQljMC4yMzMsMC4yLDAuNDY3LDAuMywwLjcsMC4zSDI5LjRjMC40LDAsMC43LTAuMSwwLjktMC4zYzAuMTY2LTAuMjMzLDAuMjUtMC41MzMsMC4yNS0wLjg5OVYxNi41eiBNMzUuNTUxLDM1LjYNCgkJQzMxLjY4NCwzOS41MzMsMjcsNDEuNSwyMS41LDQxLjVjLTUuNTMzLDAtMTAuMjgzLTEuOTY3LTE0LjI1LTUuOUMzLjQxNywzMS43MzMsMS41LDI3LjAzMywxLjUsMjEuNWMwLTUuNSwxLjkxNy0xMC4yMzMsNS43NS0xNC4yDQoJCWMzLjk2Ny0zLjg2Niw4LjcxNy01LjgsMTQuMjUtNS44YzUuNSwwLDEwLjE4NCwxLjkzNCwxNC4wNTEsNS44QzM5LjUxNywxMS4yNjcsNDEuNSwxNiw0MS41LDIxLjUNCgkJQzQxLjUsMjcuMDMzLDM5LjUxNywzMS43MzMsMzUuNTUxLDM1LjZ6IE0yNC43LDE4LjZjMC45MzQsMC45LDEuNCwxLjk4MywxLjQsMy4yNXMtMC40NjcsMi4zNjctMS40LDMuMw0KCQljLTAuODk5LDAuOTM0LTEuOTgzLDEuNC0zLjI1LDEuNGMtMS4zLDAtMi4zOTktMC40NjctMy4zLTEuNGMtMC45MzQtMC45MzMtMS40LTIuMDMzLTEuNC0zLjNzMC40NjctMi4zNSwxLjQtMy4yNQ0KCQljMC45LTAuOTM0LDItMS4zOTksMy4zLTEuMzk5QzIyLjcxNywxNy4yLDIzLjgwMSwxNy42NjYsMjQuNywxOC42eiBNMjMuNCwyMy44YzAuNTMzLTAuNTMzLDAuOC0xLjE4NCwwLjgtMS45NQ0KCQljMC0wLjczMy0wLjI2Ny0xLjM4My0wLjgtMS45NWMtMC41NjYtMC41MzMtMS4yMTctMC44LTEuOTUtMC44Yy0wLjc2NywwLTEuNDE2LDAuMjY3LTEuOTUsMC44Yy0wLjU2NiwwLjU2Ny0wLjg1LDEuMjE3LTAuODUsMS45NQ0KCQljMCwwLjc2NywwLjI4MywxLjQxNywwLjg1LDEuOTVjMC41MzQsMC41NjYsMS4xODQsMC44NSwxLjk1LDAuODVDMjIuMTg0LDI0LjY0OSwyMi44MzQsMjQuMzY2LDIzLjQsMjMuOHoiLz4NCgk8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0ZGRkZGRiIgZD0iTTMwLjU1MSwxNi41djExLjJjMCwwLjM2Ni0wLjA4NCwwLjY2Ni0wLjI1LDAuODk5DQoJCWMtMC4yLDAuMi0wLjUsMC4zLTAuOSwwLjNoLTE1Ljg1Yy0wLjIzMywwLTAuNDY3LTAuMS0wLjctMC4zQzEyLjYxNywyOC4zNjYsMTIuNSwyOC4wNjYsMTIuNSwyNy43VjE2LjUNCgkJYzAtMC4zMzQsMC4xMTctMC42MDEsMC4zNTEtMC44YzAuMjMzLTAuMiwwLjQ2Ny0wLjMwMSwwLjctMC4zMDFoMi44NWwwLjY1LTEuNDQ5YzAuMjMzLTAuNTY3LDAuNi0wLjg1MSwxLjEtMC44NTFoNi44DQoJCWMwLjQzNCwwLDAuOCwwLjI4MywxLjEwMSwwLjg1MWwwLjU1LDEuNDQ5aDIuOGMwLjQsMCwwLjcsMC4xMDEsMC45LDAuMzAxQzMwLjQ2NywxNS44OTksMzAuNTUxLDE2LjE2NiwzMC41NTEsMTYuNXogTTIzLjQsMjMuOA0KCQljLTAuNTY2LDAuNTY2LTEuMjE3LDAuODUtMS45NSwwLjg1Yy0wLjc2NywwLTEuNDE2LTAuMjgzLTEuOTUtMC44NWMtMC41NjYtMC41MzMtMC44NS0xLjE4NC0wLjg1LTEuOTUNCgkJYzAtMC43MzMsMC4yODMtMS4zODMsMC44NS0xLjk1YzAuNTM0LTAuNTMzLDEuMTg0LTAuOCwxLjk1LTAuOGMwLjczMywwLDEuMzg0LDAuMjY3LDEuOTUsMC44YzAuNTMzLDAuNTY3LDAuOCwxLjIxNywwLjgsMS45NQ0KCQlDMjQuMiwyMi42MTYsMjMuOTM0LDIzLjI2NywyMy40LDIzLjh6IE0yNC43LDE4LjZjLTAuODk5LTAuOTM0LTEuOTgzLTEuMzk5LTMuMjUtMS4zOTljLTEuMywwLTIuMzk5LDAuNDY2LTMuMywxLjM5OQ0KCQljLTAuOTM0LDAuOS0xLjQsMS45ODMtMS40LDMuMjVzMC40NjcsMi4zNjcsMS40LDMuM2MwLjksMC45MzQsMiwxLjQsMy4zLDEuNGMxLjI2NywwLDIuMzUxLTAuNDY3LDMuMjUtMS40DQoJCWMwLjkzNC0wLjkzMywxLjQtMi4wMzMsMS40LTMuM1MyNS42MzQsMTkuNSwyNC43LDE4LjZ6Ii8+DQoJDQoJCTxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMyIgZD0iDQoJCU0zNS41NTEsMzUuNkMzMS42ODQsMzkuNTMzLDI3LDQxLjUsMjEuNSw0MS41Yy01LjUzMywwLTEwLjI4My0xLjk2Ny0xNC4yNS01LjlDMy40MTcsMzEuNzMzLDEuNSwyNy4wMzMsMS41LDIxLjUNCgkJYzAtNS41LDEuOTE3LTEwLjIzMyw1Ljc1LTE0LjJjMy45NjctMy44NjYsOC43MTctNS44LDE0LjI1LTUuOGM1LjUsMCwxMC4xODQsMS45MzQsMTQuMDUxLDUuOEMzOS41MTcsMTEuMjY3LDQxLjUsMTYsNDEuNSwyMS41DQoJCUM0MS41LDI3LjAzMywzOS41MTcsMzEuNzMzLDM1LjU1MSwzNS42eiIvPg0KPC9nPg0KPC9zdmc+DQo=");
+    background-size: 40px 40px;
+}
